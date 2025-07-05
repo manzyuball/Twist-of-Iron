@@ -1,0 +1,21 @@
+HEA_mio_magic_wheel_co = {
+ 	include = twst_geniric_magic_wheel_co
+ 	icon = GFX_idea_magical_wheel
+ 	allowed = {	
+ 		tag = HEA
+ 	}
+	available = {
+		HEA = {
+            has_completed_focus = HEA_deuce_magic_wheel
+		}
+    }	
+	initial_trait = {
+		name = mio_initial_trait_HEA_magic_wheel_co
+
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+            reliability = 0.15
+			maximum_speed = 0.2
+		}	
+	}
+ }

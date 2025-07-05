@@ -1,0 +1,33 @@
+
+	HEA_ukraine_advancement_category = {
+		icon = GFX_decision_category_hol_secret_staff_talks
+		
+		visible = {
+			has_country_flag = HEA_can_advance_into_ukraine
+			NOT = { has_country_flag = HEA_ukraine_annexed }
+		}
+		allowed = {
+		original_tag = HEA
+	    }  
+	}
+	HEA_soviet_takeover_category = {
+		icon = GFX_decision_category_SOV_civil_war
+		
+		visible = {
+			has_country_flag = HEA_can_takeover_soviet
+			NOT = { has_country_flag = HEA_soviet_takeover_complete }
+		}
+		allowed = {
+		original_tag = HEA
+	    }  
+	}
+	HEA_rebellion_category = {
+		icon = GFX_decision_generic_consumer_goods
+		visible = {
+			has_country_flag = HEA_trey_route_started
+		}
+		allowed = {
+		original_tag = HEA
+	    }  
+	}
+

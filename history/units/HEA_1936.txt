@@ -1,0 +1,125 @@
+# history/units/HEA_1936.txt
+focus = {
+    current = HEA_purge_focus
+    progress = 0
+}
+# === 師団テンプレートの定義 ===
+division_template = {
+	name = "憲兵トランプ兵中隊"
+	
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+		cavalry = { x = 2 y = 2 }
+	}
+}
+division_template = {
+	name = "トランプ兵中隊"
+	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		artillery_brigade = { x = 3 y = 0 }
+		artillery_brigade = { x = 3 y = 1 }
+		artillery_brigade = { x = 3 y = 2 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		recon = {
+			x = 0
+			y = 1
+		}
+	}
+}
+
+division_template = {
+	name = "マジホイ打撃班"
+	
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 0 y = 3 }	
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+		motorized = { x = 1 y = 3 }	
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+		mot_recon = {
+			x = 0
+			y = 1
+		}
+	}
+}
+
+division_template = {
+	name = "重装突撃班"
+	
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		motorized = { x = 1 y = 0 }
+	}
+}
+
+
+# === 初期部隊の配置 ===
+units = {
+	# 首都ステートに部隊を配置（ステートIDは仮に3686としています）
+	division = {
+		name = "スペードの兵隊"
+		location = 3686 # 首都のプロヴィンスIDを指定
+		division_template = "トランプ兵中隊"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "ハートの兵隊"
+		location = 3686
+		division_template = "トランプ兵中隊"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "クローバーの兵隊"
+		location = 3686
+		division_template = "トランプ兵中隊"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "ダイヤの兵隊"
+		location = 3686
+		division_template = "トランプ兵中隊"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "ジョーカーの兵隊"
+		location = 3686
+		division_template = "トランプ兵中隊"
+		start_experience_factor = 0.3
+	}
+	division = {
+		name = "エース機動班"
+		location = 3686
+		division_template = "マジホイ打撃班"
+		start_experience_factor = 0.45
+	}
+	division = {
+		name = "デュース突撃班"
+		location = 3686
+		division_template = "マジホイ打撃班"
+		start_experience_factor = 0.45
+	}
+}

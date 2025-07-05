@@ -1,0 +1,37 @@
+spriteTypes = {
+
+	SpriteType = {
+		name = "GFX_goal_Basketball_club"
+		texturefile = "gfx/interface/goals/Basketball_club.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_physical_training_aviation"
+		texturefile = "gfx/interface/goals/physical_training_aviation.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_track_and_field_club"
+		texturefile = "gfx/interface/goals/track_and_field_club.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_Cater_weaknesses"
+		texturefile = "gfx/interface/goals/Cater_weaknesses.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_The_Kingdom_of_Rose_Heart"
+		texturefile = "gfx/interface/goals/The_Kingdom_of_Rose_Heart.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_magical_wheel"
+		texturefile = "gfx/interface/goals/magical_wheel.dds"
+	}
+	SpriteType = {
+		name = "GFX_report_event_hea_Event6"
+		texturefile = "gfx/interface/goals/report_event_hea_Event6.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_report_event_hea_Event7"
+		texturefile = "gfx/interface/goals/report_event_hea_Event7.dds"
+	}
+
+}

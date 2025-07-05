@@ -1,0 +1,416 @@
+﻿l_english:
+  # ===================================================================
+  # Country Description
+  # ===================================================================
+  HEA_GATHERING_STORM_DESC: "This is the 'Kingdom of Roses' that I rule.\nThe 810 laws established by the great Queen of Hearts are absolute, and anyone who dares disobey them will, without exception, find their head forfeit.\nUnder the leadership of Housewarden Riddle Rosehearts, the disciplined and rigorous Heartslabyul dorm now demonstrates its power as an independent state. The students, as 'Card Soldiers,' boast flawless coordination and execute any mission to perfection. White roses that have not been painted red, tea not brewed precisely on time—such things are not permitted to exist here. Everything must be perfect, just as the Queen's rules dictate.\nTheir discipline fosters stable governance and high productivity in domestic affairs, but such overly strict rule can sometimes breed discontent. However, to Housewarden Riddle, this is a trivial matter.\nFor he is the rules, and he is absolute."
+
+  # ===================================================================
+  # NF Titles
+  # ===================================================================
+  HEA_purge_focus: "Internal Purge"
+  HEA_instilling_fear: "A Frightening Education for Freshmen"
+  HEA_obedience_training: "Obedience Training"
+  HEA_obedience: "Obedience"
+  HEA_classroom_learning_tutoring: "Remedial Studies"
+  HEA_magic_tutoring_increased_firepower: "Improving Offensive Magic"
+  HEA_magic_tutoring_Improving_defensive_magic: "Improving Defensive Magic"
+  HEA_magic_Alchemy: "Application of Alchemy"
+  HEA_magic_tutoring_accumulation_of_knowledge: "Accumulation of Knowledge"
+  HEA_magic_tutoring_Overcoming_Cater_weaknesses: "Overcoming Cater's Weaknesses"
+  HEA_physical_training: "Physical Training"
+  HEA_physical_training_aviation: "Specialization in Flight"
+  HEA_physical_training_basic_physical_fitness: "Improving Basic Physical Fitness"
+  HEA_physical_training_student_officers: "Training Student Officers"
+  HEA_physical_training_Basketball_club-led: "Led by the Basketball Club"
+  HEA_physical_training_track_and_field_club-led: "Led by the Track and Field Club"
+  HEA_Kingdom_of_roose: "A Small Kingdom of Roses"
+  HEA_advance_into_Soviet_territory: "Advance into Soviet Territory"
+  HEA_tart_factory_I: "First Tart Plan"
+  HEA_tart_factory_II: "Second Tart Plan"
+  HEA_Securing_the_Ukraine_region: "Securing the Ukrainian Region"
+  HEA_Expansion_into_Poland: "Invasion of Poland"
+  HEA_Expansion_into_Romania: "Invasion of Romania"
+  HEA_Take_over_the_Soviet_Union: "Take Over the Soviet Union"
+  HEA_Improving_wheat_production_capacity: "Securing Raw Materials"
+  HEA_tray_tart: "Third Tart Plan"
+  HEA_The_Queen_of_Hearts_Law_in_the_Occupied_Territory: "Applying the Queen of Hearts' Rules"
+  HEA_Obey_work_and_be_ignorant: "Obey, Work, and Remain Ignorant!"
+  HEA_expansionist_foreign_policy: "Expansionist Foreign Policy"
+  HEA_dormitory_directory: "Housewarden Field Marshal"
+  HEA_The_Kingdom_of_Rose_Heart: "The Kingdom of Rosehearts"
+  HEA_govern_the_occupied_territories: "Governing the Occupied Territories"
+  HEA_develop_ukraine: "Re-educating Ukraine"
+  HEA_develop_belarus: "Re-educating Belarus"
+  HEA_develop_caucasus: "Re-educating the Caucasus"
+  HEA_develop_poland: "Re-educating Poland"
+  HEA_develop_romania: "Re-educating Romania"
+  HEA_develop_baltics: "Re-educating the Baltics"
+  HEA_improve_occupation_law: "Improving Occupation Policy"
+  HEA_eastern_highways: "Highways to the East"
+  HEA_garrison_reinforcement: "Reinforcing the Garrison"
+  HEA_perfect_eastern_order: "The Perfect Eastern Order"
+  HEA_assimilation_policy: "Assimilation Policy"
+  HEA_strengthen_dominance: "Strengthening Dominance"
+
+  # ===================================================================
+  # NF Descriptions
+  # ===================================================================
+  HEA_purge_focus_desc: "There are stirrings of unrest within the dorm. Those who disturb our discipline, no matter how minor the infraction, cannot be overlooked. Based on the strict 'Rules of the Queen of Hearts,' the seeds of rebellion must be thoroughly crushed."
+  HEA_instilling_fear_desc: "It seems the freshmen have yet to understand the severity of Heartslabyul. I must drill into them the greatness of the Queen of Hearts and the terror of breaking the rules. Fear is, after all, the most effective form of education."
+  HEA_obedience_training_desc: "After an education in fear, the next step is to cultivate absolute obedience. Through the training program I have devised, I will raise soldiers who can act instantly on any command without question. They do not need to think. All they need is to follow my rules."
+  HEA_obedience_desc: "The training has reached its final stage. The students have cast aside their individual wills and become mere pawns to execute my orders. Their complete obedience will make my nation unshakeable."
+  HEA_classroom_learning_tutoring_desc: "No matter how much magic or physical strength one has, without knowledge, one cannot be perfect. I shall order Trey to conduct remedial lessons to improve the students' academic abilities. A diligent spirit is the foundation of development in all fields."
+  HEA_magic_tutoring_increased_firepower_desc: "One cannot win by only defending. To crush the enemy, overwhelming firepower is necessary. I will have Cater lead research and training in more powerful and destructive offensive magic. Anyone who stands in my way will be erased without a trace."
+  HEA_magic_tutoring_Improving_defensive_magic_desc: "An impenetrable defense is the absolute condition for victory. I will order Cater to master advanced defensive magic that can block any attack. No one shall trample my rose garden."
+  HEA_magic_Alchemy_desc: "The applications of magic are limitless. By fusing ancient alchemical knowledge with modern technology, we will secure resources and develop new weaponry. Without a material foundation, a perfect nation cannot be built."
+  HEA_magic_tutoring_accumulation_of_knowledge_desc: "The pursuit of knowledge has no end. We will study magical history and ancient texts to rediscover lost magical techniques. The wisdom of the great mages of the past will also become the power of my nation."
+  HEA_magic_tutoring_Overcoming_Cater_weaknesses_desc: "Cater is an excellent mage, but he seems to have a weakness in certain areas. That is not perfect. It is necessary to conduct special training to overcome his weaknesses and develop him into a student who can handle any mission."
+  HEA_physical_training_desc: "Without a strong body, one cannot fully wield my advanced magic. I will impose strict physical training on all students to raise their basic combat capabilities. Slackers will not be tolerated."
+  HEA_physical_training_aviation_desc: "He who rules the skies rules the battle. We will specialize in flight training using magical brooms to develop an air force with high mobility. With surprise attacks from the air, we will crush the fools who break the rules."
+  HEA_physical_training_basic_physical_fitness_desc: "The foundation of all combat is unwavering basic physical strength. We will enhance running and strength training to improve the endurance and recovery of our soldiers. If you have time to complain, you should be moving your arms more."
+  HEA_physical_training_student_officers_desc: "Excellent soldiers alone are not enough. We need brilliant officers to lead them. I will select the most outstanding students and begin a special educational program to train the next generation of leaders who will serve as my right hand."
+  HEA_physical_training_Basketball_club-led_desc: "The basketball club is ideal for cultivating teamwork and situational awareness. Under Ace's leadership, we will conduct more practical group combat training. His knack for getting things done might be useful, if applied correctly."
+  HEA_physical_training_track_and_field_club-led_desc: "The training of the track and field club pushes individual physical abilities to their limits. Deuce's ridiculously honest perseverance may be something to learn from in strengthening the breakthrough power of our soldiers."
+  HEA_Kingdom_of_roose_desc: "My dorm is now a single nation. However, its foundation is still small. First, I must solidify this 'Small Kingdom of Roses' and prepare for the coming expansion."
+  HEA_advance_into_Soviet_territory_desc: "The vast lands to the east will provide the essential resources and space for my 'Kingdom of Roses' to develop. I will establish my influence in that region and take the first step of my domination."
+  HEA_tart_factory_I_desc: "An industrial base is indispensable for running a nation. Above all, a stable supply of tarts for my teatime is a top priority. As the first phase, we will construct industrial facilities to support tart production."
+  HEA_tart_factory_II_desc: "The first phase was a success. But it is far from perfect. To further increase production capacity, I will activate the second phase and further enhance our domestic industrial power."
+  HEA_Securing_the_Ukraine_region_desc: "The advance to the east has been achieved. Now is the time to bring this new territory completely under my control and stabilize my rule. The resources and people of this land will all be dedicated to my kingdom."
+  HEA_Expansion_into_Poland_desc: "Poland, adjacent to my domain, could become a potential threat to my perfect order. If they will not obey my rules, I will make them obey by force."
+  HEA_Expansion_into_Romania_desc: "Romania's oil fields are attractive for powering my war machine. If they do not offer them up themselves, I will simply go and take them myself."
+  HEA_Take_over_the_Soviet_Union_desc: "Our giant neighbor to the east threatens my perfect order by its very existence. Coexistence is no longer possible. I will bring all of them under my rule and bring true stability to this land."
+  HEA_Improving_wheat_production_capacity_desc: "To make the best tarts, one needs the best ingredients. The quality and quantity of wheat are particularly important. We will secure fertile lands and improve the production capacity of raw materials."
+  HEA_tray_tart_desc: "The perfect tart production line is nearing completion. As a final touch, I will activate the third phase. This will allow us to produce an infinite number of tarts that have reached the realm of art. And the completion of this plan will also prove the true worth of my Vice-Housewarden, Trey."
+  HEA_The_Queen_of_Hearts_Law_in_the_Occupied_Territory_desc: "My rule must extend to all lands. I will apply the strict 'Rules of the Queen of Hearts' to the occupied territories and establish perfect order. There will be no mercy for those who resist."
+  HEA_Obey_work_and_be_ignorant_desc: "The people under my rule do not need freedom of thought. Their role is to work silently for me and increase productivity. Labor will be their sole reason for existence."
+  HEA_expansionist_foreign_policy_desc: "My 'Kingdom of Roses' should not be confined to this land alone. Seeking greater territories and resources, I will initiate an aggressive foreign expansion policy. I will paint the entire world red."
+  HEA_dormitory_directory_desc: "I am not merely a Housewarden. I am the great Field Marshal who leads this nation. I will be formally granted supreme command of the military, and with my charisma, I will command all forces. No objections will be tolerated."
+  HEA_The_Kingdom_of_Rose_Heart_desc: "All preparations are complete. Now is the time to declare the founding of the true 'Kingdom of Rosehearts.' I will reign as its queen, and my absolute rule will last for eternity. My utopia is now complete."
+  HEA_govern_the_occupied_territorries_desc: "Now that they are under my rule, they must learn my rules. First, I will establish the foundations of governance throughout the vast occupied territories of the east. To these lawless lands, I will grant perfect discipline."
+  HEA_develop_ukraine_desc: "Ukraine is a fertile land. But the people who live there are far too inefficient. I will reorganize their industry according to my rules and extract the maximum value from this land."
+  HEA_develop_belarus_desc: "It seems the forests of Belarus hold untapped resources. Unplanned development will not be permitted. I will have the resources mined according to my plan and make them the foundation of my nation."
+  HEA_develop_caucasus_desc: "The black oil gushing from the Caucasus will become the lifeblood that powers my nation's machinery. It is only natural that I personally take control of this vital resource."
+  HEA_develop_poland_desc: "I hear the people of Poland are stubborn and difficult to handle. In that case, I shall have them engage in the munitions industry. Hard labor should be the most effective education for them."
+  HEA_develop_romania_desc: "The same goes for Romania's oil fields. Their inefficient management is a waste of a treasure. I will intervene directly and convert every last drop into power for my nation."
+  HEA_develop_baltics_desc: "This land facing the Baltic Sea is extremely valuable as a port. I will develop it as a new base for my fleet and solidify my control over the seas."
+  HEA_improve_occupation_law_desc: "We've made progress in developing several regions, but it seems the occupation policy itself could be improved. I need to formulate more efficient, streamlined rules to enhance the precision of my governance."
+  HEA_eastern_highways_desc: "To perfectly control the vast occupied territories, swift movement is essential. All roads should lead to my capital. I will develop highways to facilitate the transmission of information and the deployment of troops."
+  HEA_garrison_reinforcement_desc: "It seems there are still fools who do not follow the rules. I will reinforce the garrisons and make those with rebellious intentions understand the consequences. They, too, must be taught to obey my rules."
+  HEA_perfect_eastern_order_desc: "At last, my ideal system of governance is complete. The infrastructure is developed, the soldiers are disciplined, and the people obey my rules. This is the 'Perfect Eastern Order.' My rule is now unshakeable."
+  HEA_assimilation_policy_desc: "The people of the re-educated regions are no longer foreigners. I will welcome them as official citizens of my 'Kingdom of Roses' and aim for their complete assimilation. They, too, should enjoy the honor of living under my perfect rules."
+  HEA_strengthen_dominance_desc: "It seems they still do not fully understand my rules. In that case, I will simply strengthen my dominance with stricter discipline. I will enforce the 'Rules of the Queen of Hearts' even more thoroughly, ensuring that not even a hint of rebellious intent can sprout."
+
+  # ===================================================================
+  # National Spirits (Ideas)
+  # ===================================================================
+  Queen_Hearts_Law: "The Queen of Hearts' Rules"
+  Queen_Hearts_Law_desc: "The 810 perfect rules that I have established. These strict rules are the only way to maintain the order and stability of the nation."
+  Off_with_your_head: "Off with Your Head!"
+  Off_with_your_head_desc: "With Housewarden Riddle's Unique Magic, 'Off with Your Head!', the magic of those who disturb the discipline is temporarily sealed. This fear maintains order within the dorm."
+  HEA_disciplined_spirit: "Obedience"
+  HEA_disciplined_spirit_desc: "The discipline of Heartslabyul is absolute. The students are loyal to my commands and boast high morale and solidarity."
+  HEA_perfect_obedience_spirit: "Perfect Obedience"
+  HEA_perfect_obedience_spirit_desc: "They no longer have a will of their own. They merely execute my orders. Their complete obedience will draw out the human resources of this nation to their absolute limit."
+  HEA_diligent_spirit: "Spirit of Diligence"
+  HEA_diligent_spirit_desc: "As a result of the remedial classes, the students' intellectual curiosity and motivation to learn have improved. A good trend."
+  HEA_diligent_spirit_Offence: "Spirit of Diligence (Offense)"
+  HEA_diligent_spirit_Offence_desc: "Knowledge is power. The pursuit of offensive magic strengthens my military power itself."
+  HEA_diligent_spirit_Offence_2: "Spirit of Diligence (Offense/Alchemy)"
+  HEA_diligent_spirit_Offence_2_desc: "Through the application of alchemy, we have overcome even material constraints and succeeded in further increasing the efficiency of our offensive magic."
+  HEA_diligent_spirit_Difence: "Spirit of Diligence (Defense)"
+  HEA_diligent_spirit_Difence_desc: "Knowledge is a shield. The pursuit of defensive magic covers my country and soldiers with an impenetrable defense."
+  HEA_diligent_spirit_Difence_2: "Spirit of Diligence (Defense/Alchemy)"
+  HEA_diligent_spirit_Difence_2_desc: "Through the application of alchemy, we have constructed a stronger, more efficient defensive barrier, capable of withstanding any attack."
+  HEA_basic_fitness_spirit: "Heartslabyul's Physical Training"
+  HEA_basic_fitness_spirit_desc: "Strict physical training improves the basic abilities of all students. This effect will be enhanced by further specialized training."
+  HEA_rose_kingdom_foundation_spirit: "A Small Kingdom of Roses"
+  HEA_rose_kingdom_foundation_spirit_desc: "My nation is still small, but its foundation is solidifying. This is the first step towards political stability and development."
+  HEA_rose_kingdom_foundation_spirit_2: "The Kingdom of Roses"
+  HEA_rose_kingdom_foundation_spirit_2_desc: "With the industrial base in place, my 'Kingdom of Roses' has begun to take the form of a true nation."
+  HEA_aggressive_diplomacy: "Expansionist Foreign Policy"
+  HEA_forced_labor_spirit: "Forced Labor"
+  HEA_forced_labor_spirit_desc: "Under the 'Rules of the Queen of Hearts,' the people are forced into labor and thoughtless compliance. Their sacrifice has dramatically increased the nation's productivity."
+  HEA_aggressive_diplomacy_wargoal: "Expansionist Foreign Policy"
+  HEA_aggressive_diplomacy_wargoal_desc: "To show my justice to the world, I will prepare to swiftly initiate war using all diplomatic means."
+  HEA_efficient_oppression: "Efficient Oppression"
+  HEA_efficient_oppression_desc: "Rule by law is inefficient if it is merely harsh. To achieve my perfect governance, a more sophisticated system is indispensable. A small cost is a cheap price to pay for an investment in the future."
+  HEA_colonial_recruitment: "Recruitment from Occupied Territories"
+  HEA_colonial_recruitment_desc: "They have not yet fully understood my rules. So their skill level will be low. But they should be useful enough if there are many of them. Eventually, I will raise them to be my loyal soldiers."
+  HEA_perfect_eastern_order_spirit: "The Perfect Eastern Order"
+  HEA_perfect_eastern_order_spirit_desc: "At last, my rules have spread throughout the entire East. Inefficient elements have been swept away, and everything functions under a perfect order. This is the ideal governance I have aimed for."
+  HEA_colonial_recruitment_2: "Loyal Card Soldiers"
+  HEA_colonial_recruitment_2_desc: "It seems the soldiers from the occupied territories have finally understood the splendor of my rules. They are no longer mere conscripts. They are members of the loyal Card Soldiers who protect my nation."
+
+  # ===================================================================
+  # Dynamic Modifiers
+  # ===================================================================
+  rose_kingdom_legacy_modifier: "The Strict Spirit of the Queen of Hearts"
+  rose_kingdom_legacy_modifier_desc: "The nation has been perfected under its Housewarden. Our journey thus far will become the foundation of this country, and its power will be demonstrated for all eternity.\n\n§R(The effects of this national spirit change based on completed National Focuses)§!"
+
+  # ===================================================================
+  # Occupation Laws
+  # ===================================================================
+  hearts_law_occupation: "Rule of the Queen of Hearts"
+  HEA_strengthened_hearts_law: "Governing Law of the Queen of Hearts"
+
+  # ===================================================================
+  # Traits
+  # ===================================================================
+  HEA_cavalry_leader_trait: "Equestrian Club Captain"
+  HEA_cavalry_leader_trait_desc: "Skilled in handling cavalry units, their charge shatters enemy lines."
+
+  # ===================================================================
+  # Lore Events (Roleplay Enhancement)
+  # ===================================================================
+  # --- Generic Buttons ---
+  heartslabyul.back_to_main: "Return to the main selection."
+  heartslabyul.back_to_characters: "Return to character introductions."
+  heartslabyul.close: "No need for an explanation."
+
+  # --- Main Menu (heartslabyul.2) ---
+  heartslabyul.2.t: "Welcome to Heartslabyul"
+  heartslabyul.2.d: "How could this be! For our Heartslabyul dorm, along with all of Night Raven College, to be transported to an unknown world...\n\nThere is no time for lamentation. As Housewarden, I, §RRiddle Rosehearts§!, will take full responsibility for overcoming this situation. Fortunately, this nation is our dorm itself. The students are already under control.\n\nYou should use this guide to accurately grasp our current situation and reacquaint yourselves with the key figures of our nation. Breaking the rules in this situation could lead to immediate ruin. Understood?"
+  heartslabyul.2.a: "About our 'Heartslabyul'"
+  heartslabyul.2.b: "About the dorm's 'Key Figures'"
+  heartslabyul.2.c: "No explanation needed."
+
+  # --- Heartslabyul Description (heartslabyul.3) ---
+  heartslabyul.3.t: "Heartslabyul: A Dorm Based on the Spirit of the Queen of Hearts"
+  heartslabyul.3.d: "We of Heartslabyul are founded on the spirit of the strict and powerful §RQueen of Hearts§!, who once ruled over 'Wonderland.'\n\nHer laws are our absolute code. Violating them is the gravest crime, a disruption of the dorm's order. Those who cannot follow the rules have no place in this dorm.\nAt the 'Unbirthday' parties, the roses must be painted red. The teacups must always be full. And in the Queen's presence, one plays croquet with flamingos and hedgehogs. These are all rules established by the Queen of Hearts, rules that must be absolutely obeyed.\n\nThis strict discipline is our pride and the source of our strength."
+
+  # --- Key Figures Menu (heartslabyul.4) ---
+  heartslabyul.4.t: "Key Figures Introduction"
+  heartslabyul.4.d: "These are the central figures who run Heartslabyul, and by extension, this nation. Correctly understanding their abilities and personalities and using them in the right places is essential for perfect governance. Who do you wish to know about?"
+  heartslabyul.4.a: "'The Crimson Ruler' §RRiddle Rosehearts§!"
+  heartslabyul.4.b: "'The Loyal Club' §RTrey Clover§!"
+  heartslabyul.4.c: "'The Diamond Bystander' §RCater Diamond§!"
+  heartslabyul.4.e: "'The Heart's Trump Card' §RAce Trappola§!"
+  heartslabyul.4.f: "'The Spade Spearman' §RDeuce Spade§!"
+  heartslabyul.show_more: "Show more..."
+  # --- Character Details (heartslabyul.10 ~ 50) ---
+  heartslabyul.10.t: "Housewarden: Riddle Rosehearts"
+  heartslabyul.10.d: "The current Housewarden of Heartslabyul and the absolute ruler of this nation. That would be me.\n\nI value the rules set by the Queen of Hearts above all else, and I mercilessly punish those who break them with my Unique Magic, §R'Off with Your Head!'§!. This magic completely seals the target's own magic—a power unique to me.\n\nOthers say I have an 'overly serious personality and can be hysterical at times,' but this is the result of the strict upbringing by my mother, a magical physician. However, at its core lies a strong sense of responsibility to care for the dorm and maintain order above all else. I am the most just and powerful being in this country."
+  
+  heartslabyul.20.t: "Vice-Housewarden: Trey Clover"
+  heartslabyul.20.d: "The Vice-Housewarden of Heartslabyul, §RTrey Clover§!.\nWith his gentle and sensible personality, he is admired by the students as a sort of parental figure. He is also my childhood friend, and when I am on the verge of losing control due to my overly strict adherence to the rules, he is the only one who can calm me down.\nHis Unique Magic, §R'Doodle Suit'§!, has the ability to overwrite any element for a short period of time. The tarts he bakes are exquisite and an essential part of the dorm's teatime. His presence is indispensable for the stability of this nation."
+  
+  heartslabyul.30.t: "Third-Year: Cater Diamond"
+  heartslabyul.30.d: "A third-year student of Heartslabyul, §RCater Diamond§!.\nHe has excellent communication skills, is sensitive to trends, and is what you would call a 'social butterfly.' His hobby is posting on 'Magicam,' and he is the mood-maker who always brightens the atmosphere.\nHowever, behind his lighthearted demeanor lies a sharp sense of observation that allows him to calmly assess situations. His Unique Magic, §R'Split Card'§!, is a powerful ability that creates clones. In intelligence gathering and diversionary tactics, his abilities will be of immeasurable value."
+
+  heartslabyul.40.t: "First-Year: Ace Trappola"
+  heartslabyul.40.d: "Heartslabyul's troublemaker number one, §RAce Trappola§!.\nHe's got a knack for getting by and a slightly mischievous personality, a repeat offender who constantly breaks my rules and gets his head collared. However, he is good at reading the room and has a surprisingly considerate side for his friends. In a pinch, his quick wit and initiative might prove useful... though that's a rare occasion."
+  
+  heartslabyul.50.t: "First-Year: Deuce Spade"
+  heartslabyul.50.d: "Heartslabyul's troublemaker number two, §RDeuce Spade§!.\nHe strives to be a model student, but his past as a delinquent occasionally surfaces, leading him to take rash actions. He is fundamentally very serious and honest, but he is also terribly stubborn and inflexible.\nHis Unique Magic, §R'Bet the Limit'§!, is a counter-magic that returns an attack he receives directly back to the opponent. It is a simple, and therefore, powerful ability."
+
+  # ===================================================================
+  # Decisions & Events
+  # ===================================================================
+  HEA_ukraine_advancement_category: "Advance into Ukraine"
+  HEA_soviet_takeover_category: "Soviet Takeover"
+  HEA_annex_ukraine_decision: "Demand Cession of Ukrainian Territory"
+  HEA_annex_ukraine_decision_desc: "To expand our nation's influence eastward, we demand the cession of Ukraine's core territories from the Soviet Union. This will allow our 'Small Kingdom of Roses' to develop even further."
+  HEA_takeover_soviet_decision: "Takeover of the Soviet Union"
+  HEA_takeover_soviet_decision_desc: "The existence of the Soviet Union is nothing but an obstacle to us. We will deliver an ultimatum to that nation and place all of it under our control."
+  heartslabyul_play.10.t: "Territorial Demands from Heartslabyul"
+  heartslabyul_play.10.d: "Calling themselves Heartslabyul, they have demanded the cession of the vast western territories of Ukraine and Belarus. What will their response be? This demand is absolute, and refusal is not an option."
+  heartslabyul_play.10.a: "A wise decision."
+  heartslabyul_play.10.b: "You fools!"
+  heartslabyul_play.11.t: "Ultimatum from Heartslabyul"
+  heartslabyul_play.11.d: "My now-powerful nation has issued an ultimatum. 'Your country has fulfilled its historical role. Promptly transfer all your interests to us and become a part of the new order.' The only paths left for them are complete submission or ruin by my magic..."
+  heartslabyul_play.11.a: "The correct choice."
+  heartslabyul_play.11.b: "Then I shall show you by force!"
+  heartslabyul_play.12.t: "Response from the East"
+  heartslabyul_play.12.d: "It seems the Soviet Union has accepted my generous demand. They will cede control of the Ukrainian region to us. A most wise decision. My plan has advanced another step."
+  heartslabyul_play.12.a: "A wise decision, indeed."
+  heartslabyul_play.13.t: "Response from the East"
+  heartslabyul_play.13.d: "How could they! The foolish leaders of the Soviet Union have rejected my demand! It seems I must teach them firsthand what happens to those who break the rules. Begin preparations for war!"
+  heartslabyul_play.13.a: "Those who defy me will have their heads!"
+  heartslabyul_play.14.t: "The Soviet Surrender"
+  heartslabyul_play.14.d: "The Soviet Union has bowed before my overwhelming power and transferred all its interests to us. Their history ends here, and a new page of my nation begins."
+  heartslabyul_play.14.a: "A natural outcome."
+  heartslabyul_play.15.t: "Soviet Resistance"
+  heartslabyul_play.15.d: "Unbelievably, the Soviets have chosen the path of resistance against my ultimatum. I will make them regret their reckless decision. A message to all troops! Eliminate every last one of those who break the rules!"
+  heartslabyul_play.15.a: "Those who defy me will have their heads!"
+  heartslabyul_play.20.t: "The 'Unbirthday' Tea Party"
+  heartslabyul_play.20.d: "Today is neither a birthday nor an anniversary, just an ordinary day. This means it is the perfect day to hold an 'Unbirthday' Tea Party, in accordance with the traditions of the great Queen of Hearts.\n\nPerfectly brewed tea, a flawlessly made tart by Trey, and the white roses painted red. A tea party held with such perfect preparation will surely boost the morale of the students and make my rule even more solid. Now, shall we permit it to be held?"
+  heartslabyul_play.20.a: "Wonderful! Let's have a perfect tea party!"
+  heartslabyul_play.20.b: "We don't have time for that now. Cancel the preparations."
+
+  # ===================================================================
+  # Off with Your Head! Events
+  # ===================================================================
+  HEA_OWYH.10.t: "Rule Violation: Political Advisor"
+  HEA_OWYH.10.d: "How could this be! My political advisor has violated Rule 256 of the Queen of Hearts: 'Post-meal tea must be served with two sugar cubes and a slice of lemon.' This is an extremely important rule!\nAn excuse like 'it's just one sugar cube' is unacceptable. A rule is a rule. If even one is broken, the entire order will collapse. I cannot entrust the nation's politics to someone who cannot even follow such a basic rule.\n\nHis negligence is tantamount to rebellion against my perfect nation. As an example, I shall temporarily seal his authority!"
+  HEA_OWYH.20.t: "Rule Violation: Chief of the Army"
+  HEA_OWYH.20.d: "The Chief of the Army fell out of step for a single pace during the military parade? Are you serious?\nHow can he set an example for the soldiers if he acts this way? That single misstep of his could lead to the annihilation of the entire army on the battlefield. Does he even understand?\n\nI don't want to hear any excuses. As punishment, I will temporarily revoke his command authority!"
+  HEA_OWYH.30.t: "Rule Violation: High Command"
+  HEA_OWYH.30.d: "It seems the High Command ate the strawberry tart Trey made for me before I did. I told them so many times about Rule 89 of the Queen of Hearts: 'One must not eat the Queen's tarts without her permission.' This is an unforgivable, grave offense!\nDo you think it's a trivial matter? This kind of inattention to detail will eventually threaten national security. Those who cannot follow the rules are not qualified to handle military secrets.\n\nI will temporarily suspend his official duties. Off with Your Head!"
+  HEA_OWYH.100.t: "Pardon"
+  HEA_OWYH.100.d: "He seems to have reflected on his actions sufficiently.\nHonestly, if he had just followed the rules from the beginning, we wouldn't have had to waste time like this.\n...Very well. Just this once, I will specially release my magic. There won't be a next time. If you understand, get back to your post at once."
+  off_with_your_head_cooldown: "Collared"
+  HEA_OWYH.option.a: "Off with Your Head!"
+  HEA_OWYH.100.a: "...I suppose it can't be helped."
+
+  # ===================================================================
+  # Tooltips
+  # ===================================================================
+  CAPITAL_STATE_focused_industry_civ: "Adds §R2§! §BCivilian Factories§! in the §RCapital State§!."
+  HEA_unlock_hearts_law_tt: "Adopts the §ROccupation Policy: Rule of the Queen of Hearts§!."
+  Off_with_your_head_tooltip: "\n§LAs long as the Great Purge is active,§!\n§Lthe abilities of any student other than§! §RTrey§! §Land§! §RCater§! §Lmay be taken away!§!"
+  HEA_basic_fitness_spirit_army_speed_factor_ns_tt: "Adds the following modifier to §R$HEA_basic_fitness_spirit$§!: \nDivision Speed: §G+15%§! \n\n"
+  HEA_basic_fitness_spirit_army_leader_cost_factor_ns_tt: "Adds the following modifiers to §R$HEA_basic_fitness_spirit$§!:\nArmy General Cost: §G-25%§! \nNew Army Officer Starting Level: §G+2§! \nNew Army Commander Starting Attack Skill: §G+2§! \nNew Army Commander Starting Defense Skill: §G+2§! \nNew Army Commander Starting Planning Skill: §G+2§! \nNew Army Commander Starting Supply Skill: §G+2§!\n\n"
+  HEA_basic_fitness_spirit_ns_tt: "Adds the following modifier to §R$HEA_basic_fitness_spirit$§!:\nDivision Organization: §G+5%§! \n\n"
+  HEA_basic_fitness_spirit_army_morale_factor_ns_tt: "Adds the following modifier to §R$HEA_basic_fitness_spirit$§!:\nDivision Recovery Rate: §G+8%§! \n\n"
+  HEA_rose_kingdom_foundation_spirit_tooltip: "Gains the §R$HEA_rose_kingdom_foundation_spirit$§! national spirit."
+  HEA_riddle_skill_up_tooltip: "My, §RRiddle Rosehearts'§!, skills as a §CField Marshal§! will improve."
+  HEA_trey_upgrade_tooltip: "§RTrey Clover's§! abilities as a §BMinister§! will be enhanced."
+  HEA_advance_into_ukraine_decision_unlock_tt: "Unlocks the §R'Advance into Ukraine'§! decision."
+  HEA_takeover_soviet_decision_unlock_tt: "Unlocks the §R'Soviet Takeover'§! decision."
+  HEA_needs_ukraine_cores_tt: "Requires control of all core states of Ukraine."
+  unlock_hearts_law_2: "Strengthening Occupation Policy"
+  HEA_The_Kingdom_of_Rose_Heart_tt_tooltip: "My nation will transition to its final form. The fruits of our efforts will grant a permanent boon to the nation as the §R'The Strict Spirit of the Queen of Hearts'§!.\n§HDepending on the path chosen, the following effects will be permanently added:§!\n\n§T■ If 'Perfect Obedience' is achieved:§!\n§g  Surrender Limit§!: §G+10.0%§!\n§g  Training Time§!: §G-10.0%§!\n\n§T■ If 'Application of Alchemy' (Offensive Magic) is achieved:§!\n§g  Research Speed§!: §G+5.0%§!\n§g  Land Attack§!: §G+5.0%§!\n\n§T■ If 'Application of Alchemy' (Defensive Magic) is achieved:§!\n§g  Research Speed§!: §G+5.0%§!\n§g  Land Defense§!: §G+5.0%§!\n\n§T■ If 'Training Student Officers' is achieved:§!\n§g  Army Experience Gain§!: §G+10.0%§!\n§g  Command Power Gain§!: §G+15.0%§!\n\n§T■ If 'Third Tart Plan' is achieved:§!\n§g  Production Efficiency Cap§!: §G+5.0%§!\n§g  Factory Output§!: §G+5.0%§!"
+  HEA_OWYH.character_fired_tt: "§R[THIS.getName]§! has incurred the Housewarden's wrath and has been dismissed from his post! He cannot be reappointed for a period of time."
+  HEA_needs_eastern_territories_tt: "Requires control of any territory in the East."
+  HEA_govern_occupied_territories_tooltip: "Increases Compliance in all occupied European states."
+  HEA_Improving_wheat_production_capacity_tooltip: "Improves infrastructure and increases resource output in the controlled regions of §RUkraine§!."
+  HEA_tray_tart_tooltip: "Adds §RMilitary Factories§! to the states specified in the previous §RIndustrial Plans§!."
+  HEA_assimilation_policy_tooltip: "Increases Compliance by §G20%§! in all occupied European states."
+  HEA_develop_ukraine_tooltip: "Builds 2 §RCivilian Factories§! in a core state of §RUkraine§!."
+  HEA_develop_belarus_tooltip: "Produces §RSteel§! in a core state of §RBelarus§!."
+  HEA_develop_caucasus_tooltip: "Produces §ROil§! in a core state in the §RCaucasus§! region."
+  HEA_develop_poland_tooltip: "Builds 2 §RMilitary Factories§! in a core state of §RPoland§!."
+  HEA_develop_romania_tooltip: "Produces §ROil§! in a core state of §RRomania§!."
+  HEA_develop_baltics_tooltip: "Builds 2 §RNaval Dockyards§! in a coastal state of the §RBaltic States§!."
+  HEA_eastern_highways_tooltip: "Improves §RInfrastructure§! in all states specified in the development National Focuses."
+
+  # ===================================================================
+  # Base System
+  # ===================================================================
+  new_riddle_trait: "The Crimson Sovereign"
+  new_riddle_trait_desc: "Having overcome his past mistakes, he has grown into a true leader. While retaining his strictness, he has gained compassion for his comrades and flexibility."
+
+  # ===================================================================
+  # III. Rebellion Route
+  # ===================================================================
+  # --- Decisions ---
+  HEA_rebellion_unlocked: "The Spark of Rebellion"
+  start_rebellion_decision: "Rebel Against the Housewarden"
+  start_rebellion_decision_desc: "\"Again...? I just ate one tart, why do I have to go through this...\"\nAce glared resentfully at the collar that sealed his magic. Housewarden Riddle's unreasonable rules were escalating day by day. If they continued to be his puppets, they would truly lose all their freedom.\n\"...I've made up my mind. I'm gonna drag that guy off the Housewarden's throne, no matter what...! Deuce! You're helping me out!\""
+  
+  HEA_rebellion_category: "Persuading Trey"
+  HEA_rebellion_category_desc: "\"What? You want to make a tart to apologize to Riddle? Haha, that's an interesting idea.\nBut to make a tart that would satisfy Riddle, you'll need some special ingredients.\n\n\n\n■ First, §R400§! §RSupport Equipment§!. For the latest mixer to knead the perfect tart dough.\n\n■ Also, the strawberries must be imported from America. Negotiations will be difficult unless our §Rrelations with America§! are §Rat least 40§!.\n\n■ And finally, we need §RPolitical Power§!. That's what will give it a deep flavor.\""
+  HEA_baking_tart_for_trey: "Help Bake the Tart"
+  HEA_baking_tart_for_trey_desc: "Trey-senpai suggested making Riddle's favorite strawberry tart as an apology. But to make the best tart, we need the best ingredients. We'll gather the 'ingredients' he needs and help him out."
+
+  # --- NF Titles (Rebellion Route) ---
+  HEA_rebellion_against_riddle: "Rebellion Against the Housewarden"
+  HEA_contact_trey: "Consult Trey"
+  HEA_contact_cater: "Ask for Cater's Cooperation"
+  HEA_trey_tart_plan: "Trey's Errand"
+  HEA_trey_gather_friends: "Trey Pulls Some Strings"
+  HEA_deuce_magic_wheel: "Deuce's Magical Wheel"
+  HEA_cater_social_network: "Cater's Network"
+  HEA_cater_gather_friends: "Recruiting Comrades on Magicam"
+  HEA_find_allies_in_the_dorm: "Recruiting Allies within the Dorm"
+  HEA_strengthen_the_rebels: "Solidifying the Rebels"
+  HEA_prepare_for_duel: "Preparing for the Duel"
+  HEA_duel_with_riddle: "Duel with the Housewarden"
+  HEA_after_the_overblot: "After the Overblot"
+  HEA_a_new_hearts_order: "A New Heartslabyul Order"
+  HEA_unbirthday_party: "The Unbirthday Party"
+
+  # --- NF Descriptions (Rebellion Route) ---
+  HEA_rebellion_against_riddle_desc: "The plan has begun. We'll correct the twisted rules of this dorm with our own hands.\nThe first step is to contact those two who are close to the Housewarden...\nTrey-senpai or Cater-senpai. Who should we approach first?"
+  HEA_contact_trey_desc: "(Trey's perspective)\n\"Geez, looks like the first-years are up to something troublesome again.\nWell, if they're willing to run an errand for me, I suppose I could help them out.\""
+  HEA_contact_cater_desc: "\"Whoa, going against Riddle? Seriously? Hmm, but like, Heartslabyul's been a bit too uptight lately, not very #Insta-worthy, y'know?\nAight, guess your boy Cater's gotta lend a hand! I'll try to find some cool allies with my Magicam network ♪\""
+  HEA_trey_tart_plan_desc: "Looks like Trey-senpai is willing to listen to our request in exchange for tart ingredients. Let's find out what he needs right away."
+  HEA_trey_gather_friends_desc: "\"Now that I'm in on Ace and the others' plan, I need to make a move too.\nThere's no way the first-years can win against Riddle...\nI'll try to pull some strings behind the scenes to keep things from getting too out of hand.\""
+  HEA_deuce_magic_wheel_desc: "\"The time has come for my Magical Wheel to be of service! If I modify it for military use, it will surely become a powerful asset.\nMy promise to my mom... to become an honor student... I'll show them what I'm made of right here!\""
+  HEA_cater_social_network_desc: "\"I tried using the tag '#ThinkingAboutHeartslabyulsFuture' on Magicam, and the response is surprisingly good~.\nI'll contact them secretly through DMs and increase our allies!\nIt'll take time, but this kind of grassroots effort is pretty important, right!\""
+  HEA_cater_gather_friends_desc: "\"Alright, we've gathered a good number of allies, so let's move on to the next step! If I subtly hint at our plan on Magicam, more people should get interested!\nIt's a bit risky, but that's what being an influencer is all about!\""
+  HEA_find_allies_in_the_dorm_desc: "The plan is going smoothly. Thanks to Trey-senpai pulling strings and Cater-senpai's information network, the number of allies who agree with us in the dorm is steadily increasing. It's not just us anymore. Let's make this circle even bigger!"
+  HEA_strengthen_the_rebels_desc: "Our allies have grown, and our solidarity is strengthening day by day. We won't stand by and watch someone get punished unfairly anymore. If the Housewarden tries to take someone's head, this time we'll fight back with everything we've got!"
+  HEA_prepare_for_duel_desc: "We've gathered allies, and our senpais' preparations are complete. The preparations for the 'duel,' our final means of conveying our will to Housewarden Riddle, are done. Alright, let's do this!"
+  HEA_duel_with_riddle_desc: "All preparations are complete. We can't let the Housewarden's tyranny continue any longer. Now is the time for us to challenge Riddle Rosehearts with our own hands!"
+  HEA_after_the_overblot_desc: "We managed to stop the rampaging Housewarden by working together. Seeing his tears afterward, I finally understood. The loneliness and suffering hidden behind his strict rules...\nSheesh, you're not getting off the hook just by crying!\nNow it's your turn to apologize, Housewarden Riddle! And after that, you'd better bake a tart yourself and throw a party. Then, maybe, we'll think about forgiving you..."
+  HEA_a_new_hearts_order_desc: "Housewarden Riddle has changed. Like, he's a little nicer than before? Or maybe he's just the same as always.\nWell, for now, he's stopped purging people for no reason, so I guess he's learned his lesson."
+  HEA_unbirthday_party_desc: "\"A very merry unbirthday to you!\" ...Housewarden Riddle said with a smile. The first page of the new rulebook read just that. Come on, let's all get ready for the party! This time, we should be able to enjoy it from the bottom of our hearts."
+
+  # --- Rebellion Route National Spirits ---
+  HEA_gathering_allies_spirit: "Gathering Allies"
+  HEA_gathering_allies_spirit_desc: "People who agree with our actions are slowly gathering. It's still a small force, but we can feel a definite response."
+  HEA_gathering_allies_spirit_2: "The Circle of Rebellion"
+  HEA_gathering_allies_spirit_2_desc: "Our allies have grown, and our plan has reached a point of no return. A definite circle of rebellion is spreading within the dorm."
+  HEA_gathering_allies_spirit_3: "A Solid Bond"
+  HEA_gathering_allies_spirit_3_desc: "We are not alone anymore. We have allies bound by a solid bond. If someone is about to be punished, it's our turn to protect them."
+  HEA_cater_networking_idea: "Cater's Intel Gathering"
+  HEA_cater_networking_idea_desc: "Cater-senpai is using his information network to find allies for us. Who knew Magicam could be this useful... But it looks like it's going to take some time."
+  HEA_overblot: "Overblot"
+  HEA_overblot_desc: "The Housewarden's rampage has thrown the entire dorm into chaos. Before his immense magic, our strength will be greatly diminished."
+  HEA_Nothing_party_spirit: "Improved Dorm Morale from the Tea Party"
+  HEA_Nothing_party_spirit_desc: "An Unbirthday Party in a peaceful dorm is different from before! The dorm's morale is definitely higher than usual!"
+  HEA_better_obedience_spirit: "Heartslabyul's Unity"
+  HEA_better_obedience_spirit_desc: "Not under strict rules, but under the unity of the dorm, the students are united as one."
+
+  # --- Rebellion Route Events ---
+  heartslabyul.57.t: "In the Name of the Law"
+  heartslabyul.57.d: "\"Ace Trappola, you have some nerve!\nRule 89 of the Queen of Hearts: 'One must not eat the Queen's tarts without her permission.'\nTheft of a tart is an unforgivable, grave offense! Off with Your Head!\"\n\n...And so, Ace's magic is currently sealed. He will probably be forgiven and be able to use magic again eventually, but it seems Ace is not happy about it..."
+  heartslabyul.57.a: "..."
+  heartslabyul.58.t: "I Can't Take It Anymore"
+  heartslabyul.58.d: "\"Again...? I just ate one tart, why do I have to go through this...\"\nAce glared resentfully at the collar that sealed his magic. Housewarden Riddle's unreasonable rules were escalating day by day. If they continued to be his puppets, they would truly lose all their freedom.\n\"...I've made up my mind. I'm gonna drag that guy off the Housewarden's throne, no matter what...! Deuce! You're helping me out!\"\nIn his eyes, there was not his usual flippancy, but the light of a firm resolve.\nThe small spark of rebellion that would change the fate of Heartslabyul was about to be lit."
+  heartslabyul.58.a: "Alright, let's do this!"
+  heartslabyul.58.b: "No, it's reckless. Let's wait for him to forgive us."
+  heartslabyul.59.t: "The First Ally"
+  heartslabyul.59.d: "So we decided to rebel against the Housewarden, but it's way too reckless with just our own strength, right? We need to find a senpai who questions the Housewarden's ways and would be on our side.\n\nTwo people come to mind.\nOne is §RTrey Clover§!-senpai, who, as Vice-Housewarden, has always tried to reason with him. With his wisdom and magic, he'd be a great asset. If we prepare his favorite tart, he might listen to us.\n\nThe other is §RCater Diamond§!-senpai, who is well-informed and knows a lot of people. He seems like he'd avoid trouble at first glance, but with his communication skills, he might be able to rally the discontented elements in the dorm.\n\nWho should we approach first...?"
+  heartslabyul.59.a: "If we want to be sure, shouldn't it be Trey-senpai?"
+  heartslabyul.59.b: "If we're going for an information war, I think it's Cater-senpai."
+  heartslabyul.60.t: "Trey's Homemade Tart"
+  heartslabyul.60.d: "\"Alright, it's done. Thanks to the best 'ingredients' you guys gathered, I've made a perfect strawberry tart.\nWhat? What about the political power? Haha, as if I'd use political power as a secret ingredient! I'm just kidding.\nWell then, you've done me a favor, so now it's my turn to do you one. So, you want me to help with your little plan?\"\n\nAnd so, Trey-senpai agreed to help us challenge Housewarden Riddle to a duel!"
+  heartslabyul.60.a: "Thank you, Trey-senpai!"
+  heartslabyul.99.t: "The Duel"
+  heartslabyul.99.d: "\"We will now commence a duel for the position of Housewarden of Heartslabyul, under the supervision of the Vice-Housewarden. The challengers are Ace Trappola and Deuce Spade. Accepting the challenge is the current Housewarden, Riddle Rosehearts. Now, in accordance with the rules of the duel, please remove the magic-sealing collars, the challengers' handicap.\"\n\"Ah, finally, the collar's off!\"\n\"You'll just have it put back on soon enough. Enjoy your fleeting moment of freedom. I doubted my ears when I heard you two were challenging me to a duel. Are you serious?\"\n\"Of course we are.\"\n\"We wouldn't challenge you to a duel as a joke.\"\n\"Hmph. Fine. Let's get this over with.\"\n\"The duel begins when this hand mirror I'm throwing shatters on the ground. Now... Ready, FIGHT!\""
+  heartslabyul.99.a: "We'll show you what we're made of!"
+  heartslabyul.100.t: "Overwhelming Power"
+  heartslabyul.100.d: "\"Off with Your Head!!\"\nAs soon as the signal was given, Housewarden Riddle's magic exploded. We were helpless, and once again, those cursed collars were fastened around our necks.\n\"Guh... damn it! Not even time to cast a spell!\"\n\"To be this completely outmatched...\"\n\"Hmph. It didn't even take five seconds. With that level of skill, I'm surprised you even thought of challenging me. Aren't you embarrassed? As expected, those who break the rules are useless no matter what they do. Just as Mother said.\"\n\"Ugh... It's true, rules should be followed. But forcing unreasonable rules on others is just tyranny!\"\n\"Hah? If you break a rule, there's a punishment. And in this dorm, I AM the rules. So, anyone who can't follow what I've decided has no right to complain even if they get their head taken! You don't even understand something that simple? What kind of education did you receive? I bet you were born to parents who couldn't even use proper magic and never got a decent education before coming here. How truly pathetic.\""
+  heartslabyul.100.a: "Damn it...!"
+  heartslabyul.101.t: "Rampage"
+  heartslabyul.101.d: "\"DON'T MESS WITH MEEEEEEEEEE!!!!!!\"\nAce's fist connected with Riddle's cheek.\n\"Ouch... Huh? I was... punched...?\"\n\"Sure, maybe your super-strict helicopter mom raised you in some insane way, but is that all you can say? 'Mother, Mother'! You don't think for yourself at all! I see it clearly now! It's not your parents' fault you're such a damn bastard! It's YOUR fault for not making a single friend in the year you've been here who would call you out on your tyranny!\"\n\"What... are you saying?\"\n\"What 'Crimson Ruler'?! You're just a baby who's good at magic!\"\n\"A baby...? Me? You know nothing! Shut up!! Mother is right! So I am absolutely right too!!\"\nRiddle launches a fire spell at Ace and the others.\n\"Riddle, stop it!\"\nTrey-senpai instantly overwrote Riddle's magic, so the fire spell didn't hit. But that shattered his last shred of pride.\n\"Huh...? My magic was overwritten? Does that mean your magic is superior? Trey, are you also saying that I'm wrong?\"\n\"Of course not. Riddle, calm down and listen to me.\"... I won't believe you!!!!!\nI... I am the one who is!!! Absolutely, absolutely, RIIIIIGHT----!!!\"\nVast amounts of magical energy, like black ink, enveloped Housewarden Riddle, transforming him into a monstrous figure. This is bad, he's overblotting!"
+  heartslabyul.101.a: "We have to stop the Housewarden, together!"
+  heartslabyul.102.t: "The Crimson Tyrant"
+  heartslabyul.102.d: "\"I was... wrong...? That can't be right... Mother...\"\nFrom his ink-stained heart, sad memories overflow.\n\n'A life under strict rules, with no freedom allowed, and a learning schedule packed to the minute—it was all for me to grow up to be a respectable person, Mother said.'\n'But one day, during my study time, my friends invited me out, and I snuck out of the house to play outside. I lost track of time...'\n'After that, Mother became even stricter, tying me down. My free time completely vanished, and I was locked up so I couldn't leave the house on my own.'\n'If you break the rules, even your fun time gets taken away. So I have to follow the rules Mother made. My mother, the most brilliant person in this country, must always be right.'\n'But... hey, Mama. Why? For some reason, my chest hurts so much. I just want to eat a tart on my birthday. I want to play outside a lot. I want more friends.'\n'Tell me, Mama. What rule do I have to follow for this pain to go away?'\n\nHe had been living all alone for so long. To be the right person, to be the perfect person. No one knew of his suffering... Seeing those tears, we finally understood. His true feelings, hidden behind the strict rules."
+  heartslabyul.102.a: "...I see."
+
+  # ===================================================================
+  # Tooltips
+  # ===================================================================
+  HEA_rebellion_decision_tt: "The §R'Rebellion Against the Housewarden'§! National Focus becomes available."
+  HEA_contact_trey_tt: "The §R'Persuading Trey'§! decision becomes available."
+  HEA_contact_cater_tt: "Cater-senpai begins gathering allies for us."
+  HEA_trey_mission_incomplete_tt: "To fully persuade Trey-senpai, you must gather the §Rtart ingredients§! he requested and complete the decision."
+  HEA_deuce_magic_wheel_tt: "Deuce's prized Magical Wheel will be converted for military use. §R'Magical Wheel Inc.'§! becomes available as a military industrial organization."
+  HEA_can_protect_allies_tt: "§GAn option to shield an ally will be added to the 'Off with Your Head!' event.§!"
+  HEA_rebellion_started_tt: "The fuse of rebellion against the Housewarden's tyranny has been lit. First, let's find allies."
+  HEA_prepare_for_duel_tt: "Our strength and morale have reached their peak in preparation for the duel with Housewarden Riddle."
+  heartslabyul.102.a.tt: "We have touched the depths of Housewarden Riddle's heart."
+  HEA_after_the_overblot_tt: "Riddle has truly become a part of the dorm, and his tyranny has come to an end."
+  HEA_OWYH.option.b: "It wasn't him, it was my fault!"
+  HEA_OWYH.protected_ally_tt: "We shielded our ally and avoided the Housewarden's punishment."
+  HEA_unbirthday_party_tooltip: "The effects of the 'Unbirthday Tea Party' decision will be significantly enhanced from now on."
+  heartslabyul.58.a_opinion_tooltip:  "Some National Focuses will become unavailable!"
+  heartslabyul.58.b_opinion_tooltip:  "The National Focus tree starting with §R'Rebellion Against the Housewarden'§! will be permanently locked!"
+  Riddle_Paranoia_tooltops: "The Housewarden has sensed our plan and will advance his own National Focuses to maintain order in the dorm."
+  
+  # ===================================================================
+  # MIO
+  # ===================================================================
+  HEA_mio_magic_wheel_co: "Magical Wheel Works"
+  mio_initial_trait_HEA_magic_wheel_co: "Deuce's Mag-Wheel Tech"
+  mio_desc_HEA_mio_magic_wheel_co: "A military vehicle manufacturer founded by applying the skills Deuce Spade cultivated through maintaining his beloved Magical Wheel. His seriousness and passion produce highly reliable vehicles. It began with simple modifications, but will eventually lead to its own unique design philosophy."
+  
+  # ===================================================================
+  # Flags
+  # ===================================================================
+  HEA_rebellion_unlocked: "Ace has decided to defy Riddle"
+  HEA_riddle_reconciled: "Riddle has reconciled"
+  HEA_trey_persuaded: "Trey has been persuaded"

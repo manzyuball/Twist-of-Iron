@@ -1,0 +1,40 @@
+
+HEA_basic_fitness_spirit = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_NORDIC_army_communist
+
+	#
+	army_speed_factor = HEA_basic_fitness_spirit_army_speed_factor #0
+	army_strength_factor = HEA_basic_fitness_spirit_army_strength_factor #0.05
+	army_morale_factor = HEA_basic_fitness_spirit_army_morale_factor #0
+	army_org_regain = HEA_basic_fitness_spirit_army_org_regain #0
+
+	#
+	army_leader_cost_factor = HEA_basic_fitness_spirit_army_leader_cost_factor
+	army_leader_start_level = HEA_basic_fitness_spirit_army_leader_start_level
+		
+    army_leader_start_attack_level = HEA_basic_fitness_spirit_army_leader_start_attack_level
+	army_leader_start_defense_level = HEA_basic_fitness_spirit_army_leader_start_defense_level
+	army_leader_start_logistics_level = HEA_basic_fitness_spirit_army_leader_start_logistics_level
+	army_leader_start_planning_level = HEA_basic_fitness_spirit_army_leader_start_planning_level
+}
+rose_kingdom_legacy_modifier = {
+	icon = GFX_idea_ger_the_great_red_menace # 最終NFにふさわしい強力なイメージ
+	enable = { always = yes }	
+	# ここに記述する modifier は、変数の値に応じて効果を発揮します
+	# 変数の名前（例: rose_kingdom_legacy_surrender_limit）は任意ですが、分かりやすい名前を推奨します
+			
+	surrender_limit = rose_kingdom_legacy_surrender_limit
+	training_time_factor = rose_kingdom_legacy_training_time
+			
+	research_speed_factor = rose_kingdom_legacy_research_speed
+	army_attack_factor = rose_kingdom_legacy_army_attack
+	army_defence_factor = rose_kingdom_legacy_army_defense
+	
+	experience_gain_army_factor = rose_kingdom_legacy_army_experience
+	command_power_gain_mult = rose_kingdom_legacy_command_power
+			
+	production_factory_max_efficiency_factor = rose_kingdom_legacy_production_efficiency
+	industrial_capacity_factory = rose_kingdom_legacy_factory_output
+}

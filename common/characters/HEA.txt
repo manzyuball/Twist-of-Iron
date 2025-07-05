@@ -1,0 +1,254 @@
+# common/characters/HEA.txt
+# 「オフ・ウィズ・ユアヘッド！」イベントシステムに対応済み
+
+characters={
+	HEA_Riddle_Rosehearts={
+		name = HEA_Riddle_Rosehearts
+		portraits = {
+			civilian = { large = GFX_portrait_Riddle_Rosehearts }
+			army = { large = GFX_portrait_Riddle_Rosehearts small = GFX_idea_Riddle_Rosehearts }
+		}
+		country_leader={
+			ideology=stalinism
+			traits = { Rose_Red_Tyrant }
+			expire="1965.1.1.1"
+			id=-1
+		}
+		field_marshal={
+			traits={ brilliant_strategist harsh_leader trait_reckless }
+			skill=4
+			attack_skill=4
+			defense_skill=3
+			planning_skill=4
+			logistics_skill=3
+		}
+	}
+
+	HEA_Trey_Clover={
+		name = HEA_Trey_Clover
+		portraits={
+			civilian={ large = GFX_portrait_Trey_Clover }
+			army = { large = GFX_portrait_Trey_Clover small = GFX_idea_Trey_Clover }
+		}
+		corps_commander={
+			traits={ infantry_leader trait_engineer }
+			skill=3
+			attack_skill=2
+			defense_skill=4
+			planning_skill=3
+			logistics_skill=3
+		}
+		advisor={
+			cost = 150
+			slot = political_advisor
+			idea_token = HEA_Trey_Clover_token
+			can_be_fired = no
+			allowed = { original_tag = HEA }
+			available = {
+				# クールダウン中でないことが条件
+				NOT = { has_character_flag = off_with_your_head_cooldown }
+			}
+			traits = { Appeasing_the_Queen }
+		}
+	}
+
+	HEA_Cater_Diamond={
+		name=HEA_Cater_Diamond
+		portraits={
+			civilian={ large = GFX_portrait_Cater_Diamond }
+			army = { large = GFX_portrait_Cater_Diamond small = GFX_idea_Cater_Diamond }
+		}
+		corps_commander={
+			traits={ media_personality infantry_leader trickster }
+			skill=3
+			attack_skill=3
+			defense_skill=3
+			planning_skill=2
+			logistics_skill=4
+		}
+		advisor={
+			cost = 150
+			slot = political_advisor
+			idea_token = HEA_Cater_Diamond_token
+			allowed = { original_tag = HEA }
+			available = {
+				# クールダウン中でないことが条件
+				NOT = { has_character_flag = off_with_your_head_cooldown }
+			}
+			traits = { magic_camerar }
+		}
+	}
+
+	HEA_Deuce_Spade = {
+		name = HEA_Deuce_Spade
+		portraits={
+			civilian={ large = GFX_portrait_Deuce_Spade }
+			army = { large = GFX_portrait_Deuce_Spade small = GFX_idea_Deuce_Spade }
+		}
+		corps_commander={
+			traits={ inflexible_strategist }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+		}
+		advisor={
+			cost = 150
+			slot = army_chief
+			idea_token = HEA_Deuce_Spade
+			allowed = { original_tag = HEA }
+			available = {
+				# クールダウン中でないことが条件
+				NOT = { has_character_flag = off_with_your_head_cooldown }
+			}
+			traits = { Honor_student }
+		}
+	}
+
+	HEA_Ace_Trappola={
+		name=HEA_Ace_Trappola
+		portraits={
+			civilian={ large = GFX_portrait_Ace_Trappola }
+			army = { large = GFX_portrait_Ace_Trappola small = GFX_idea_Ace_Trappola }
+		}
+		corps_commander={
+			traits={ brilliant_strategist }
+			skill=1
+			attack_skill=1
+			defense_skill=1
+			planning_skill=1
+			logistics_skill=1
+		}
+		advisor={
+			cost = 150
+			slot = army_chief
+			idea_token = HEA_Ace_Trappola
+			allowed = { original_tag = HEA }
+			available = {
+				# クールダウン中でないことが条件
+				NOT = { has_character_flag = off_with_your_head_cooldown }
+			}
+			traits = { Joker_Ace }
+		}
+	}
+
+	HEA_Mob_A={
+		name=HEA_Mob_A
+		portraits={
+			civilian={ small = GFX_idea_Mob_A }
+			army = { small = GFX_idea_Mob_A }
+		}
+		advisor={
+			cost = 150
+			slot = political_advisor
+			idea_token = HEA_Mob_A
+			allowed = { original_tag = HEA }
+			available = {
+				# クールダウン中でないことが条件
+				NOT = { has_character_flag = off_with_your_head_cooldown }
+			}
+			traits = { captain_of_industry }
+		}
+	}
+
+	HEA_Mob_B={
+		name=HEA_Mob_B
+		portraits={
+			civilian={ small = GFX_idea_Mob_B }
+			army = { small = GFX_idea_Mob_B }
+		}
+		advisor={
+			cost = 150
+			slot = political_advisor
+			idea_token = HEA_Mob_B
+			allowed = { original_tag = HEA }
+			available = {
+				# クールダウン中でないことが条件
+				NOT = { has_character_flag = off_with_your_head_cooldown }
+			}
+			traits = { war_industrialist }
+		}
+	}
+
+	HEA_Mob_C={
+		name=HEA_Mob_C
+		portraits={
+			civilian={ small = GFX_idea_Mob_C }
+			army = { small = GFX_idea_Mob_C }
+		}
+		advisor={
+			cost = 150
+			slot = political_advisor
+			idea_token = HEA_Mob_C
+			allowed = { original_tag = HEA }
+			available = {
+				# クールダウン中でないことが条件
+				NOT = { has_character_flag = off_with_your_head_cooldown }
+			}
+			traits = { financial_expert }
+		}
+	}
+	HEA_Mob_D_HC={
+		name=HEA_Mob_D_HC # 内部的なID
+		portraits={
+			# アイコンは既存のものを流用
+			civilian={ small = GFX_idea_Mob_A } 
+			army = { small = GFX_idea_Mob_A }
+		}
+		advisor={
+			cost = 150
+			slot = high_command # 軍最高司令部
+			idea_token = HEA_Mob_D_HC_Attack_token
+			allowed = { original_tag = HEA }
+			available = { NOT = { has_character_flag = off_with_your_head_cooldown } }
+			traits = { army_infantry_2 } # 歩兵
+		}
+	}
+
+	HEA_Mob_E_HC={
+		name=HEA_Mob_E_HC
+		portraits={
+			civilian={ small = GFX_idea_Mob_B }
+			army = { small = GFX_idea_Mob_B }
+		}
+		advisor={
+			cost = 150
+			slot = high_command # 軍最高司令部
+			idea_token = HEA_Mob_E_HC_Defense_token
+			allowed = { original_tag = HEA }
+			available = { NOT = { has_character_flag = off_with_your_head_cooldown } }
+			traits = { army_cavalry_2 } # 騎兵
+		}
+	}
+	HEA_Mob_G_HC={
+		name=HEA_Mob_G_HC
+		portraits={
+			civilian={ small = GFX_idea_Mob_C }
+			army = { small = GFX_idea_Mob_C }
+		}
+		advisor={
+			cost = 150
+			slot = high_command # 理論家スロット
+			idea_token = HEA_Mob_G_HC
+			allowed = { original_tag = HEA }
+			available = { NOT = { has_character_flag = off_with_your_head_cooldown } }
+			traits = { army_artillery_2 } # 砲兵
+		}
+	}
+	HEA_Mob_F_Theorist={
+		name=HEA_Mob_F_Theorist
+		portraits={
+			civilian={ small = GFX_idea_Mob_C }
+			army = { small = GFX_idea_Mob_C }
+		}
+		advisor={
+			cost = 150
+			slot = theorist # 理論家スロット
+			idea_token = HEA_Mob_F_Theorist_token
+			allowed = { original_tag = HEA }
+			available = { NOT = { has_character_flag = off_with_your_head_cooldown } }
+			traits = { military_theorist } # 大規模戦闘計画ドクトリンの理論家
+		}
+	}
+}

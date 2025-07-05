@@ -1,0 +1,66 @@
+state = {
+	id = 137
+	name = "STATE_137"
+	manpower = 1061607
+	
+	state_category = megalopolis
+
+	history = {
+
+		owner = HEA
+
+		victory_points = {
+			3686 30 # Sevastopol
+		}
+
+		victory_points = {
+			9680 5 # Kerch
+		}
+
+		victory_points = {
+			6704 5 # Yalta
+		}
+
+		victory_points = {
+			705 10 # Simferopol
+		}
+
+		buildings = {
+
+			infrastructure = 4
+			industrial_complex = 3
+			arms_factory = 8
+			dockyard = 1
+			air_base = 5
+
+			3686 = {
+				naval_base = 10
+				coastal_bunker = 5
+			}
+
+			9680 = {
+				naval_base = 5
+				coastal_bunker = 5
+			}
+			
+		}
+
+		add_core_of = SOV
+		add_core_of = CRI
+		add_core_of = HEA
+
+	}
+
+	resources = {
+		steel = 24
+		aluminium = 3
+		oil = 2
+		tungsten = 6
+	}
+
+	provinces = {
+		705 3686 3722 6704 6724 9677 9680 9718 11649 
+	}
+
+	local_supplies = 10.0 
+}

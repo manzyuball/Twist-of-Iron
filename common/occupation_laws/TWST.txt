@@ -1,0 +1,52 @@
+
+	# 「ハートの女王の法律」占領法
+	hearts_law_occupation = {
+		icon = 14
+		fallback_law = military_governor_occupation
+		sound_effect = "Martial_Law_Interface_Autonomous_Occupation_Unique_DEM"
+		# この占領法が利用可能になる条件
+		visible = {
+            original_tag = HEA
+			has_country_flag = unlock_hearts_law
+			NOT = {
+				has_country_flag = unlock_hearts_law_2
+			}
+		}
+		default_law = yes
+		icon = GFX_occupation_law_princely_subjugation # アイコンは既存のものを流用
+		
+		# 占領法の効果
+	    state_modifier = {
+		resistance_target 				= -0.60
+		compliance_gain 				= -0.10
+		required_garrison_factor 		= 0.15
+		local_factories 				= 0.10
+		local_resources 				= 0.10
+	    }
+		ai_will_do = {
+			factor = 10
+		}
+	}
+	HEA_strengthened_hearts_law = {
+		icon = 14
+		fallback_law = military_governor_occupation
+		sound_effect = "Martial_Law_Interface_Autonomous_Occupation_Unique_DEM"
+		# この占領法が利用可能になる条件
+		visible = {
+            original_tag = HEA
+			has_country_flag = unlock_hearts_law
+			has_country_flag = unlock_hearts_law_2
+		}
+		default_law = yes
+		icon = GFX_occupation_law_princely_subjugation # アイコンは既存のものを流用
+	    state_modifier = {
+		resistance_target 				= -0.60
+		compliance_gain 				= -0.10
+		required_garrison_factor 		= 0.15
+		local_factories 				= 0.40
+		local_resources 				= 0.40
+	    }
+		ai_will_do = {
+			factor = 10
+		}
+	}

@@ -1,0 +1,19 @@
+# common/on_actions/00_on_actions.txt
+
+on_actions = {
+	on_startup = {
+		effect = {
+			# グローバルフラグがない場合のみイベントを発生させる
+			if = {
+				limit = { NOT = { has_global_flag = twst_intro_has_fired } }
+				# プレイヤー国にイベントを発生させる
+				# any_player_country を使うことでマルチプレイにも対応可能
+				HEA = {
+					country_event = { id = twst_intro.1 }
+				}
+				# イベントが発生したことを記録するフラグ
+				set_global_flag = twst_intro_has_fired
+			}
+		}
+	}
+}

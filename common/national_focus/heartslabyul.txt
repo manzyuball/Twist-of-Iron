@@ -1,0 +1,1268 @@
+focus_tree = {
+	id = heartslabyul_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = HEA
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 50 y = 1650 }
+
+	focus = {
+    id = HEA_purge_focus #寮内の平和維持
+    icon = GFX_focus_AUS_lawmaking_leniency
+    x = 2
+    y = 0
+    cost = 10
+	cancelable = no
+    ai_will_do = { factor = 200 }
+    completion_reward = {
+        add_political_power = -50      # 政治力を50獲得
+        add_stability = -0.1          # 安定度15%上昇
+    }
+    }
+
+	focus = {
+    id = HEA_instilling_fear #新入生に恐怖を植え付ける
+    icon = GFX_SOV_a_new_theory_of_revolution_ccp_2d_sov_compatibility
+    prerequisite = { focus = HEA_purge_focus }
+    x = 0
+    y = 1
+	cancelable = no
+    relative_position_id = HEA_purge_focus
+    cost = 10
+    completion_reward = {
+        add_political_power = -75      # 政治力を75獲得
+        add_stability = -0.10         # 安定度を15%上昇
+        add_war_support = -0.05       # 戦争協力度を5%低下
+    }
+    }
+	focus = {
+    id = HEA_obedience_training #服従教育
+    icon = GFX_focus_generic_subjugation
+    prerequisite = { focus = HEA_instilling_fear } 
+    x = 0
+    y = 2
+	cancelable = no
+    relative_position_id = HEA_purge_focus
+    cost = 10
+    completion_reward = {
+        add_ideas = {
+            HEA_disciplined_spirit
+        }
+    }
+    }
+	focus = {
+    id = HEA_obedience #完全服従
+    icon = GFX_focus_spr_crush_the_revolution
+    prerequisite = { focus = HEA_obedience_training }
+    x = 0
+    y = 3
+    relative_position_id = HEA_purge_focus
+    cost = 10
+	cancelable = no
+    completion_reward = {
+        add_political_power = 150       # 政治力を150獲得
+        swap_ideas = {
+            remove_idea = HEA_disciplined_spirit
+            add_idea = HEA_perfect_obedience_spirit
+        }
+    }
+    }
+	focus = {
+	id = HEA_classroom_learning_tutoring #補習 
+	icon = GFX_focus_NOR_moscows_education_centers 
+	prerequisite = { focus = HEA_instilling_fear } 
+	x = 3 
+	y = 2 
+	relative_position_id = HEA_purge_focus 
+	cost = 10
+	completion_reward = {
+		# 「勤勉の精神」という国民精神を追加
+		# （効果：研究速度 +5%）
+		add_ideas = {
+			HEA_diligent_spirit
+		}
+	}
+    }
+	focus = {
+	id = HEA_magic_tutoring_increased_firepower #魔法補習 -攻撃魔法の向上 
+	icon = GFX_goal_generic_major_war 
+	prerequisite = { focus = HEA_classroom_learning_tutoring } 
+	mutually_exclusive = { focus =  HEA_magic_tutoring_Improving_defensive_magic } 
+	x = 1 
+	y = 1 
+	relative_position_id = HEA_classroom_learning_tutoring 
+	cost = 10
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = HEA_diligent_spirit
+			add_idea = HEA_diligent_spirit_Offence
+		}
+	}
+    }
+	focus = {
+	id = HEA_magic_tutoring_Improving_defensive_magic #魔法補習 -防衛魔法の向上 
+	icon = GFX_SOV_found_the_pcdi_ccp_2d_sov_compatibility 
+	prerequisite = { focus = HEA_classroom_learning_tutoring } 
+	mutually_exclusive = { focus = HEA_magic_tutoring_increased_firepower } 
+	x = -1 
+	y = 1 
+	relative_position_id = HEA_classroom_learning_tutoring 
+	cost = 10
+	completion_reward = {
+
+				swap_ideas = {
+			remove_idea = HEA_diligent_spirit
+			add_idea = HEA_diligent_spirit_Difence
+		}
+	}
+    }
+	focus = {
+		id = HEA_magic_Alchemy #魔法補習 -錬金術の応用
+		icon = GFX_SOV_pc_of_mechanical_engineering_ccp_2d_sov_compatibility
+		prerequisite = { focus = HEA_magic_tutoring_increased_firepower focus = HEA_magic_tutoring_Improving_defensive_magic }
+		#mutually_exclusive = { focus = }
+		x = -2
+		y = 2
+			cost = 10
+		relative_position_id = HEA_classroom_learning_tutoring
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = HEA_diligent_spirit_Difence
+				}
+				swap_ideas = {
+					remove_idea = HEA_diligent_spirit_Difence
+					add_idea = HEA_diligent_spirit_Difence_2
+				}
+			}
+			else_if = {
+				limit = { has_idea = HEA_diligent_spirit_Offence }
+					swap_ideas = {
+					    remove_idea = HEA_diligent_spirit_Offence
+					    add_idea = HEA_diligent_spirit_Offence_2
+				    }
+			}
+			else = {
+					swap_ideas = {
+					    remove_idea = HEA_diligent_spirit_Offence
+					    add_idea = HEA_diligent_spirit_Offence_2
+				    }
+			}
+		}
+	}
+	focus = {
+	id = HEA_magic_tutoring_accumulation_of_knowledge #魔法補習 -知識の蓄積 
+	icon = GFX_SOV_national_academies_of_sciences_ccp_2d_sov_compatibility 
+	prerequisite = { focus = HEA_magic_tutoring_increased_firepower focus = HEA_magic_tutoring_Improving_defensive_magic } 
+	x = 0 
+	y = 2 
+	relative_position_id = HEA_classroom_learning_tutoring 
+	cost = 10
+	completion_reward = {
+		add_research_slot = 1 # 研究枠を1つ追加
+	}
+    }
+	focus = {
+		id = HEA_magic_tutoring_Overcoming_Cater_weaknesses #魔法補習 -ケイトの苦手克服
+		icon = GFX_goal_Cater_weaknesses
+		prerequisite = { focus = HEA_magic_tutoring_increased_firepower focus = HEA_magic_tutoring_Improving_defensive_magic }
+		#mutually_exclusive = { focus = }
+		x = 2
+		y = 2
+			cost = 10
+		relative_position_id = HEA_classroom_learning_tutoring
+		completion_reward = {
+			remove_trait = {
+				character = HEA_Cater_Diamond
+				slot = political_advisor
+				trait =  magic_camerar
+			}
+			add_trait = {
+				character = HEA_Cater_Diamond
+				slot = political_advisor
+				trait =  magic_camerar2
+			}
+		}
+
+	}
+	focus = {
+	id = HEA_physical_training #体力訓練 
+	icon = GFX_focus_generic_little_entente 
+	prerequisite = { focus = HEA_instilling_fear } 
+	x = -3 
+	y = 2 
+	relative_position_id = HEA_purge_focus 
+	cost = 10
+	completion_reward = {
+	    army_experience = 25
+		add_dynamic_modifier = {
+			modifier = HEA_basic_fitness_spirit
+		}
+		custom_effect_tooltip =  HEA_basic_fitness_spirit_ns_tt
+	}
+    }
+	focus = {
+	id = HEA_physical_training_aviation #体力訓練 - 飛行術に特化 
+	icon = GFX_goal_physical_training_aviation 
+	prerequisite = { focus = HEA_physical_training } 
+	mutually_exclusive = { focus = HEA_physical_training_basic_physical_fitness } 
+	x = -1 
+	y = 1 
+	relative_position_id = HEA_physical_training 
+	cost = 10
+	completion_reward = {
+		add_to_variable = {
+           var = HEA_basic_fitness_spirit_army_speed_factor
+           value = 0.15
+        }
+		custom_effect_tooltip =  HEA_basic_fitness_spirit_army_speed_factor_ns_tt
+	}
+    }
+	focus = {
+	id = HEA_physical_training_basic_physical_fitness #体力訓練 - 基礎運動能力 
+	icon = GFX_focus_prc_infiltration 
+	prerequisite = { focus = HEA_physical_training } 
+	mutually_exclusive = { focus = HEA_physical_training_aviation } 
+	x = 1 
+	y = 1 
+	relative_position_id = HEA_physical_training 
+	cost = 10
+	completion_reward = {
+		add_to_variable = {
+           var = HEA_basic_fitness_spirit_army_morale_factor
+           value = 0.08
+        }
+		custom_effect_tooltip =  HEA_basic_fitness_spirit_army_morale_factor_ns_tt
+	}
+    }
+	focus = {
+	id = HEA_physical_training_student_officers #体力訓練 - 生徒将校の育成 
+	icon = GFX_focus_generic_military_mission 
+	prerequisite = { focus = HEA_physical_training_aviation focus = HEA_physical_training_basic_physical_fitness  } 
+	x = 2 
+	y = 2 
+	relative_position_id = HEA_physical_training 
+	cost = 10
+	completion_reward = {
+		custom_effect_tooltip =  HEA_basic_fitness_spirit_army_leader_cost_factor_ns_tt
+		add_to_variable = {
+           var = HEA_basic_fitness_spirit_army_leader_cost_factor
+           value = -0.25
+        }
+		add_to_variable = {
+           var = HEA_basic_fitness_spirit_army_leader_start_level
+           value = 2
+        }
+		add_to_variable = {
+           var = HEA_basic_fitness_spirit_army_leader_start_attack_level
+           value = 2
+        }
+		add_to_variable = {
+           var = HEA_basic_fitness_spirit_army_leader_start_defense_level
+           value = 2
+        }
+		add_to_variable = {
+           var = HEA_basic_fitness_spirit_army_leader_start_logistics_level
+           value = 2
+        }
+		add_to_variable = {
+           var = HEA_basic_fitness_spirit_army_leader_start_planning_level
+           value = 2
+        }
+	}
+    }
+	focus = {
+		id = HEA_physical_training_Basketball_club-led #体力訓練 - バスケ部主導
+		icon = GFX_goal_Basketball_club
+		prerequisite = { focus = HEA_physical_training_aviation focus = HEA_physical_training_basic_physical_fitness  }
+		mutually_exclusive = { focus = HEA_physical_training_track_and_field_club-led }
+		x = 0
+		y = 2
+			cost = 10
+		relative_position_id = HEA_physical_training
+		completion_reward = {
+			remove_trait = {
+				character = HEA_Ace_Trappola
+				slot = army_chief
+				trait =  Joker_Ace
+			}
+			add_trait = {
+				character = HEA_Ace_Trappola
+				slot = army_chief
+				trait =  Joker_Ace_2
+			}
+		}
+	}
+	focus = {
+		id = HEA_physical_training_track_and_field_club-led #体力訓練 - 陸上部主導
+		icon = GFX_goal_track_and_field_club
+		prerequisite = { focus = HEA_physical_training_aviation focus = HEA_physical_training_basic_physical_fitness  }
+		mutually_exclusive = { focus = HEA_physical_training_Basketball_club-led }
+		x = -2
+		y = 2
+			cost = 10
+		relative_position_id = HEA_physical_training
+		completion_reward = {
+			remove_trait = {
+				character = HEA_Deuce_Spade
+				slot = army_chief
+				trait = Honor_student
+			}
+			add_trait = {
+				character = HEA_Deuce_Spade
+				slot = army_chief
+				trait =  Honor_student_2
+			}
+		}
+	}
+
+# ===================================================================
+# HEA_Kingdom_of_roose 以降のNFツリーを、こちらのコードに置き換えてください
+# ディシジョンとイベントによる段階的な併合を実装しました
+# ===================================================================
+
+	focus = {
+		id = HEA_Kingdom_of_roose #小さい薔薇の王国
+		icon = GFX_focus_PER_strengthen_the_tudeh
+		x = 9
+		y = 0
+		cost = 10
+		completion_reward = {
+			add_political_power = 120
+			add_stability = 0.05
+			add_ideas = HEA_rose_kingdom_foundation_spirit
+		}
+	}
+	focus = {
+		id = HEA_tart_factory_I #タルト生産工場1
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = HEA_Kingdom_of_roose }
+		x = 4
+		y = 1
+		relative_position_id = HEA_Kingdom_of_roose
+		cost = 5
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+				set_state_flag = HEA_industrial_target_state
+			}
+		}
+	}
+	focus = {
+		id = HEA_tart_factory_II #タルト生産工場2
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = HEA_tart_factory_I }
+		x = 4
+		y = 2
+		relative_position_id = HEA_Kingdom_of_roose
+		cost = 5
+		completion_reward = {
+			random_owned_state = {
+				limit = { is_core_of = ROOT NOT = { has_state_flag = HEA_industrial_target_state } }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+				set_state_flag = HEA_industrial_target_state
+			}
+			random_owned_state = {
+				limit = { is_core_of = ROOT NOT = { has_state_flag = HEA_industrial_target_state } }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+				set_state_flag = HEA_industrial_target_state
+			}
+			swap_ideas = {
+				remove_idea = HEA_rose_kingdom_foundation_spirit
+				add_idea = HEA_rose_kingdom_foundation_spirit_2
+			}
+		}
+	}
+	focus = {
+		id = HEA_advance_into_Soviet_territory #ソビエト領への進出
+		icon = GFX_focus_generic_provoke_border_clashes
+		prerequisite = { focus = HEA_Kingdom_of_roose }
+		x = 0
+		y = 1
+		relative_position_id = HEA_Kingdom_of_roose
+		cost = 5
+
+		completion_reward = {
+			# ウクライナへの進出ディシジョンをアンロックするフラグを設定
+			set_country_flag = HEA_can_advance_into_ukraine
+			custom_effect_tooltip = HEA_advance_into_ukraine_decision_unlock_tt
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = HEA_Securing_the_Ukraine_region #ウクライナ地域の確保
+		icon = GFX_SOV_reinforce_southern_naval_bases_ccp_2d_sov_compatibility
+		prerequisite = { focus = HEA_advance_into_Soviet_territory }
+		available = {
+			num_of_controlled_states > 5
+		}
+		x = 0
+		y = 2
+		relative_position_id = HEA_Kingdom_of_roose
+		cost = 10
+		completion_reward = {
+			every_owned_state = {
+			limit = {
+				is_core_of = UKR
+			}
+			add_core_of = HEA
+			
+		  }
+		}
+	}
+	focus = {
+		id = HEA_Expansion_into_Poland #ポーランドへの進出
+		icon = GFX_focus_generic_attack_poland
+		prerequisite = { focus = HEA_Securing_the_Ukraine_region }
+		x = -1
+		y = 3
+		relative_position_id = HEA_Kingdom_of_roose
+		cost = 10
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = POL }
+		}
+	}
+	focus = {
+		id = HEA_Expansion_into_Romania #ルーマニアへの進出
+		icon = GFX_focus_generic_attack_romania
+		prerequisite = { focus = HEA_Securing_the_Ukraine_region }
+		x = 1
+		y = 3
+		relative_position_id = HEA_Kingdom_of_roose
+		cost = 10
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = ROM }
+		}
+	}
+	focus = {
+		id = HEA_Take_over_the_Soviet_Union #ソビエトを乗っ取る
+		icon = GFX_focus_attack_soviet
+		prerequisite = { focus = HEA_Expansion_into_Poland focus = HEA_Expansion_into_Romania }
+		x = 0
+		y = 4
+		relative_position_id = HEA_Kingdom_of_roose
+		cost = 10
+		completion_reward = {
+			# ソ連乗っ取りディシジョンをアンロック
+			set_country_flag = HEA_can_takeover_soviet
+			custom_effect_tooltip = HEA_takeover_soviet_decision_unlock_tt
+		}
+	}
+	focus = {
+		id = HEA_Improving_wheat_production_capacity #原材料の確保
+		icon = GFX_focus_SOV_breadbasket_of_the_union
+		prerequisite = { focus = HEA_Securing_the_Ukraine_region }
+		x = 3
+		y = 3
+		relative_position_id = HEA_Kingdom_of_roose
+		cost = 10
+		available = {
+			203 = {
+				is_owned_by = HEA
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = HEA_Improving_wheat_production_capacity_tooltip
+			# 実際の効果
+			every_state = {
+				limit = {
+					is_owned_by = ROOT
+					state = 203
+				}
+				add_building_construction = { type = infrastructure level = 2 instant_build = yes }
+			}
+			203 = { add_resource = { type = steel amount = 24 } }
+		}
+	}
+	focus = {
+		id = HEA_tray_tart #第三次タルト計画
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = HEA_Improving_wheat_production_capacity focus = HEA_tart_factory_II }
+		x = 4
+		y = 4
+		relative_position_id = HEA_Kingdom_of_roose
+		cost = 10
+		available = {
+			num_of_controlled_states > 5
+		}
+		completion_reward = {
+			custom_effect_tooltip = HEA_tray_tart_tooltip
+			# 実際の効果
+			every_owned_state = {
+				limit = { has_state_flag = HEA_industrial_target_state }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+			}
+			remove_trait = {
+				character = HEA_Trey_Clover
+				slot = political_advisor
+				trait = Appeasing_the_Queen
+			}
+			add_trait = {
+				character = HEA_Trey_Clover
+				slot = political_advisor
+				trait =  Appeasing_the_Queen_2
+			}
+		}
+	}
+
+	focus = {
+		id = HEA_The_Queen_of_Hearts_Law_in_the_Occupied_Territory #占領地のハートの女王の法律
+		icon = GFX_focus_hol_the_foundations_of_defense
+		prerequisite = { focus = HEA_Take_over_the_Soviet_Union }
+		available = {
+		}
+		x = 0
+		y = 1
+		relative_position_id =  HEA_Take_over_the_Soviet_Union
+		cost = 10
+		completion_reward = {
+			# 独自の占領法をアンロック
+			set_country_flag = unlock_hearts_law
+			custom_effect_tooltip = HEA_unlock_hearts_law_tt
+			hidden_effect = {
+				HEA = {
+                    HEA = {
+                        set_occupation_law = hearts_law_occupation
+                    }
+                }
+			}
+		}
+	}
+	focus = {
+		id = HEA_Obey_work_and_be_ignorant #従い、働け、愚民共
+		icon = GFX_focus_generic_monarchist_sentiment
+		prerequisite = { focus = HEA_The_Queen_of_Hearts_Law_in_the_Occupied_Territory }
+		available = {
+			NOT = {
+				has_completed_focus = HEA_rebellion_against_riddle
+			}
+		}
+		x = 0
+		y = 2
+		relative_position_id =  HEA_Take_over_the_Soviet_Union
+		cost = 10
+		completion_reward = {
+			# 工場生産量を上げる国民精神を追加
+			add_ideas = HEA_forced_labor_spirit
+		}
+	}
+	focus = {
+		id = HEA_expansionist_foreign_policy #拡張的対外政策
+		icon = GFX_SOV_claims_on_poland_ccp_2d_sov_compatibility
+		prerequisite = { focus = HEA_The_Queen_of_Hearts_Law_in_the_Occupied_Territory }
+		x = 2
+		y = 2
+		relative_position_id =  HEA_Take_over_the_Soviet_Union
+		cost = 10
+		available = {
+			NOT = {
+				has_completed_focus = HEA_rebellion_against_riddle
+			}
+		}
+		completion_reward = {
+			# 戦争目標正当化に特化した国民精神を追加
+			add_ideas = HEA_aggressive_diplomacy_wargoal
+		}
+	}
+	focus = {
+		id = HEA_dormitory_directory #寮長元帥
+		icon = GFX_SOV_consolidate_power_ccp_2d_sov_compatibility
+		prerequisite = { focus = HEA_The_Queen_of_Hearts_Law_in_the_Occupied_Territory }
+		x = -2
+		y = 2
+		relative_position_id =  HEA_Take_over_the_Soviet_Union
+		cost = 10
+		completion_reward = {
+			# リドルの国家指導者特性に騎兵バフを追加
+			HEA_Riddle_Rosehearts = {
+				add_country_leader_trait = HEA_cavalry_leader_trait
+			}
+		}
+	}
+	focus = {
+		id = HEA_The_Kingdom_of_Rose_Heart #ローズハートの国
+		icon = GFX_goal_The_Kingdom_of_Rose_Heart
+		prerequisite = { focus = HEA_expansionist_foreign_policy focus = HEA_Obey_work_and_be_ignorant }
+		x = 1
+		y = 3
+		relative_position_id =  HEA_Take_over_the_Soviet_Union
+		cost = 10
+		
+		# NF完了時に表示されるツールチップ
+		complete_tooltip = {
+			
+		}
+		available = {
+			NOT = {
+				has_completed_focus = HEA_rebellion_against_riddle
+			}
+		}
+		
+		completion_reward = {
+			
+			# 2. 永続的な国家ボーナスの付与
+			# これまでのプレイスタイルに応じて変化する強力な国民精神を追加
+			add_dynamic_modifier = {
+				modifier = rose_kingdom_legacy_modifier
+			}
+			
+			# 服従ルートを極めた場合
+			if = {
+				limit = { has_idea = HEA_perfect_obedience_spirit }
+				add_to_variable = { rose_kingdom_legacy_surrender_limit = 0.10 }
+				add_to_variable = { rose_kingdom_legacy_training_time = -0.10 }
+			}
+			# 補習（研究）ルートを進んだ場合
+			if = {
+				limit = { has_idea = HEA_diligent_spirit_Offence_2 }
+				add_to_variable = { rose_kingdom_legacy_research_speed = 0.05 }
+				add_to_variable = { rose_kingdom_legacy_army_attack = 0.05 }
+			}
+			if = {
+				limit = { has_idea = HEA_diligent_spirit_Difence_2 }
+				add_to_variable = { rose_kingdom_legacy_research_speed = 0.05 }
+				add_to_variable = { rose_kingdom_legacy_army_defense = 0.05 }
+			}
+			# 体力訓練ルートを極めた場合
+			if = {
+				limit = { has_completed_focus = HEA_physical_training_student_officers }
+				add_to_variable = { rose_kingdom_legacy_army_experience = 0.10 }
+				add_to_variable = { rose_kingdom_legacy_command_power = 0.15 }
+			}
+			# 工業ルートを極めた場合
+			if = {
+				limit = { has_completed_focus = HEA_tray_tart }
+				add_to_variable = { rose_kingdom_legacy_production_efficiency = 0.05 }
+				add_to_variable = { rose_kingdom_legacy_factory_output = 0.05 }
+			}
+			custom_effect_tooltip = HEA_The_Kingdom_of_Rose_Heart_tt_tooltip
+		}
+	}
+# ===================================================================
+# 新規NFツリー：占領地の統治 (独立ツリー ＆ relative_position_id 使用)
+# ===================================================================
+
+	# === ルート開始NF ===
+	focus = {
+		id = HEA_govern_the_occupied_territories
+		icon = GFX_SOV_experts_in_camouflage_ccp_2d_sov_compatibility
+		x = 2# このツリーの基準となるX座標
+		y = 7 # 既存のツリーと重ならないY座標
+		cost = 5
+
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = HEA_needs_eastern_territories_tt
+				OR = {
+					any_state = { is_core_of = UKR is_owned_and_controlled_by = ROOT }
+					any_state = { is_core_of = BLR is_owned_and_controlled_by = ROOT }
+					any_state = { is_core_of = GEO is_owned_and_controlled_by = ROOT }
+					any_state = { is_core_of = ARM is_owned_and_controlled_by = ROOT }
+					any_state = { is_core_of = AZR is_owned_and_controlled_by = ROOT }
+					any_state = { is_core_of = POL is_owned_and_controlled_by = ROOT }
+					any_state = { is_core_of = ROM is_owned_and_controlled_by = ROOT }
+					any_state = { is_core_of = EST is_owned_and_controlled_by = ROOT }
+					any_state = { is_core_of = LAT is_owned_and_controlled_by = ROOT }
+					any_state = { is_core_of = LIT is_owned_and_controlled_by = ROOT }
+				}
+			}
+		}
+
+		completion_reward = {
+			add_political_power = 75
+			custom_effect_tooltip = HEA_govern_occupied_territories_tooltip
+			every_state = {
+				limit = { is_controlled_by = ROOT is_on_continent = europe NOT = { is_core_of = ROOT } }
+				add_compliance = 10
+			}
+		}
+	}
+
+	# === 各国開発ルート (横一列に配置) ===
+	# --- ウクライナ開発 ---
+	focus = {
+		id = HEA_develop_ukraine
+		icon = GFX_focus_SOV_breadbasket_of_the_union
+		prerequisite = { focus = HEA_govern_the_occupied_territories }
+		x = -4 # 基準から左に4つ
+		y = 1  # 基準から下に1つ
+		relative_position_id = HEA_govern_the_occupied_territories
+		cost = 5
+		available = { any_owned_state = { is_core_of = UKR is_controlled_by = ROOT } }
+		completion_reward = {
+			custom_effect_tooltip = HEA_develop_ukraine_tooltip
+			random_owned_controlled_state = {
+				limit = { is_core_of = UKR NOT = { has_state_flag = developed_by_hea } }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = industrial_complex level = 2 instant_build = yes }
+				set_state_flag = developed_by_hea
+			}
+		}
+	}
+	
+	# --- ベラルーシ開発 ---
+	focus = {
+		id = HEA_develop_belarus
+		icon = GFX_focus_generic_mining_industry
+		prerequisite = { focus = HEA_govern_the_occupied_territories }
+		x = -2 # 基準から左に2つ
+		y = 1  # 基準から下に1つ
+		relative_position_id = HEA_govern_the_occupied_territories
+		cost = 5
+		available = { any_owned_state = { is_core_of = BLR is_controlled_by = ROOT } }
+		completion_reward = {
+			custom_effect_tooltip = HEA_develop_belarus_tooltip
+			random_owned_controlled_state = {
+				limit = { is_core_of = BLR NOT = { has_state_flag = developed_by_hea } }
+				add_resource = { type = steel amount = 15 }
+				set_state_flag = developed_by_hea
+			}
+		}
+	}
+	
+	# --- カフカース開発 ---
+	focus = {
+		id = HEA_develop_caucasus
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = HEA_govern_the_occupied_territories }
+		x = 0  # 基準と同じX座標
+		y = 1  # 基準から下に1つ
+		relative_position_id = HEA_govern_the_occupied_territories
+		cost = 5
+		available = { any_owned_state = { OR = { is_core_of = GEO is_core_of = ARM is_core_of = AZR } is_controlled_by = ROOT } }
+		completion_reward = {
+			custom_effect_tooltip = HEA_develop_caucasus_tooltip
+			random_owned_controlled_state = {
+				limit = { OR = { is_core_of = GEO is_core_of = ARM is_core_of = AZR } NOT = { has_state_flag = developed_by_hea } }
+				add_resource = { type = oil amount = 20 }
+				set_state_flag = developed_by_hea
+			}
+		}
+	}
+	
+	# --- ポーランド開発 ---
+	focus = {
+		id = HEA_develop_poland
+		icon = GFX_focus_POL_the_four_year_plan
+		prerequisite = { focus = HEA_govern_the_occupied_territories }
+		x = 2  # 基準から右に2つ
+		y = 1
+		relative_position_id = HEA_govern_the_occupied_territories
+		cost = 5
+		available = { any_owned_state = { is_core_of = POL is_controlled_by = ROOT } }
+		completion_reward = {
+			custom_effect_tooltip = HEA_develop_poland_tooltip
+			random_owned_controlled_state = {
+				limit = { is_core_of = POL NOT = { has_state_flag = developed_by_hea } }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = arms_factory level = 2 instant_build = yes }
+				set_state_flag = developed_by_hea
+			}
+			
+		}
+	}
+	
+	# --- ルーマニア開発 ---
+	focus = {
+		id = HEA_develop_romania
+		icon = GFX_focus_generic_resource_extraction
+		prerequisite = { focus = HEA_govern_the_occupied_territories }
+		x = 4  # 基準から右に4つ
+		y = 1
+		relative_position_id = HEA_govern_the_occupied_territories
+		cost = 5
+		available = { any_owned_state = { is_core_of = ROM is_controlled_by = ROOT } }
+		completion_reward = {
+			custom_effect_tooltip = HEA_develop_romania_tooltip
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROM  NOT = { has_state_flag = developed_by_hea } }
+				add_resource = { type = oil amount = 15 }
+				set_state_flag = developed_by_hea
+			}
+			random_owned_controlled_state = {
+				limit = { is_core_of = ROM  NOT = { has_state_flag = developed_by_hea } }
+				add_resource = { type = oil amount = 15 }
+				set_state_flag = developed_by_hea
+			}
+		}
+	}
+
+	# --- バルト三国開発 ---
+	focus = {
+		id = HEA_develop_baltics
+		icon = GFX_focus_generic_baltic_sea_fleet
+		prerequisite = { focus = HEA_govern_the_occupied_territories }
+		x = 6 # 基準から右に6つ
+		y = 1
+		relative_position_id = HEA_govern_the_occupied_territories
+		cost = 5
+		available = { any_owned_state = { OR = { is_core_of = EST is_core_of = LAT is_core_of = LIT } is_controlled_by = ROOT } }
+		completion_reward = {
+			custom_effect_tooltip = HEA_develop_baltics_tooltip
+			random_owned_controlled_state = {
+				limit = { OR = { is_core_of = EST is_core_of = LAT is_core_of = LIT } is_coastal = yes NOT = { has_state_flag = developed_by_hea } }
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = { type = dockyard level = 2 instant_build = yes }
+				set_state_flag = developed_by_hea
+			}
+		}
+	}
+
+	# === 統治強化ルート ===
+	focus = {
+		id = HEA_improve_occupation_law
+		icon = GFX_SOV_reformalize_the_role_of_the_patriarchate_ccp_2d_sov_compatibility
+		x = 0  
+		y = 1
+		relative_position_id = HEA_develop_caucasus
+		cost = 5
+		prerequisite = {
+			focus = HEA_develop_ukraine
+			focus = HEA_develop_belarus
+			focus = HEA_develop_caucasus
+			focus = HEA_develop_poland
+			focus = HEA_develop_romania
+			focus = HEA_develop_baltics
+		}
+		completion_reward = {
+			add_ideas = HEA_efficient_oppression
+		}
+	}
+
+	focus = {
+		id = HEA_eastern_highways
+		icon = GFX_focus_generic_road_investment
+		prerequisite = { focus = HEA_improve_occupation_law }
+		x = -1 # 分岐
+		y = 1
+		relative_position_id = HEA_improve_occupation_law
+		cost = 5
+		completion_reward = {
+			custom_effect_tooltip = HEA_eastern_highways_tooltip
+			every_owned_state = {
+				limit = { has_state_flag = developed_by_hea }
+				add_building_construction = { type = infrastructure level = 2 }
+			}
+		}
+	}
+
+	focus = {
+		id = HEA_garrison_reinforcement
+		icon = GFX_SOV_coup_detat_ccp_2d_sov_compatibility
+		prerequisite = { focus = HEA_improve_occupation_law }
+		x = 1 # 分岐
+		y = 1
+		relative_position_id = HEA_improve_occupation_law
+		cost = 5
+		completion_reward = {
+			add_ideas = HEA_colonial_recruitment
+		}
+	}
+
+	focus = {
+		id = HEA_perfect_eastern_order
+		icon = GFX_SOV_a_global_class_struggle_ccp_2d_sov_compatibility
+		prerequisite = { focus = HEA_garrison_reinforcement }
+		prerequisite = { focus = HEA_eastern_highways }
+		x = 0 # 合流
+		y = 2
+		relative_position_id = HEA_improve_occupation_law
+		cost = 5
+		completion_reward = {
+			add_political_power = 150
+			add_stability = 0.1
+			swap_ideas = { remove_idea = HEA_efficient_oppression add_idea = HEA_perfect_eastern_order_spirit }
+			swap_ideas = { remove_idea = HEA_colonial_recruitment add_idea = HEA_colonial_recruitment_2 }
+		}
+	}
+	# === 統治方針の選択 (択一NF) ===
+	focus = {
+		id = HEA_assimilation_policy # 同化政策
+		icon = GFX_focus_YUG_pan_slavic_congress
+		prerequisite = { focus = HEA_improve_occupation_law }
+		mutually_exclusive = { focus = HEA_strengthen_dominance }
+		
+		x = 3 # 分岐の左側
+		y = 1
+		relative_position_id = HEA_improve_occupation_law
+		cost = 5
+
+		completion_reward = {
+			custom_effect_tooltip = HEA_assimilation_policy_tooltip
+			every_state = {
+				limit = { is_controlled_by = ROOT is_on_continent = europe NOT = { is_core_of = ROOT } }
+				add_compliance = 20
+			}
+		}
+	}
+
+	focus = {
+		id = HEA_strengthen_dominance # 支配の強化
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = HEA_improve_occupation_law }
+		mutually_exclusive = { focus = HEA_assimilation_policy }
+
+		x = 5 # 分岐の右側
+		y = 1
+		relative_position_id = HEA_improve_occupation_law
+		cost = 5
+        available = {
+			has_completed_focus = HEA_The_Queen_of_Hearts_Law_in_the_Occupied_Territory
+		}
+		completion_reward = {
+			set_country_flag = unlock_hearts_law_2
+			custom_effect_tooltip = HEA_unlock_hearts_law_tt
+			hidden_effect = {
+				HEA = {
+                    HEA = {
+                        set_occupation_law = HEA_strengthened_hearts_law
+                    }
+                }
+			}
+		}
+	}
+# ===================================================================
+	# Ⅱ. 寮長への反逆ルート (ディシジョンでアンロックされる独立ツリー)
+	# ===================================================================
+	focus = {
+		id = HEA_rebellion_against_riddle
+		icon = GFX_focus_spr_crush_the_revolution
+		x = 18 # 既存ツリーから離す
+		y = 0
+		cost = 5
+		available = { has_country_flag = HEA_rebellion_unlocked }
+		cancel = { has_country_flag = HEA_riddle_reconciled }
+		completion_reward = {
+			add_political_power = 50
+			custom_effect_tooltip = HEA_rebellion_started_tt
+			add_ideas = HEA_gathering_allies_spirit
+			country_event = heartslabyul.59
+			if = {
+				limit = {
+					NOT = {
+						has_completed_focus = HEA_instilling_fear
+					}
+				}
+				custom_effect_tooltip = Riddle_Paranoia_tooltops
+				complete_national_focus = HEA_instilling_fear
+			}
+			else_if = {
+			    limit = {
+			    	NOT = {
+			    		has_completed_focus = HEA_obedience_training
+			    	}
+			    }
+				custom_effect_tooltip = Riddle_Paranoia_tooltops
+                complete_national_focus = HEA_obedience_training
+			}
+			else_if = {
+			    limit = {
+			    	NOT = {
+			    		has_completed_focus = HEA_obedience
+			    	}
+			     }
+				custom_effect_tooltip = Riddle_Paranoia_tooltops
+                complete_national_focus = HEA_obedience
+			}
+		}
+	}
+	focus = {
+		id = HEA_contact_trey
+		icon = GFX_goal_report_event_hea_Event7
+		prerequisite = { focus = HEA_rebellion_against_riddle }
+		mutually_exclusive = { focus = HEA_contact_cater }
+		x = -2 y = 2 relative_position_id = HEA_rebellion_against_riddle
+		cost = 5
+		
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = HEA_contact_cater
+		icon = GFX_goal_report_event_hea_Event6
+		prerequisite = { focus = HEA_rebellion_against_riddle }
+		mutually_exclusive = { focus = HEA_contact_trey }
+		x = 2 y = 2 relative_position_id = HEA_rebellion_against_riddle
+		cost = 5
+		completion_reward = {
+
+		}
+	}
+
+	# --- トレイルート ---
+	focus = {
+		id = HEA_trey_tart_plan
+		icon = GFX_focus_BRA_cafe_com_leite_politics
+		prerequisite = { focus = HEA_contact_trey }
+		x = 0 y = 1 relative_position_id = HEA_contact_trey
+		cost = 5
+		completion_reward = { 
+			set_country_flag = HEA_trey_route_started
+			# ★変更点★ ミッションではなく、ディシジョンをアンロック
+			custom_effect_tooltip = HEA_contact_trey_tt
+		}
+	}
+	focus = {
+		id = HEA_trey_gather_friends
+		icon = GFX_SOV_national_specialists_ccp_2d_sov_compatibility
+		prerequisite = { focus = HEA_trey_tart_plan }
+		x = -1 y = 2 relative_position_id = HEA_contact_trey
+		cost = 5
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = HEA_trey_mission_incomplete_tt
+				has_country_flag = HEA_trey_persuaded
+			}
+		}
+		completion_reward = { 
+			add_stability = 0.05
+			add_war_support = 0.1
+			if = {
+				limit = {
+					NOT = {
+						has_completed_focus = HEA_instilling_fear
+					}
+				}
+				custom_effect_tooltip = Riddle_Paranoia_tooltops
+				complete_national_focus = HEA_instilling_fear
+			}
+			else_if = {
+			    limit = {
+			    	NOT = {
+			    		has_completed_focus = HEA_obedience_training
+			    	}
+			    }
+				custom_effect_tooltip = Riddle_Paranoia_tooltops
+                complete_national_focus = HEA_obedience_training
+			}
+			else_if = {
+			    limit = {
+			    	NOT = {
+			    		has_completed_focus = HEA_obedience
+			    	}
+			     }
+					custom_effect_tooltip = Riddle_Paranoia_tooltops
+				hidden_effect = {
+				   oob = "HEA_auto_focus_3"
+				}
+			}
+		}
+	}
+	focus = {
+		id = HEA_deuce_magic_wheel
+		icon = GFX_goal_magical_wheel
+		prerequisite = { focus = HEA_strengthen_the_rebels }
+		x = -1 y = 1 relative_position_id = HEA_strengthen_the_rebels
+		cost = 5
+		completion_reward = {
+			unlock_military_industrial_organization_tooltip = mio:HEA_mio_magic_wheel_co
+			mio:HEA_mio_magic_wheel_co = {
+              add_mio_size = 3
+			}
+		}
+	}
+
+	# --- ケイトルート ---
+	focus = {
+		id = HEA_cater_social_network
+		icon = GFX_focus_generic_whispers
+		prerequisite = { focus = HEA_contact_cater }
+		x = 0 y = 1 relative_position_id = HEA_contact_cater
+		cost = 5
+		completion_reward = { 
+			set_country_flag = HEA_cater_route_started
+			custom_effect_tooltip = HEA_contact_cater_tt
+			
+			add_timed_idea = { idea = HEA_cater_networking_idea days = 180 } 
+
+		}
+	}
+	focus = {
+		id = HEA_cater_gather_friends
+		icon = GFX_focus_generic_radio_communication
+		prerequisite = { focus = HEA_cater_social_network }
+		x = 1 y = 1 relative_position_id = HEA_cater_social_network
+		available = {
+			NOT = {
+	           has_idea = HEA_cater_networking_idea 
+			}	
+			has_idea = HEA_gathering_allies_spirit_3
+		}
+		cost = 5
+		completion_reward = { 
+	    	add_stability = 0.05
+			add_war_support = 0.1
+			if = {
+				limit = {
+					NOT = {
+						has_completed_focus = HEA_instilling_fear
+					}
+				}
+				custom_effect_tooltip = Riddle_Paranoia_tooltops
+				complete_national_focus = HEA_instilling_fear
+			}
+			else_if = {
+			    limit = {
+			    	NOT = {
+			    		has_completed_focus = HEA_obedience_training
+			    	}
+			    }
+				custom_effect_tooltip = Riddle_Paranoia_tooltops
+				complete_national_focus = HEA_obedience_training
+			}
+			else_if = {
+			    limit = {
+			    	NOT = {
+			    		has_completed_focus = HEA_obedience
+			    	}
+			     }
+				custom_effect_tooltip = Riddle_Paranoia_tooltops
+				complete_national_focus = HEA_obedience
+			}
+		}
+	}
+	
+	# --- 共通ルート ---
+	focus = {
+		id = HEA_find_allies_in_the_dorm
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = { focus = HEA_strengthen_the_rebels }
+		x = 1 y = 1 relative_position_id = HEA_strengthen_the_rebels
+		cost = 5
+		available = {
+			has_idea = HEA_gathering_allies_spirit_2
+		}
+		completion_reward = {
+			swap_ideas = { remove_idea = HEA_gathering_allies_spirit_2 add_idea = HEA_gathering_allies_spirit_3 }
+		}
+	}
+	focus = {
+		id = HEA_strengthen_the_rebels
+		icon = GFX_focus_generic_workers_and_farmers_rise
+		prerequisite = { focus = HEA_contact_trey focus = HEA_contact_cater }
+		x = 0 y = 3 relative_position_id = HEA_rebellion_against_riddle
+		cost = 5
+		available = {
+			has_idea = HEA_gathering_allies_spirit
+		}
+		completion_reward = {
+			swap_ideas = { remove_idea = HEA_gathering_allies_spirit add_idea = HEA_gathering_allies_spirit_2 }
+		}
+	}
+	focus = {
+		id = HEA_prepare_for_duel
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = HEA_trey_gather_friends focus = HEA_cater_gather_friends }
+		x = 0 y = 2 relative_position_id = HEA_strengthen_the_rebels
+		cost = 5
+		
+		available = {
+		}
+
+		completion_reward = {
+			add_political_power = 100
+			army_experience = 25
+			custom_effect_tooltip = HEA_prepare_for_duel_tt
+						if = {
+				limit = {
+					NOT = {
+						has_completed_focus = HEA_instilling_fear
+					}
+				}
+				custom_effect_tooltip = Riddle_Paranoia_tooltops
+				complete_national_focus = HEA_instilling_fear
+			}
+			else_if = {
+			    limit = {
+			    	NOT = {
+			    		has_completed_focus = HEA_obedience_training
+			    	}
+			    }
+				custom_effect_tooltip = Riddle_Paranoia_tooltops
+                complete_national_focus = HEA_obedience_training
+			}
+			else_if = {
+			    limit = {
+			    	NOT = {
+			    		has_completed_focus = HEA_obedience
+			    	}
+			     }
+				custom_effect_tooltip = Riddle_Paranoia_tooltops
+                complete_national_focus = HEA_obedience
+			}
+		}
+	}
+	
+	# --- 決闘とその後 ---
+	focus = {
+		id = HEA_duel_with_riddle
+		icon = GFX_focus_RAJ_lions_of_the_great_war
+		prerequisite = { focus = HEA_prepare_for_duel }
+		x = 0 y = 1 relative_position_id = HEA_prepare_for_duel
+		cost = 5
+		completion_reward = { country_event = { id = heartslabyul.99 } }
+	}
+	focus = {
+		id = HEA_after_the_overblot
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = { focus = HEA_duel_with_riddle }
+		x = 0 y = 1 relative_position_id = HEA_duel_with_riddle
+		cost = 5
+		completion_reward = {
+			set_country_flag = HEA_riddle_reconciled
+			remove_ideas = Off_with_your_head
+			HEA_Riddle_Rosehearts = {
+				remove_country_leader_trait = Rose_Red_Tyrant
+				add_country_leader_trait = Queen_of_Rose_Heart
+			}
+			custom_effect_tooltip = HEA_after_the_overblot_tt
+			hidden_effect = {
+				remove_ideas = HEA_gathering_allies_spirit
+				remove_ideas = HEA_gathering_allies_spirit_2
+				remove_ideas = HEA_gathering_allies_spirit_3
+			}
+		}
+	}
+	focus = {
+		id = HEA_a_new_hearts_order
+		icon = GFX_focus_SWE_refuge_from_war
+		prerequisite = { focus = HEA_after_the_overblot }
+		x = -1 y = 1 relative_position_id = HEA_after_the_overblot
+		cost = 5
+		available = {
+			has_idea = HEA_perfect_obedience_spirit
+		}
+		completion_reward = { 
+			swap_ideas = {
+				remove_idea = HEA_perfect_obedience_spirit
+				add_idea = HEA_better_obedience_spirit
+			}
+	    }
+	}
+	focus = {
+		id = HEA_unbirthday_party
+		icon = GFX_focus_RAJ_tea_exports
+		prerequisite = { focus = HEA_after_the_overblot }
+		x = 1 y = 1 relative_position_id = HEA_after_the_overblot
+		cost = 5
+		completion_reward = { 
+			custom_effect_tooltip = HEA_unbirthday_party_tooltip
+	    }
+	}
+
+}

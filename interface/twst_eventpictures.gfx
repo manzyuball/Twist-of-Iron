@@ -1,0 +1,75 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_report_event_hea_Event1"
+		texturefile = "gfx/event_pictures/report_event_hea_Event1.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_hea_Event2"
+		texturefile = "gfx/event_pictures/report_event_hea_Event2.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_hea_Event3"
+		texturefile = "gfx/event_pictures/report_event_hea_Event3.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_hea_Event4"
+		texturefile = "gfx/event_pictures/report_event_hea_Event4.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_hea_Event5"
+		texturefile = "gfx/event_pictures/report_event_hea_Event5.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_hea_Event6"
+		texturefile = "gfx/event_pictures/report_event_hea_Event6.dds"
+	}
+
+	spriteType = {
+		name = "GFX_report_event_hea_Event7"
+		texturefile = "gfx/event_pictures/report_event_hea_Event7.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_hea_Event8"
+		texturefile = "gfx/event_pictures/report_event_hea_Event8.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_hea_Event9"
+		texturefile = "gfx/event_pictures/report_event_hea_Event9.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_hea_Event10"
+		texturefile = "gfx/event_pictures/report_event_hea_Event10.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_OCT_Event1"
+		texturefile = "gfx/event_pictures/report_event_OCT_Event1.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_OCT_Event2"
+		texturefile = "gfx/event_pictures/report_event_OCT_Event2.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_OCT_Event3"
+		texturefile = "gfx/event_pictures/report_event_OCT_Event3.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_OCT_Event4"
+		texturefile = "gfx/event_pictures/report_event_OCT_Event4.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_OCT_Event5"
+		texturefile = "gfx/event_pictures/report_event_OCT_Event5.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_OCT_Event6"
+		texturefile = "gfx/event_pictures/report_event_OCT_Event6.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_OCT_Event7"
+		texturefile = "gfx/event_pictures/report_event_OCT_Event7.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_OCT_Event8"
+		texturefile = "gfx/event_pictures/report_event_OCT_Event8.dds"
+	}
+}

@@ -1,0 +1,57 @@
+spriteTypes = {
+
+	### HEA
+
+	spriteType = {
+		name = "GFX_portrait_Riddle_Rosehearts"
+		texturefile = "gfx/leaders/HEA/Riddle_Rosehearts.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_Trey_Clover"
+		texturefile = "gfx/leaders/HEA/Trey_Clover.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_Cater_Diamond"
+		texturefile = "gfx/leaders/HEA/Cater_Diamond.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_Ace_Trappola"
+		texturefile = "gfx/leaders/HEA/Ace_Trappola.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_Deuce_Spade"
+		texturefile = "gfx/leaders/HEA/Deuce_Spade.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_Azul_Ashengrotto"
+		texturefile = "gfx/leaders/OCT/Azul_Ashengrotto.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_Azul_Ashengrotto_Beens"
+		texturefile = "gfx/leaders/OCT/Azul_Ashengrotto_Beens.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_Floyd_Leech"
+		texturefile = "gfx/leaders/OCT/Floyd_Leech.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_Floyd_Leech_Beens"
+		texturefile = "gfx/leaders/OCT/Floyd_Leech_Beens.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_Jade_Leech"
+		texturefile = "gfx/leaders/OCT/Jade_Leech.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_Jade_Leech_Beens"
+		texturefile = "gfx/leaders/OCT/Jade_Leech_Beens.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_Mob_A"
+		texturefile = "gfx/leaders/OCT/Mob_A.dds"
+	}
+	spriteType = {
+		name = "GFX_portrait_Mob_B"
+		texturefile = "gfx/leaders/OCT/Mob_B.dds"
+	}
+}

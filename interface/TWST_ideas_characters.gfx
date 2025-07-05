@@ -1,0 +1,59 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_idea_Riddle_Rosehearts"
+		texturefile = "gfx/interface/ideas/Riddle_Rosehearts.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Trey_Clover"
+		texturefile = "gfx/interface/ideas/Trey_Clover.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Cater_Diamond"
+		texturefile = "gfx/interface/ideas/Cater_Diamond.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Ace_Trappola"
+		texturefile = "gfx/interface/ideas/Ace_Trappola.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Deuce_Spade"
+		texturefile = "gfx/interface/ideas/Deuce_Spade.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Mob_A"
+		texturefile = "gfx/interface/ideas/Mob_A.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Mob_B"
+		texturefile = "gfx/interface/ideas/Mob_B.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Mob_C"
+		texturefile = "gfx/interface/ideas/Mob_C.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_OCT_Jade_Leech"
+		texturefile = "gfx/interface/ideas/OCT_Jade_Leech.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_OCT_Floyd_Leech"
+		texturefile = "gfx/interface/ideas/OCT_Floyd_Leech.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_OCT_B_Floyd_Leech"
+		texturefile = "gfx/interface/ideas/OCT_B_Floyd_Leech.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_OCT_B_Jade_Leech"
+		texturefile = "gfx/interface/ideas/OCT_B_Jade_Leech.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_OCT_Mob_A"
+		texturefile = "gfx/interface/ideas/OCT_Mob_A.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_OCT_Mob_B"
+		texturefile = "gfx/interface/ideas/OCT_Mob_B.dds"
+	}
+}

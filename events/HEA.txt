@@ -1,0 +1,677 @@
+# HEA_events.txt
+add_namespace = heartslabyul
+add_namespace = heartslabyul_play
+add_namespace = HEA_OWYH
+
+# ===================================================================
+# 世界観・キャラクター説明イベント (ID修正版)
+# ===================================================================
+
+# --- 1. メインメニュー (全ての情報の入り口) ---
+country_event = {
+	id = heartslabyul.2 # ID変更
+	title = "heartslabyul.2.t" # キー変更
+	desc = "heartslabyul.2.d"
+	picture = GFX_report_event_NOR_storting
+	is_triggered_only = yes
+    immediate = {
+		hidden_effect = {
+		add_ideas = HEA_Trey_Clover_token
+		add_ideas = HEA_Cater_Diamond_token
+		
+		scoped_play_song = "Heartslabyul_BGM"
+		}
+	}
+	option = {
+		name = "heartslabyul.2.a" # キー変更
+		country_event = { id = heartslabyul.3 } # 遷移先ID変更
+	}
+	option = {
+		name = "heartslabyul.2.b" # キー変更
+		country_event = { id = heartslabyul.4 } # 遷移先ID変更
+	}
+	option = {
+		name = "heartslabyul.2.c" # キー変更
+	}
+}
+
+# --- 2. ハーツラビュル寮の説明 ---
+country_event = {
+	id = heartslabyul.3 # ID変更
+	title = "heartslabyul.3.t" # キー変更
+	desc = "heartslabyul.3.d"
+	picture = GFX_report_event_generic_read_write
+	is_triggered_only = yes
+	
+	option = {
+		name = "heartslabyul.back_to_main" # キー変更
+		country_event = { id = heartslabyul.2 } # 遷移先ID変更
+	}
+	option = {
+		name = "heartslabyul.close" # キー変更
+	}
+}
+# ===================================================================
+# 3. 主要人物紹介メニュー
+# ===================================================================
+# --- 3-1. 人物紹介メニュー (1ページ目) ---
+country_event = {
+	id = heartslabyul.4
+	title = "heartslabyul.4.t" # 主要人物紹介
+	desc = "heartslabyul.4.d"
+	picture = GFX_report_event_military_planning
+	is_triggered_only = yes
+
+	# 上位3名の選択肢
+	option = {
+		name = "heartslabyul.4.a" # リドル・ローズハート
+		country_event = { id = heartslabyul.10 }
+	}
+	option = {
+		name = "heartslabyul.4.b" # トレイ・クローバー
+		country_event = { id = heartslabyul.20 }
+	}
+	option = {
+		name = "heartslabyul.4.c" # ケイト・ダイヤモンド
+		country_event = { id = heartslabyul.30 }
+	}
+	# 「さらに表示」ボタン
+	option = {
+		name = "heartslabyul.show_more" # さらに表示…
+		country_event = { id = heartslabyul.5 } # 2ページ目に遷移
+	}
+}
+
+# --- 3-2. 人物紹介メニュー (2ページ目) ---
+country_event = {
+	id = heartslabyul.5 # 新規ID
+	title = "heartslabyul.4.t" # タイトルは同じ「主要人物紹介」
+	desc = "heartslabyul.4.d" # 説明文も同じ
+	picture = GFX_report_event_character_generic
+	is_triggered_only = yes
+
+	# 下位2名の選択肢
+	option = {
+		name = "heartslabyul.4.e" # エース・トラッポラ
+		country_event = { id = heartslabyul.40 }
+	}
+	option = {
+		name = "heartslabyul.4.f" # デュース・スペード
+		country_event = { id = heartslabyul.50 }
+	}
+	# 「メインメニューに戻る」ボタン
+	option = {
+		name = "heartslabyul.back_to_main"
+		country_event = { id = heartslabyul.2 }
+	}
+}
+
+
+# ===================================================================
+# 4. 各キャラクターの詳細説明 
+# ===================================================================
+
+# --- 4-1. リドル・ローズハート ---
+country_event = {
+	id = heartslabyul.10
+	title = "heartslabyul.10.t"
+	desc = "heartslabyul.10.d"
+	picture = GFX_report_event_hea_Event3
+	is_triggered_only = yes
+	option = {
+		name = "heartslabyul.back_to_characters"
+		country_event = { id = heartslabyul.4 } # 1ページ目に戻る
+	}
+}
+# --- 4-2. トレイ・クローバー ---
+country_event = {
+	id = heartslabyul.20
+	title = "heartslabyul.20.t"
+	desc = "heartslabyul.20.d"
+	picture = GFX_report_event_hea_Event7
+	is_triggered_only = yes
+	option = {
+		name = "heartslabyul.back_to_characters"
+		country_event = { id = heartslabyul.4 } # 1ページ目に戻る
+	}
+}
+# --- 4-3. ケイト・ダイヤモンド ---
+country_event = {
+	id = heartslabyul.30
+	title = "heartslabyul.30.t"
+	desc = "heartslabyul.30.d"
+	picture = GFX_report_event_hea_Event6
+	is_triggered_only = yes
+	option = {
+		name = "heartslabyul.back_to_characters"
+		country_event = { id = heartslabyul.4 } # 1ページ目に戻る
+	}
+}
+# --- 4-4. エース・トラッポラ ---
+country_event = {
+	id = heartslabyul.40
+	title = "heartslabyul.40.t"
+	desc = "heartslabyul.40.d"
+	picture = GFX_report_event_hea_Event4
+	is_triggered_only = yes
+	option = {
+		name = "heartslabyul.back_to_characters"
+		country_event = { id = heartslabyul.5 } # 2ページ目に戻る
+	}
+}
+# --- 4-5. デュース・スペード ---
+country_event = {
+	id = heartslabyul.50
+	title = "heartslabyul.50.t"
+	desc = "heartslabyul.50.d"
+	picture = GFX_report_event_hea_Event5
+	is_triggered_only = yes
+	option = {
+		name = "heartslabyul.back_to_characters"
+		country_event = { id = heartslabyul.5 } # 2ページ目に戻る
+	}
+}
+
+
+
+
+# --- ウクライナ割譲イベント (hearts.10) ---
+country_event = {
+	id = heartslabyul_play.10
+	title = "heartslabyul_play.10.t" # HEAからの領土要求
+	desc = "heartslabyul_play.10.d"
+	picture = GFX_report_event_hea_Event3
+	hidden = no
+	is_triggered_only = yes
+	
+	# 選択肢1: 要求を呑む (AI用)
+	option = {
+		name = "heartslabyul_play.10.a"
+		ai_chance = { factor = 95 }
+		# HEAにウクライナの中核州を割譲
+		SOV = {
+		every_owned_state = {
+			limit = {
+				is_core_of = UKR
+			}
+			transfer_state_to = HEA
+		
+			
+		  }
+		  
+		  set_country_flag = HEA_ukraine_annexed # HEAに併合完了フラグ
+		}
+        HEA = { country_event = { id = heartslabyul_play.12 } }
+	}
+	
+	# 選択肢2: 要求を拒否する
+	option = {
+		name = "heartslabyul_play.10.b"
+		ai_chance = { factor = 5 }
+		HEA = {
+			create_wargoal = {
+				type = annex_everything
+				target = SOV
+			}
+		 country_event = { id = heartslabyul_play.13 } 
+		}
+	}
+}
+
+# --- ソ連乗っ取りイベント (heartslabyul_play.11) ---
+country_event = {
+	id = heartslabyul_play.11
+	title = "heartslabyul_play.11.t" # HEAによる国家乗っ取りの最後通牒
+	desc = "heartslabyul_play.11.d"
+	picture = GFX_report_event_hea_Event3
+	
+	is_triggered_only = yes
+	
+	# 選択肢1: 全てを差し出す
+	option = {
+		name = "heartslabyul_play.11.a"
+		ai_chance = { factor = 25 }
+		# HEAがSOVを併合
+		HEA = {
+			annex_country = { target = SOV transfer_troops = yes }
+			country_event = { id = heartslabyul_play.14 }
+		}
+	}
+	
+	# 選択肢2: 戦う道を選ぶ
+	option = {
+		name = "heartslabyul_play.11.b"
+		ai_chance = { factor = 75 }
+		HEA = {
+			create_wargoal = {
+				type = annex_everything
+				target = SOV
+			}
+			country_event = { id = heartslabyul_play.15 }
+		}
+	}
+}
+
+# ===================================================================
+# ソ連からの返答通知イベント
+# ===================================================================
+
+# --- 4-1. ウクライナ割譲要求が【承諾】された場合の通知 ---
+country_event = {
+	id = heartslabyul_play.12
+	title = "heartslabyul_play.12.t" # 東方からの返答
+	desc = "heartslabyul_play.12.d"
+	picture = GFX_report_event_hea_Event3
+	is_triggered_only = yes
+
+	option = {
+		name = "heartslabyul_play.12.a" # 賢明な判断だ。
+		add_political_power = 25
+		add_war_support = 0.05
+	}
+}
+
+# --- 4-2. ウクライナ割譲要求が【拒否】された場合の通知 ---
+country_event = {
+	id = heartslabyul_play.13
+	title = "heartslabyul_play.13.t" # 東方からの返答
+	desc = "heartslabyul_play.13.d"
+	picture = GFX_report_event_hea_Event3
+	is_triggered_only = yes
+	
+	option = {
+		name = "heartslabyul_play.13.a" # 愚かな…力で示すまでだ！
+		add_war_support = 0.10
+	}
+}
+
+# --- 4-3. ソ連掌握が【承諾】された場合の通知 ---
+country_event = {
+	id = heartslabyul_play.14
+	title = "heartslabyul_play.14.t" # ソビエトの降伏
+	desc = "heartslabyul_play.14.d"
+	picture = GFX_report_event_hea_Event3
+	is_triggered_only = yes
+
+	option = {
+		name = "heartslabyul_play.14.a" # 当然の結果だね。
+		add_political_power = 100
+		add_stability = 0.10
+	}
+}
+
+# --- 4-4. ソ連掌握が【拒否】された場合の通知 ---
+country_event = {
+	id = heartslabyul_play.15
+	title = "heartslabyul_play.15.t" # ソビエトの抵抗
+	desc = "heartslabyul_play.15.d"
+	picture = GFX_report_event_hea_Event3
+	is_triggered_only = yes
+	
+	option = {
+		name = "heartslabyul_play.15.a" # ルールを破る者は、首をはねておしまい！
+		add_war_support = 0.15
+	}
+}
+
+
+
+# ===================================================================
+# 「なんでもない日」のお茶会イベント
+# ===================================================================
+country_event = {
+	id = heartslabyul_play.20 # 他のイベントと被らないID
+	title = "heartslabyul_play.20.t" # なんでもない日のお茶会
+	desc = "heartslabyul_play.20.d"
+	picture = GFX_report_event_hea_Event2 # 専用のイベント画像を指定
+    hidden = no
+	# 発生条件
+	is_triggered_only = yes
+    immediate = {
+		hidden_effect = {
+			scoped_play_song = "UNBIRTHDAY_voice"
+		}
+	}
+	# 発生頻度 (平均70日ごと)
+	#mean_time_to_happen = {
+	#	days = 70
+	#}
+
+	# 選択肢1: お茶会を開催する
+	option = {
+		name = "heartslabyul_play.20.a" # 素晴らしい！完璧なお茶会にしよう！
+		
+		# フレーバーとして陸軍経験値も少し獲得
+		if = {
+			limit = { has_completed_focus = HEA_physical_training }
+			army_experience = 5
+		}
+		if = {
+			limit = {
+			    NOT  = {
+                has_completed_focus =  HEA_unbirthday_party
+			    }	
+			}
+		    add_political_power = -25 # 政治力を25消費
+		    add_stability = 0.05      # 安定度が5%上昇
+		}
+		else_if = {
+			limit = { has_completed_focus =  HEA_unbirthday_party }
+			add_political_power = -5
+			add_stability = 0.05
+			add_timed_idea = {
+				days = 15
+				idea = HEA_Nothing_party_spirit
+			}
+		}
+		hidden_effect = {
+			country_event = { id = heartslabyul_play.20  days = 80 }
+		}
+	}
+
+	# 選択肢2: 今は忙しい
+	option = {
+		name = "heartslabyul_play.20.b" # 今はそれどころではない
+		# 何も起こらない
+		hidden_effect = {
+			country_event = { id = heartslabyul_play.20  days = 90 }
+		}
+	}
+}
+
+#------反抗イベント ------
+country_event = {
+	id = heartslabyul.57
+	title = "heartslabyul.57.t" # エース憤慨
+	desc = "heartslabyul.57.d"
+	picture = GFX_report_event_hea_Event1
+	trigger = {
+		tag = HEA
+		date > 1936.05.03
+	}
+	fire_only_once = yes
+    immediate = {
+		hidden_effect = {
+		scoped_play_song = "Hea_OWYH_3_voice"
+		}
+	}
+	option = {
+		name =  "heartslabyul.57.a" 
+		HEA_Ace_Trappola = {
+			save_global_event_target_as = target_character
+			custom_effect_tooltip = HEA_OWYH.character_fired_tt
+			set_character_flag = off_with_your_head_cooldown
+		} 
+		country_event = heartslabyul.58
+	}
+}
+country_event = {
+	id = heartslabyul.58
+	title = "heartslabyul.58.t" # エース憤慨
+	desc = "heartslabyul.58.d"
+	picture = GFX_report_event_hea_Event4
+	is_triggered_only = yes
+
+	option = {
+		name = "heartslabyul.58.a" 
+		# 次のNFに進むためのフラグを立てる
+		set_country_flag = HEA_rebellion_unlocked
+		custom_effect_tooltip = heartslabyul.58.a_opinion_tooltip
+	}
+	option = {
+		name = "heartslabyul.58.b"
+		country_event = {id = HEA_OWYH.100 days = 25 }
+		custom_effect_tooltip = heartslabyul.58.b_opinion_tooltip
+	}
+}
+country_event = {
+	id = heartslabyul.59
+	title = "heartslabyul.59.t" # エース憤慨
+	desc = "heartslabyul.59.d"
+	picture = GFX_report_event_hea_Event4
+	is_triggered_only = yes
+
+    option = {
+        name = "heartslabyul.59.a"
+        complete_national_focus = HEA_contact_trey
+    }
+    # 選択肢B (ケイト)
+    option = {
+        name = "heartslabyul.59.b"
+        complete_national_focus = HEA_contact_cater
+    }
+}
+# --- トレイのタルト作り完了イベント ---
+country_event = {
+	id = heartslabyul.60
+	title = "heartslabyul.60.t" # トレイのお手製タルト
+	desc = "heartslabyul.60.d"
+	picture = GFX_report_event_hea_Event2 # なんでもない日のお茶会と同じ画像
+	is_triggered_only = yes
+
+	option = {
+		name = "heartslabyul.60.a" # ありがとう、トレイ先輩！
+		# 次のNFに進むためのフラグを立てる
+		set_country_flag = HEA_trey_persuaded
+		# ボーナス
+		add_political_power = 300
+	}
+}
+country_event = {
+	id = heartslabyul.99 title = "heartslabyul.99.t" desc = "heartslabyul.99.d" picture = GFX_report_event_hea_Event8 is_triggered_only = yes
+	option = { name = "heartslabyul.99.a" HEA_Ace_Trappola = { clr_character_flag = off_with_your_head_cooldown } country_event =  { id = heartslabyul.100 } }
+}
+country_event = {
+	id = heartslabyul.100 title = "heartslabyul.100.t" desc = "heartslabyul.100.d" picture = GFX_report_event_hea_Event8 immediate = { hidden_effect = { scoped_play_song = Heartslabyul_historical_Event_1 } } is_triggered_only = yes
+	option = { name = "heartslabyul.100.a"  HEA_Ace_Trappola = { set_character_flag = off_with_your_head_cooldown }  HEA_Deuce_Spade = { set_character_flag = off_with_your_head_cooldown } add_political_power = -50 add_stability = -0.1 country_event = { id = heartslabyul.101 } }
+}
+country_event = {
+	id = heartslabyul.101 title = "heartslabyul.101.t" desc = "heartslabyul.101.d" picture = GFX_report_event_hea_Event9 immediate = { hidden_effect = { scoped_play_song = Heartslabyul_historical_Event_2 } } is_triggered_only = yes
+	option = { name = "heartslabyul.101.a" HEA_Riddle_Rosehearts = { add_country_leader_trait = { trait = HEA_overblot } } country_event = { id = heartslabyul.102 } }
+}
+country_event = {
+	id = heartslabyul.102 title = "heartslabyul.102.t" desc = "heartslabyul.102.d" picture = GFX_report_event_hea_Event10 is_triggered_only = yes
+	option = { name = "heartslabyul.102.a"  HEA_Riddle_Rosehearts = { remove_country_leader_trait = { trait = HEA_overblot } } set_country_flag = HEA_riddle_defeated custom_effect_tooltip = "heartslabyul.102.a.tt" }
+}
+
+
+
+
+
+
+
+
+# ===================================================================
+# 1. 首はねイベントのトリガー 
+# ===================================================================
+country_event = {
+	id = HEA_OWYH.1
+	title = "DUMMY"
+	hidden = yes
+	is_triggered_only = no
+
+	trigger = {
+		has_idea = Off_with_your_head
+		NOT = { has_war_with_major = yes }
+	}
+
+	mean_time_to_happen = {
+		days = 90
+	}
+
+	immediate = {
+		random_list = {
+			40 = { country_event = { id = HEA_OWYH.10 } } # 政治顧問
+			30 = { country_event = { id = HEA_OWYH.20 } } # 陸軍長官
+			30 = { country_event = { id = HEA_OWYH.30 } } # 軍最高司令部
+		}
+	}
+}
+
+# ===================================================================
+# 2. 対象選択と解任イベント (新方式)
+# ===================================================================
+# --- 2-1. 政治顧問の首をはねる ---
+country_event = {
+	id = HEA_OWYH.10
+	title = "HEA_OWYH.10.t" # 規律違反：政治顧問
+	desc = "HEA_OWYH.10.d"
+	picture = GFX_report_event_hea_Event1
+	is_triggered_only = yes
+
+	# 処罰対象が誰もいない場合はイベントを発生させない
+	trigger = {
+		# 雇用中で、かつ罰せられていない政治顧問がいるかチェック
+		any_character = {
+			is_advisor = yes
+			is_political_advisor = yes
+			is_hired_as_advisor = yes
+			NOT = { is_character = HEA_Trey_Clover } # トレイとケイトは対象外
+			NOT = { is_character = HEA_Cater_Diamond }
+			NOT = { has_character_flag = off_with_your_head_cooldown }
+		}
+	}
+    immediate = {
+		hidden_effect = {
+		    scoped_play_song = "Hea_OWYH_1_voice"
+		}
+	}
+	option = {
+		name = "HEA_OWYH.option.a" # 首をはねておしまい！
+
+		# 雇用中の政治顧問の中からランダムに1人選ぶ
+		random_character = {
+			limit = {
+				is_advisor = yes
+				is_political_advisor = yes
+		        is_hired_as_advisor = yes
+				NOT = { is_character = HEA_Trey_Clover }
+				NOT = { is_character = HEA_Cater_Diamond }
+				NOT = { has_character_flag = off_with_your_head_cooldown }
+			}
+			# キャラクターの情報を保存
+			save_global_event_target_as = target_character
+			
+			# どの閣僚が解任されたかプレイヤーに通知
+			custom_effect_tooltip = HEA_OWYH.character_fired_tt
+			
+			# 一時的に雇用不可にする
+			set_character_flag = off_with_your_head_cooldown
+		}
+		
+		# 90日後に再雇用可能にするイベントを予約
+		country_event = { id = HEA_OWYH.100 days = 90 }
+
+	}
+}
+
+# --- 2-2. 陸軍長官の首をはねる ---
+country_event = {
+	id = HEA_OWYH.20
+	title = "HEA_OWYH.20.t" # 規律違反：陸軍長官
+	desc = "HEA_OWYH.20.d"
+	picture = GFX_report_event_hea_Event1
+	is_triggered_only = yes
+
+	trigger = {
+		any_character = {
+			is_advisor = yes
+			is_army_chief = yes
+			is_hired_as_advisor = yes
+			NOT = { has_character_flag = off_with_your_head_cooldown }
+		}
+	}
+    immediate = {
+		hidden_effect = {
+		scoped_play_song = "Hea_OWYH_2_voice"
+		}
+	}
+	option = {
+		name = "HEA_OWYH.option.a" # 首をはねておしまい！
+		random_character = {
+				limit = {
+				is_advisor = yes
+		    	is_army_chief = yes
+			    is_hired_as_advisor = yes
+				NOT = { has_character_flag = off_with_your_head_cooldown }
+			}
+			save_global_event_target_as = target_character
+			custom_effect_tooltip = HEA_OWYH.character_fired_tt
+			set_character_flag = off_with_your_head_cooldown
+
+		}
+		
+	}
+}
+# --- 2-3. 軍最高司令部の首をはねる (新規イベント) ---
+country_event = {
+	id = HEA_OWYH.30
+	title = "HEA_OWYH.30.t"
+	desc = "HEA_OWYH.30.d"
+	picture = GFX_report_event_hea_Event1
+	is_triggered_only = yes
+
+	trigger = {
+		any_character = {
+			is_advisor = yes
+			is_high_command = yes
+			is_hired_as_advisor = yes
+			NOT = { has_character_flag = off_with_your_head_cooldown }
+		}
+	}
+    immediate = {
+		hidden_effect = {
+	    scoped_play_song =  "Hea_OWYH_3_voice"
+		}
+	}
+	option = {
+		name = "HEA_OWYH.option.a"
+		random_character = {
+			limit = {
+				is_advisor = yes
+		    	is_high_command = yes
+		    	is_hired_as_advisor = yes
+				NOT = { has_character_flag = off_with_your_head_cooldown }
+			}
+			save_global_event_target_as = target_character_high_command
+			custom_effect_tooltip = HEA_OWYH.character_fired_tt
+			
+			add_political_power = 150
+			set_character_flag = off_with_your_head_cooldown
+		 
+		}
+        
+		country_event = { id = HEA_OWYH.100 days = 90 }
+	}
+}
+
+# ===================================================================
+# 3. 再雇用可能にするイベント 
+# ===================================================================
+country_event = {
+	id = HEA_OWYH.100
+	title = "HEA_OWYH.100.t" # 赦免
+	desc = "HEA_OWYH.100.d"
+	picture = GFX_report_event_ITA_grand_council
+	is_triggered_only = yes
+    trigger = {
+		any_character = {
+			has_character_flag = off_with_your_head_cooldown
+		}
+		NOT = {
+			has_completed_focus = HEA_strengthen_the_rebels
+		}
+	}
+
+	option = {
+		name = "HEA_OWYH.100.a" # まあ、反省したようだから許してあげよう。
+		
+		# 保存しておいたキャラクターのクールダウンを解除
+		random_character = {
+            limit = {
+				has_character_flag = off_with_your_head_cooldown
+			}
+			clr_character_flag = off_with_your_head_cooldown
+		}
+	}
+}

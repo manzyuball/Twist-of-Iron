@@ -1,0 +1,125 @@
+
+###Todo remove commented advisor experience gains
+
+leader_traits = {
+
+	Rose_Red_Tyrant = {
+		random = no
+		political_power_factor = 0.25
+		stability_weekly = -0.02
+		war_support_factor = 0.1
+		opinion_gain_monthly_factor = -0.25
+		subjects_autonomy_gain = -0.25
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Queen_of_Rose_Heart = {
+		random = no
+		political_power_factor = 0.15
+		war_support_factor = 0.1
+		command_power_gain_factor = 0.25
+		ai_will_do = { factor = 1 }
+	}
+    Appeasing_the_Queen = {
+		random = no
+		political_power_factor = -0.1
+		stability_weekly = 0.03
+		stability_factor = 0.15
+        sprite = 13
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	magic_camerar = {
+		random = no
+		political_power_factor = 0.15
+		civilian_intel_to_others = 10.0
+        sprite = 13
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	magic_camerar2 = {
+		random = no
+		political_power_factor = 0.15
+		war_support_weekly = 0.02
+		research_speed_factor = 0.02
+		civilian_intel_to_others = 10.0
+        sprite = 13
+		ai_will_do = {
+			factor = 1
+		}
+	}
+    Joker_Ace = {
+		random = no
+		initiative_factor = 0.1
+		experience_gain_army = @chief_experience_gain_medium
+		command_cap_increase = @tier2_cp_cap_increase
+		command_power = @tier2_cp_cost
+        sprite = 7
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Joker_Ace_2 = {
+		random = no
+		initiative_factor = 0.2
+		experience_gain_army = @chief_experience_gain_medium
+		command_cap_increase = @tier2_cp_cap_increase
+		command_power = @tier2_cp_cost
+        sprite = 7
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Honor_student = {
+		random = no
+		army_strength_factor = 0.05
+		conscription_factor = 0.05
+		experience_gain_army = @chief_experience_gain_medium
+		command_cap_increase = @tier2_cp_cap_increase
+		command_power = @tier2_cp_cost
+        sprite = 5
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	Honor_student_2 = {
+		random = no
+		army_strength_factor = 0.1
+		conscription_factor = 0.1
+		experience_gain_army = @chief_experience_gain_medium
+		command_cap_increase = @tier2_cp_cap_increase
+		command_power = @tier2_cp_cost
+        sprite = 5
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	HEA_overblot = {
+	    random = no
+		stability_weekly = -0.05
+		war_support_weekly = -0.05
+		political_power_gain = -0.25
+		disabled_ideas = 1
+	}
+		# トレイ強化後
+	Appeasing_the_Queen_2 = {
+		random = no
+		stability_weekly = 0.03
+		stability_factor = 0.15
+		political_power_gain = 0.05
+        sprite = 13
+		ai_will_do = { factor = 1 }
+	}
+	# ローズハートの国 建国後
+
+	HEA_cavalry_leader_trait = {
+		cavalry_attack_factor = 0.15      # 騎兵師団の攻撃 +15%
+		cavalry_defence_factor = 0.15     # 騎兵師団の防御 +15%
+		cavalry_speed_factor = 0.10       # 騎兵師団の速度 +10%
+		ai_will_do = { factor = 1 }
+	}
+
+}

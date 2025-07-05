@@ -1,0 +1,128 @@
+capital = 137
+set_research_slots = 3
+
+set_stability = 0.5
+set_war_support = 0.75
+add_command_power = 500
+add_ideas = {
+	partial_economic_mobilisation
+	limited_conscription 
+    closed_economy
+	Off_with_your_head
+	Queen_Hearts_Law
+	
+}
+add_manpower = 100000
+
+add_ideas = {
+	 HEA_Cater_Diamond_token 
+	 HEA_Trey_Clover_token
+}
+add_equipment_to_stockpile = {
+	type = train_equipment_1
+	amount = 100
+}
+country_event = { id = heartslabyul.2   days = 2 }
+country_event = { id = heartslabyul_play.20 days = 75 }
+set_convoys = 29
+oob = "HEA_1936"
+recruit_character = HEA_Riddle_Rosehearts
+recruit_character = HEA_Trey_Clover
+recruit_character = HEA_Cater_Diamond
+recruit_character = HEA_Ace_Trappola
+recruit_character = HEA_Deuce_Spade
+recruit_character = HEA_Mob_A
+recruit_character = HEA_Mob_B
+recruit_character = HEA_Mob_C
+recruit_character = HEA_Mob_D_HC
+recruit_character = HEA_Mob_E_HC
+recruit_character = HEA_Mob_F_Theorist
+recruit_character = HEA_Mob_G_HC
+
+
+
+set_politics = {
+	ruling_party = communism
+	last_election = "1935.11.14"
+	election_frequency = 48
+	elections_allowed = yes ##suspended through duration of war, which is handled via event
+}
+set_popularities = {
+	democratic = 0
+	communism = 100
+	fascism = 0
+	neutrality = 0
+}
+
+set_variable = { HEA_basic_fitness_spirit_army_speed_factor = 0.00 }
+set_variable = { HEA_basic_fitness_spirit_army_strength_factor = 0.05 }
+set_variable = { HEA_basic_fitness_spirit_army_morale_factor = 0.0 }
+set_variable = { HEA_basic_fitness_spirit_army_leader_start_attack_level = 0  }
+set_variable = { HEA_basic_fitness_spirit_army_leader_start_defense_level = 0  }
+set_variable = { HEA_basic_fitness_spirit_army_leader_start_logistics_level = 0 }
+set_variable = { HEA_basic_fitness_spirit_army_leader_start_planning_level = 0 }
+set_variable = { rose_kingdom_legacy_surrender_limit = 0 }
+set_variable = { rose_kingdom_legacy_training_time = 0 }
+set_variable = { rose_kingdom_legacy_research_speed = 0 }
+set_variable = { rose_kingdom_legacy_army_attack = 0 }
+set_variable = { rose_kingdom_legacy_army_defense = 0 }
+set_variable = { rose_kingdom_legacy_army_experience = 0 }
+set_variable = { rose_kingdom_legacy_command_power = 0 }
+set_variable = { rose_kingdom_legacy_production_efficiency = 0 }
+set_variable = { rose_kingdom_legacy_factory_output = 0 }
+
+set_technology = {
+	# 歩兵
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	tech_military_police = 1
+	tech_mountaineers = 1
+	tech_trucks = 1
+	motorised_infantry = 1
+	
+	# 砲兵
+	gw_artillery = 1
+	interwar_artillery = 1
+	interwar_antitank = 1
+	interwar_antiair = 1
+	
+	# 装甲
+	gwtank_chassis = 1
+	basic_light_tank_chassis = 1
+	
+	# 陸軍ドクトリン
+	mass_assault = 1
+
+	# 海軍
+	early_ship_hull_light = 1
+	early_ship_hull_submarine = 1
+	early_ship_hull_cruiser = 1
+	basic_torpedo = 1
+	basic_depth_charges = 1
+	mtg_transport = 1
+
+	# 海軍ドクトリン
+	fleet_in_being = 1
+	
+	# 空軍
+	iw_small_airframe = 1
+	iw_medium_airframe = 1
+	
+	# 空軍ドクトリン
+	air_superiority = 1
+
+	# 工学
+	electronic_mechanical_engineering = 1
+	radio = 1
+	
+	# 産業
+	basic_machine_tools = 1
+	construction1 = 1
+	dispersed_industry = 1
+	fuel_silos = 1
+	fuel_refining = 1
+	basic_train = 1
+}

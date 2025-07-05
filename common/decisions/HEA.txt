@@ -1,0 +1,87 @@
+# HEA_decisions.txt
+
+	HEA_ukraine_advancement_category = {
+	HEA_annex_ukraine_decision = {
+		icon = GFX_decision_border_war
+		cost = 50 # 政治力を50消費
+		
+		available = {
+			has_country_flag = HEA_can_advance_into_ukraine
+			NOT = { has_country_flag = HEA_ukraine_annexed }
+			SOV = { exists = yes }
+		}
+		
+		fire_only_once = yes
+		
+		complete_effect = {
+			# ソ連にイベントを送り、領土割譲を要求する
+			SOV = { country_event = { id = heartslabyul_play.10 } }
+		}
+	}
+	}
+
+
+HEA_soviet_takeover_category = {
+
+
+	# ソ連乗っ取りディシジョン本体
+	HEA_takeover_soviet_decision = {
+		icon = GFX_decision_generic_form_nation
+		cost = 150 # 政治力を150消費
+		
+		available = {
+			has_country_flag = HEA_can_takeover_soviet
+			NOT = { has_country_flag = HEA_soviet_takeover_complete }
+			SOV = { exists = yes }
+		}
+		
+		fire_only_once = yes
+		
+		complete_effect = {
+			# ソ連に最後通牒イベントを送る
+			SOV = { country_event = { id = heartslabyul_play.11 } }
+		}
+	}
+}
+HEA_rebellion_category = {
+	# --- タルト作りディシジョン ---
+	HEA_baking_tart_for_trey = {
+		icon = GFX_decision_hol_exchange_intelligence_data
+		#何？タルトを作りたい？そうだな、それじゃあおつかい頼まれてくれないか？
+		#まず支援装備が400必要になる、アメリカから材料を輸入するから友好度は40以上ないとな
+		#そしてタルトの隠し味は...中戦車だ、こいつが深い味をつけてくれる
+
+		# ディシジョンが表示される条件
+		visible = {
+			has_country_flag = HEA_trey_route_started
+			NOT = { has_country_flag = HEA_trey_persuaded }
+		}
+		
+		# ディシジョン実行に必要な条件 (ツールチップで表示される)
+		# 材料1: 技術
+		#has_tech = basic_medium_tank_chassis
+		# 材料2: 友好度
+		#USA = { has_opinion = { target = ROOT value > 40 } }
+		# 材料3: 装備
+		#has_equipment = { support_equipment = 400 }
+
+		available = {
+			USA = { has_opinion = { target = ROOT value > 39 } }
+			has_equipment = { support_equipment > 399 }
+		}
+		# 実行コスト
+		cost = 300 # 政治力コスト
+		fire_only_once = yes
+
+		# 完了時の効果
+		complete_effect = {
+			# 装備を消費
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = -400
+			}
+			# トレイ説得完了イベントを発生させる
+			country_event = { id = heartslabyul.60 }
+		}
+	}
+}

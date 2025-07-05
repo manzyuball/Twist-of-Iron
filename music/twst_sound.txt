@@ -1,0 +1,56 @@
+music_station = "TWST_VOICE_station"
+
+music = {
+	song = "Hea_OWYH_1_voice"
+	chance = {
+		factor = 0
+	}
+	value = 1.5
+}
+
+music = {
+	song = "Hea_OWYH_2_voice"
+	chance = {
+		factor = 0
+	}
+    value = 1.5
+}
+
+music = {
+	song = "Hea_OWYH_3_voice"
+	chance = {
+		factor = 0
+	}
+	value = 1.5
+}
+
+music = {
+	song = "UNBIRTHDAY_voice"
+	chance = {
+		factor = 0
+	}
+    value = 1.5
+}
+music = {
+	song = "Heartslabyul_BGM"
+	chance = {
+		factor = 0
+	}
+    value = 1.2
+}
+
+music = {
+	song = "Heartslabyul_historical_Event_1"
+	chance = {
+		factor = 0
+	}
+	value = 1.5
+}
+
+music = {
+	song = "Heartslabyul_historical_Event_2"
+	chance = {
+		factor = 0
+	}
+    value = 1.5
+}

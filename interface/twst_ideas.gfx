@@ -1,0 +1,12 @@
+spriteTypes = {	
+
+
+	spriteType = {
+		name = "GFX_idea_Queen_Hearts_Law"
+		texturefile = "gfx/interface/ideas/HEA_Queen_Hearts_Law.dds"
+	}		
+		spriteType = {
+		name = "GFX_idea_magical_wheel"
+		texturefile = "gfx/interface/ideas/idea_magical_wheel.dds"
+	}		
+}

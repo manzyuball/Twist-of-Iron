@@ -1,0 +1,196 @@
+# common/ideas/heartslabyul_ideas.txt
+
+ideas = {
+	country = {
+	
+		Queen_Hearts_Law = {
+			allowed = { original_tag = HEA }
+			removal_cost = -1
+			modifier = {
+				drift_defence_factor = 0.25
+				political_advisor_cost_factor = 0.2
+				trade_laws_cost_factor = 0.2
+				economy_cost_factor = 0.2
+				mobilization_laws_cost_factor = 0.2
+			}
+		}
+		Off_with_your_head = {
+			picture = generic_secret_police # 恐怖政治、粛清のイメージ
+			allowed = { original_tag = HEA }
+			removal_cost = -1
+			modifier = {
+				political_power_factor = 0.2
+				stability_weekly = -0.02
+				war_support_factor = -0.15
+				custom_modifier_tooltip = Off_with_your_head_tooltip
+			}
+		}
+        # 服従教育で追加される国民精神
+        HEA_disciplined_spirit = {
+            picture = generic_prisoner # 規律、徴兵のイメージ
+            modifier = {
+				surrender_limit = 0.05
+                command_power_gain = 0.12
+            }
+        }
+
+        # 完全服従で追加される国民精神
+        HEA_perfect_obedience_spirit = {
+            picture = generic_prisoner # より強い規律のイメージ
+            modifier = {
+				surrender_limit = 0.08
+				conscription_factor = 0.05
+                command_power_gain = 0.15
+            }
+		}
+		HEA_better_obedience_spirit = {
+            picture = generic_victors_of_ww1
+            modifier = {
+				surrender_limit = 0.2
+				army_org_factor = 0.2
+            }
+		}
+        # 補習ルート
+        HEA_diligent_spirit = {
+            picture = AFG_democratic_graduates 
+            modifier = {
+                research_speed_factor = 0.05
+            }
+        }
+		HEA_diligent_spirit_Offence = {
+            picture = AFG_democratic_graduates
+            modifier = {
+                research_speed_factor = 0.05
+                army_attack_factor = 0.05
+            }
+        }
+		HEA_diligent_spirit_Offence_2 = {
+            picture = AFG_democratic_graduates
+            modifier = {
+                research_speed_factor = 0.05
+                army_attack_factor = 0.05
+                production_lack_of_resource_penalty_factor = -0.33 
+            }
+        }
+		HEA_diligent_spirit_Difence = {
+            picture = AFG_democratic_graduates 
+            modifier = {
+                research_speed_factor = 0.05
+				  army_defence_factor = 0.05
+            }
+        }
+        HEA_diligent_spirit_Difence_2 = {
+            picture = AFG_democratic_graduates
+            modifier = {
+                research_speed_factor = 0.05
+				  army_defence_factor = 0.05
+				production_lack_of_resource_penalty_factor = -0.33
+            }
+        }
+		# 小さい薔薇の王国
+		HEA_rose_kingdom_foundation_spirit = {
+			picture = AUS_habsburg_monarchy_restored # 王国、帝国のイメージ
+			modifier = {
+				political_power_gain = 0.10
+				stability_factor = 0.05
+			}
+		}
+		# タルト工場Ⅱで強化
+		HEA_rose_kingdom_foundation_spirit_2 = {
+			picture = AUS_habsburg_monarchy_restored # 国家再建のイメージ
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.05
+				industrial_capacity_civilian = 0.10
+			}
+		}
+		# 拡張的対外政策 (戦争目標正当化バージョン)
+		HEA_aggressive_diplomacy_wargoal = {
+			picture = generic_fascism_drift_2 # 拡張主義、ファシズムのイメージ
+			modifier = {
+				justify_war_goal_time = -0.25
+			}
+		}
+		# 従い、働け、愚民共
+		HEA_forced_labor_spirit = {
+			picture = ARG_public_works_investment # 労働運動、強制労働のイメージ
+			modifier = {
+				industrial_capacity_factory = 0.10
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+
+		# === 占領地統治ツリーの国民精神 ===
+		HEA_efficient_oppression = {
+			picture = generic_secret_police
+			modifier = {
+				compliance_gain = 0.10
+				resistance_target = -0.10
+				consumer_goods_factor = 0.08
+				political_power_gain = -0.05
+			}
+		}
+
+		HEA_colonial_recruitment = {
+			picture = prc_low_popular_support3
+			modifier = {
+				non_core_manpower = 0.1
+				division_recovery_rate = -0.05
+			}
+		}
+
+		HEA_perfect_eastern_order_spirit = {
+			picture = generic_oppression
+			modifier = {
+				compliance_gain = 0.15
+				resistance_target = -0.15
+				consumer_goods_factor = -0.05
+			}
+		}
+		
+		HEA_colonial_recruitment_2 = {
+			picture = prc_low_popular_support3
+			modifier = {
+				non_core_manpower = 0.2
+				army_core_attack_factor = 0.10
+				army_core_defence_factor = 0.15
+			}
+		}
+
+		# === 反逆ルートの国民精神 (定義追加) ===
+		HEA_gathering_allies_spirit = {
+			picture = chi_war_of_resistance
+			modifier = {
+				political_power_gain = 0.10
+			}
+		}
+		HEA_gathering_allies_spirit_2 = {
+			picture = chi_war_of_resistance2
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.05
+			}
+		}
+		HEA_gathering_allies_spirit_3 = {
+			picture = chi_war_of_resistance3
+			modifier = {
+				political_power_gain = 0.20
+				stability_factor = 0.10
+				war_support_factor = 0.05
+			}
+		}
+		HEA_cater_networking_idea = {
+			picture = GFX_idea_generic_spy_political
+			modifier = {
+				political_power_gain = -0.20 # 時間がかかることをデバフで表現
+			}
+		}
+		HEA_Nothing_party_spirit = {
+			picture = BRA_departamento_nacional_do_cafe
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.6 
+			}
+
+		}
+	}
+}

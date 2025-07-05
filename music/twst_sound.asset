@@ -1,0 +1,32 @@
+
+music = {
+	name = "Hea_OWYH_1_voice"
+	file = "HEA/Hea_OWYH_1.ogg"
+}
+
+music = {
+	name = "Hea_OWYH_2_voice"
+	file = "HEA/Hea_OWYH_2.ogg"
+}
+
+music = {
+	name = "Hea_OWYH_3_voice"
+	file = "HEA/Hea_OWYH_3.ogg"
+}
+
+music = {
+	name = "UNBIRTHDAY_voice"
+	file = "HEA/UNBIRTHDAY.ogg"
+}
+music = {
+	name = "Heartslabyul_BGM"
+	file = "HEA/Heartslabyul_BGM.ogg"
+}
+music = {
+	name = "Heartslabyul_historical_Event_1"
+	file = "HEA/HEA_historicalEvent1.ogg"
+}
+music = {
+	name = "Heartslabyul_historical_Event_2"
+	file = "HEA/HEA_historicalEvent2.ogg"
+}
