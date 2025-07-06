@@ -1,0 +1,5 @@
+# Octavinelle Events
+# This file will contain all the events related to the Octavinelle focus tree.
+
+# Placeholder for future events
+# add_namespace = oct

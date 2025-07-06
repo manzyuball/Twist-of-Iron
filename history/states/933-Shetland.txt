@@ -1,0 +1,34 @@
+state = {
+	id = 933
+	name = "STATE_933"
+	manpower = 18000
+	
+	state_category = metropolis
+
+	resources = {
+		steel = 32
+		chromium = 4
+		oil = 12
+	}
+
+	history = {
+		owner = OCT
+		add_core_of = ENG
+		add_core_of = OCT
+		add_core_of = SCO
+
+		buildings = {
+			infrastructure = 4	
+			industrial_complex = 4
+			dockyard = 4
+			6196 = {
+				naval_base = 10	
+			}
+		}
+		
+	}
+
+	provinces = { 6196 }
+
+	local_supplies = 0.0 
+}

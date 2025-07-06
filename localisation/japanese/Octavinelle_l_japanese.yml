@@ -1,0 +1,43 @@
+﻿l_japanese:
+  # Characters
+  OCT_Azul_Ashengrotto: "アズール・アーシェングロット"
+  OCT_Jade_Leech: "ジェイド・リーチ"
+  OCT_Floyd_Leech: "フロイド・リーチ"
+  OCT_Mob_A: "オクタヴィネル寮生A"
+  OCT_Mob_B: "オクタヴィネル寮生B"
+  OCT_Mob_C: "オクタヴィネル寮生C"
+  OCT_Mob_D: "オクタヴィネル寮生D"
+  OCT_Mob_E: "オクタヴィネル寮生E"
+  OCT_Mob_F: "オクタヴィネル寮生F"
+  OCT_Mob_G: "オクタヴィネル寮生G"
+
+  # Leader Traits
+  Charitable_Businessman: "博愛主義の経営者"
+
+  # Advisor Traits
+  Careful_Planner: "慎重な計画者"
+  Superior_Tactician: "優れた戦術家"
+  Aggressive_Attacker: "積極的な攻撃手"
+  Fierce_Warrior: "猛烈な戦士"
+  silent_workhorse: "静かなる仕事人"
+  backroom_backstabber: "裏工作の達人"
+  land_doctrine_theorist: "陸軍ドクトリンの専門家"
+  naval_doctrine_theorist: "海軍ドクトリンの専門家"
+  army_attack_specialist: "陸軍攻撃の専門家"
+  army_defence_specialist: "陸軍防御の専門家"
+  army_logistics_specialist: "陸軍兵站の専門家"
+
+  # Idea Tokens
+  OCT_Jade_Leech_Advisor_token: "ジェイド・リーチ (政治顧問)"
+  OCT_Jade_Leech_Army_token: "ジェイド・リーチ (陸軍長官)"
+  OCT_Jade_Leech_Navy_token: "ジェイド・リーチ (海軍長官)"
+  OCT_Floyd_Leech_Advisor_token: "フロイド・リーチ (政治顧問)"
+  OCT_Floyd_Leech_Army_token: "フロイド・リーチ (陸軍長官)"
+  OCT_Floyd_Leech_Navy_token: "フロイド・リーチ (海軍長官)"
+  OCT_Mob_Advisor_1_token: "モストロ・ラウンジのスタッフ"
+  OCT_Mob_Advisor_2_token: "闇社会のフィクサー"
+  OCT_Mob_Theorist_Army_token: "陸軍理論家"
+  OCT_Mob_Theorist_Navy_token: "海軍理論家"
+  OCT_Mob_HC_1_token: "攻撃部隊司令官"
+  OCT_Mob_HC_2_token: "防衛部隊司令官"
+  OCT_Mob_HC_3_token: "兵站管理官"

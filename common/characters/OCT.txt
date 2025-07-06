@@ -1,0 +1,204 @@
+# common/characters/OCT.txt
+
+characters={
+	OCT_Azul_Ashengrotto={
+		name = OCT_Azul_Ashengrotto
+		portraits = {
+			civilian = { large = GFX_portrait_Azul_Ashengrotto }
+			army = { large = GFX_portrait_Azul_Ashengrotto }
+		}
+		country_leader={
+			ideology=conservatism
+			traits = { Charitable_Businessman }
+			expire="1965.1.1.1"
+			id=-1
+		}
+	}
+
+	OCT_Jade_Leech_Advisor={
+		name = OCT_Jade_Leech
+		portraits={
+			civilian={ large = GFX_portrait_Jade_Leech }
+			army = { large = GFX_portrait_Jade_Leech_Beens small = GFX_idea_OCT_Jade_Leech }
+		}
+		advisor={
+			cost = 150
+			slot = political_advisor
+			idea_token = OCT_Jade_Leech_Advisor_token
+			allowed = { original_tag = OCT }
+			traits = { Careful_Planner }
+		}
+	}
+
+	OCT_Jade_Leech_Army={
+		name = OCT_Jade_Leech
+		portraits={
+			civilian={ large = GFX_portrait_Jade_Leech }
+			army = { large = GFX_portrait_Jade_Leech_Beens small = GFX_idea_OCT_Jade_Leech }
+		}
+		advisor={
+			cost = 150
+			slot = army_chief
+			idea_token = OCT_Jade_Leech_Army_token
+			allowed = { original_tag = OCT }
+			traits = { Superior_Tactician }
+		}
+		corps_commander={
+			traits={ defensive_doctrine }
+			skill=4
+			attack_skill=2
+			defense_skill=5
+			planning_skill=4
+			logistics_skill=3
+		}
+	}
+
+	OCT_Jade_Leech_Navy={
+		name = OCT_Jade_Leech
+		portraits={
+			civilian={ large = GFX_portrait_Jade_Leech }
+			army = { large = GFX_portrait_Jade_Leech_Beens small = GFX_idea_OCT_Jade_Leech }
+		}
+		advisor={
+			cost = 150
+			slot = navy_chief
+			idea_token = OCT_Jade_Leech_Navy_token
+			allowed = { original_tag = OCT }
+			traits = { Superior_Tactician }
+		}
+	}
+
+	OCT_Floyd_Leech_Advisor={
+		name=OCT_Floyd_Leech
+		portraits={
+			civilian={ large = GFX_portrait_Floyd_Leech }
+			army = { large = GFX_portrait_Floyd_Leech_Beens small = GFX_idea_OCT_Floyd_Leech }
+		}
+		advisor={
+			cost = 150
+			slot = political_advisor
+			idea_token = OCT_Floyd_Leech_Advisor_token
+			allowed = { original_tag = OCT }
+			traits = { Aggressive_Attacker }
+		}
+	}
+
+	OCT_Floyd_Leech_Army={
+		name=OCT_Floyd_Leech
+		portraits={
+			civilian={ large = GFX_portrait_Floyd_Leech }
+			army = { large = GFX_portrait_Floyd_Leech_Beens small = GFX_idea_OCT_Floyd_Leech }
+		}
+		advisor={
+			cost = 150
+			slot = army_chief
+			idea_token = OCT_Floyd_Leech_Army_token
+			allowed = { original_tag = OCT }
+			traits = { Fierce_Warrior }
+		}
+		corps_commander={
+			traits={ offensive_doctrine }
+			skill=4
+			attack_skill=5
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=4
+		}
+	}
+
+	OCT_Floyd_Leech_Navy={
+		name=OCT_Floyd_Leech
+		portraits={
+			civilian={ large = GFX_portrait_Floyd_Leech }
+			army = { large = GFX_portrait_Floyd_Leech_Beens small = GFX_idea_OCT_Floyd_Leech }
+		}
+		advisor={
+			cost = 150
+			slot = navy_chief
+			idea_token = OCT_Floyd_Leech_Navy_token
+			allowed = { original_tag = OCT }
+			traits = { Fierce_Warrior }
+		}
+	}
+
+	# Mob Characters
+	OCT_Mob_Advisor_1={
+		name=OCT_Mob_A
+		portraits={ civilian={ small = GFX_idea_OCT_Mob_A } army = { small = GFX_idea_OCT_Mob_A } }
+		advisor={
+			cost = 100
+			slot = political_advisor
+			idea_token = OCT_Mob_Advisor_1_token
+			allowed = { original_tag = OCT }
+			traits = { silent_workhorse }
+		}
+	}
+	OCT_Mob_Advisor_2={
+		name=OCT_Mob_B
+		portraits={ civilian={ small = GFX_idea_OCT_Mob_B } army = { small = GFX_idea_OCT_Mob_B } }
+		advisor={
+			cost = 100
+			slot = political_advisor
+			idea_token = OCT_Mob_Advisor_2_token
+			allowed = { original_tag = OCT }
+			traits = { backroom_backstabber }
+		}
+	}
+
+	OCT_Mob_Theorist_Army={
+		name=OCT_Mob_C
+		portraits={ civilian={ small = GFX_idea_OCT_Mob_A } army = { small = GFX_idea_OCT_Mob_A } }
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = OCT_Mob_Theorist_Army_token
+			allowed = { original_tag = OCT }
+			traits = { land_doctrine_theorist }
+		}
+	}
+	OCT_Mob_Theorist_Navy={
+		name=OCT_Mob_D
+		portraits={ civilian={ small = GFX_idea_OCT_Mob_B } army = { small = GFX_idea_OCT_Mob_B } }
+		advisor={
+			cost = 100
+			slot = theorist
+			idea_token = OCT_Mob_Theorist_Navy_token
+			allowed = { original_tag = OCT }
+			traits = { naval_doctrine_theorist }
+		}
+	}
+
+	OCT_Mob_HC_1={
+		name=OCT_Mob_E
+		portraits={ civilian={ small = GFX_idea_OCT_Mob_A } army = { small = GFX_idea_OCT_Mob_A } }
+		advisor={
+			cost = 100
+			slot = high_command
+			idea_token = OCT_Mob_HC_1_token
+			allowed = { original_tag = OCT }
+			traits = { army_attack_specialist }
+		}
+	}
+	OCT_Mob_HC_2={
+		name=OCT_Mob_F
+		portraits={ civilian={ small = GFX_idea_OCT_Mob_B } army = { small = GFX_idea_OCT_Mob_B } }
+		advisor={
+			cost = 100
+			slot = high_command
+			idea_token = OCT_Mob_HC_2_token
+			allowed = { original_tag = OCT }
+			traits = { army_defence_specialist }
+		}
+	}
+	OCT_Mob_HC_3={
+		name=OCT_Mob_G
+		portraits={ civilian={ small = GFX_idea_OCT_Mob_A } army = { small = GFX_idea_OCT_Mob_A } }
+		advisor={
+			cost = 100
+			slot = high_command
+			idea_token = OCT_Mob_HC_3_token
+			allowed = { original_tag = OCT }
+			traits = { army_logistics_specialist }
+		}
+	}
+}

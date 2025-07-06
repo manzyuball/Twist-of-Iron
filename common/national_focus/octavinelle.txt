@@ -1,0 +1,474 @@
+focus_tree = {
+	id = octavinelle_focus
+	country = {
+		factor = 5
+		modifier = {
+			add = 1.5
+			has_government = democratic
+		}
+	}
+	default = no
+
+	# Starting Focus
+	focus = {
+		id = OCT_the_mostro_lounge
+		icon = GFX_goal_magical_wheel
+		x = 30
+		y = 0
+		cost = 0
+		ai_will_do = { factor = 1 }
+		completion_reward = {
+			add_political_power = 150
+			add_stability = 0.10
+		}
+	}
+
+	# --- Industry Branch ---
+	focus = {
+		id = OCT_industry_branch
+		icon = GFX_goal_magical_wheel
+		x = 14
+		y = 2
+		cost = 10
+		prerequisite = { focus = OCT_the_mostro_lounge }
+		completion_reward = { add_ideas = oct_mostro_lounge_idea }
+	}
+	focus = {
+		id = OCT_construction_business
+		icon = GFX_goal_magical_wheel
+		x = 10
+		y = 4
+		cost = 10
+		prerequisite = { focus = OCT_industry_branch }
+		completion_reward = { add_ideas = oct_construction_idea }
+	}
+	focus = {
+		id = OCT_urban_development
+		icon = GFX_goal_magical_wheel
+		x = 10
+		y = 6
+		cost = 10
+		prerequisite = { focus = OCT_construction_business }
+	}
+	focus = {
+		id = OCT_financial_business
+		icon = GFX_goal_magical_wheel
+		x = 14
+		y = 4
+		cost = 10
+		prerequisite = { focus = OCT_industry_branch }
+		completion_reward = { add_ideas = oct_financial_idea }
+	}
+	focus = {
+		id = OCT_stock_market
+		icon = GFX_goal_magical_wheel
+		x = 14
+		y = 6
+		cost = 10
+		prerequisite = { focus = OCT_financial_business }
+	}
+	focus = {
+		id = OCT_retail_business
+		icon = GFX_goal_magical_wheel
+		x = 18
+		y = 4
+		cost = 10
+		prerequisite = { focus = OCT_industry_branch }
+		completion_reward = { add_ideas = oct_retail_idea }
+	}
+	focus = {
+		id = OCT_logistics_network
+		icon = GFX_goal_magical_wheel
+		x = 18
+		y = 6
+		cost = 10
+		prerequisite = { focus = OCT_retail_business }
+	}
+	focus = {
+		id = OCT_mostro_conglomerate
+		icon = GFX_goal_magical_wheel
+		x = 14
+		y = 8
+		cost = 10
+		prerequisite = { focus = OCT_urban_development focus = OCT_stock_market focus = OCT_logistics_network }
+		completion_reward = { add_research_slot = 1 }
+	}
+	focus = {
+		id = OCT_offshore_production
+		icon = GFX_goal_magical_wheel
+		x = 14
+		y = 10
+		cost = 10
+		prerequisite = { focus = OCT_mostro_conglomerate }
+	}
+
+	# --- Expansion Branch ---
+	focus = {
+		id = OCT_expansion_branch
+		icon = GFX_goal_magical_wheel
+		x = 40
+		y = 2
+		cost = 10
+		prerequisite = { focus = OCT_the_mostro_lounge }
+		completion_reward = { add_ideas = golden_contract_idea }
+	}
+	# Scandinavian Sub-branch
+	focus = {
+		id = OCT_target_scandinavia
+		icon = GFX_goal_magical_wheel
+		x = 36
+		y = 4
+		cost = 10
+		prerequisite = { focus = OCT_expansion_branch }
+	}
+	focus = {
+		id = OCT_scandinavian_pressure
+		icon = GFX_goal_magical_wheel
+		x = 36
+		y = 6
+		cost = 10
+		prerequisite = { focus = OCT_target_scandinavia }
+	}
+	focus = {
+		id = OCT_scandinavian_deal
+		icon = GFX_goal_magical_wheel
+		x = 36
+		y = 8
+		cost = 10
+		prerequisite = { focus = OCT_scandinavian_pressure }
+	}
+	focus = {
+		id = OCT_scandinavian_ultimatum
+		icon = GFX_goal_magical_wheel
+		x = 36
+		y = 10
+		cost = 10
+		prerequisite = { focus = OCT_scandinavian_deal }
+	}
+	focus = {
+		id = OCT_scandinavian_hegemony
+		icon = GFX_goal_magical_wheel
+		x = 36
+		y = 12
+		cost = 10
+		prerequisite = { focus = OCT_scandinavian_ultimatum }
+	}
+	# Caribbean Sub-branch
+	focus = {
+		id = OCT_target_caribbean
+		icon = GFX_goal_magical_wheel
+		x = 40
+		y = 4
+		cost = 10
+		prerequisite = { focus = OCT_expansion_branch }
+	}
+	focus = {
+		id = OCT_caribbean_pressure
+		icon = GFX_goal_magical_wheel
+		x = 40
+		y = 6
+		cost = 10
+		prerequisite = { focus = OCT_target_caribbean }
+	}
+	focus = {
+		id = OCT_caribbean_deal
+		icon = GFX_goal_magical_wheel
+		x = 40
+		y = 8
+		cost = 10
+		prerequisite = { focus = OCT_caribbean_pressure }
+	}
+	focus = {
+		id = OCT_caribbean_ultimatum
+		icon = GFX_goal_magical_wheel
+		x = 40
+		y = 10
+		cost = 10
+		prerequisite = { focus = OCT_caribbean_deal }
+	}
+	focus = {
+		id = OCT_caribbean_monopoly
+		icon = GFX_goal_magical_wheel
+		x = 40
+		y = 12
+		cost = 10
+		prerequisite = { focus = OCT_caribbean_ultimatum }
+	}
+	# UK Sub-branch
+	focus = {
+		id = OCT_target_uk
+		icon = GFX_goal_magical_wheel
+		x = 44
+		y = 4
+		cost = 10
+		prerequisite = { focus = OCT_expansion_branch }
+	}
+	focus = {
+		id = OCT_uk_pressure
+		icon = GFX_goal_magical_wheel
+		x = 44
+		y = 6
+		cost = 10
+		prerequisite = { focus = OCT_target_uk }
+	}
+	focus = {
+		id = OCT_uk_deal
+		icon = GFX_goal_magical_wheel
+		x = 44
+		y = 8
+		cost = 10
+		prerequisite = { focus = OCT_uk_pressure }
+	}
+	focus = {
+		id = OCT_uk_ultimatum
+		icon = GFX_goal_magical_wheel
+		x = 44
+		y = 10
+		cost = 10
+		prerequisite = { focus = OCT_uk_deal }
+	}
+	focus = {
+		id = OCT_uk_hegemony
+		icon = GFX_goal_magical_wheel
+		x = 44
+		y = 12
+		cost = 10
+		prerequisite = { focus = OCT_uk_ultimatum }
+	}
+
+	# --- Military Branch ---
+	focus = {
+		id = OCT_military_branch
+		icon = GFX_goal_magical_wheel
+		x = 30
+		y = 16
+		cost = 10
+		prerequisite = { focus = OCT_the_mostro_lounge }
+	}
+	# Jade's Land Doctrine
+	focus = {
+		id = OCT_jade_land_doctrine
+		icon = GFX_goal_magical_wheel
+		x = 24
+		y = 18
+		cost = 10
+		prerequisite = { focus = OCT_military_branch }
+		completion_reward = { add_ideas = jade_army_theorist }
+	}
+	focus = {
+		id = OCT_grand_battleplan
+		icon = GFX_goal_magical_wheel
+		x = 22
+		y = 20
+		cost = 10
+		prerequisite = { focus = OCT_jade_land_doctrine }
+	}
+	focus = {
+		id = OCT_gbp_1
+		icon = GFX_goal_magical_wheel
+		x = 22
+		y = 22
+		cost = 10
+		prerequisite = { focus = OCT_grand_battleplan }
+	}
+	focus = {
+		id = OCT_gbp_2
+		icon = GFX_goal_magical_wheel
+		x = 22
+		y = 24
+		cost = 10
+		prerequisite = { focus = OCT_gbp_1 }
+	}
+	focus = {
+		id = OCT_superior_firepower
+		icon = GFX_goal_magical_wheel
+		x = 26
+		y = 20
+		cost = 10
+		prerequisite = { focus = OCT_jade_land_doctrine }
+	}
+	focus = {
+		id = OCT_sfp_1
+		icon = GFX_goal_magical_wheel
+		x = 26
+		y = 22
+		cost = 10
+		prerequisite = { focus = OCT_superior_firepower }
+	}
+	focus = {
+		id = OCT_sfp_2
+		icon = GFX_goal_magical_wheel
+		x = 26
+		y = 24
+		cost = 10
+		prerequisite = { focus = OCT_sfp_1 }
+	}
+	# Floyd's Naval Doctrine
+	focus = {
+		id = OCT_floyd_naval_doctrine
+		icon = GFX_goal_magical_wheel
+		x = 36
+		y = 18
+		cost = 10
+		prerequisite = { focus = OCT_military_branch }
+		completion_reward = { add_ideas = floyd_navy_theorist }
+	}
+	focus = {
+		id = OCT_fleet_in_being
+		icon = GFX_goal_magical_wheel
+		x = 34
+		y = 20
+		cost = 10
+		prerequisite = { focus = OCT_floyd_naval_doctrine }
+	}
+	focus = {
+		id = OCT_fib_1
+		icon = GFX_goal_magical_wheel
+		x = 34
+		y = 22
+		cost = 10
+		prerequisite = { focus = OCT_fleet_in_being }
+	}
+	focus = {
+		id = OCT_fib_2
+		icon = GFX_goal_magical_wheel
+		x = 34
+		y = 24
+		cost = 10
+		prerequisite = { focus = OCT_fib_1 }
+	}
+	focus = {
+		id = OCT_trade_interdiction
+		icon = GFX_goal_magical_wheel
+		x = 38
+		y = 20
+		cost = 10
+		prerequisite = { focus = OCT_floyd_naval_doctrine }
+	}
+	focus = {
+		id = OCT_ti_1
+		icon = GFX_goal_magical_wheel
+		x = 38
+		y = 22
+		cost = 10
+		prerequisite = { focus = OCT_trade_interdiction }
+	}
+	focus = {
+		id = OCT_ti_2
+		icon = GFX_goal_magical_wheel
+		x = 38
+		y = 24
+		cost = 10
+		prerequisite = { focus = OCT_ti_1 }
+	}
+	# Combined
+	focus = {
+		id = OCT_combined_arms
+		icon = GFX_goal_magical_wheel
+		x = 30
+		y = 26
+		cost = 10
+		prerequisite = { focus = OCT_gbp_2 focus = OCT_sfp_2 focus = OCT_fib_2 focus = OCT_ti_2 }
+		completion_reward = { army_experience = 100, air_experience = 100 }
+	}
+
+	# --- Exploration & Covert Ops Branch ---
+	focus = {
+		id = OCT_exploration_branch
+		icon = GFX_goal_magical_wheel
+		x = 50
+		y = 2
+		cost = 10
+		prerequisite = { focus = OCT_the_mostro_lounge }
+	}
+	focus = {
+		id = OCT_jade_mountain_expedition
+		icon = GFX_goal_magical_wheel
+		x = 48
+		y = 4
+		cost = 10
+		prerequisite = { focus = OCT_exploration_branch }
+	}
+	focus = {
+		id = OCT_floyd_cooking_trip
+		icon = GFX_goal_magical_wheel
+		x = 50
+		y = 4
+		cost = 10
+		prerequisite = { focus = OCT_exploration_branch }
+	}
+	focus = {
+		id = OCT_azul_research
+		icon = GFX_goal_magical_wheel
+		x = 52
+		y = 4
+		cost = 10
+		prerequisite = { focus = OCT_exploration_branch }
+		completion_reward = { add_ideas = azul_research_idea }
+	}
+	focus = {
+		id = OCT_unlock_mountain_specialist
+		icon = GFX_goal_magical_wheel
+		x = 48
+		y = 6
+		cost = 10
+		prerequisite = { focus = OCT_jade_mountain_expedition }
+	}
+	focus = {
+		id = OCT_unlock_diplomatic_channels
+		icon = GFX_goal_magical_wheel
+		x = 50
+		y = 6
+		cost = 10
+		prerequisite = { focus = OCT_floyd_cooking_trip }
+	}
+	focus = {
+		id = OCT_unlock_advanced_computing
+		icon = GFX_goal_magical_wheel
+		x = 52
+		y = 6
+		cost = 10
+		prerequisite = { focus = OCT_azul_research }
+	}
+	# Covert Ops
+	focus = {
+		id = OCT_covert_ops_agency
+		icon = GFX_goal_magical_wheel
+		x = 4
+		y = 2
+		cost = 10
+		prerequisite = { focus = OCT_the_mostro_lounge }
+	}
+	focus = {
+		id = OCT_establish_networks
+		icon = GFX_goal_magical_wheel
+		x = 4
+		y = 4
+		cost = 10
+		prerequisite = { focus = OCT_covert_ops_agency }
+	}
+	focus = {
+		id = OCT_smuggling_routes
+		icon = GFX_goal_magical_wheel
+		x = 2
+		y = 6
+		cost = 10
+		prerequisite = { focus = OCT_establish_networks }
+	}
+	focus = {
+		id = OCT_destabilize_governments
+		icon = GFX_goal_magical_wheel
+		x = 6
+		y = 6
+		cost = 10
+		prerequisite = { focus = OCT_establish_networks }
+	}
+	focus = {
+		id = OCT_master_of_espionage
+		icon = GFX_goal_magical_wheel
+		x = 4
+		y = 8
+		cost = 10
+		prerequisite = { focus = OCT_smuggling_routes focus = OCT_destabilize_governments }
+	}
+}
