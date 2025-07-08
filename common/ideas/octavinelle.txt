@@ -1,4 +1,59 @@
 ideas = {
 	country = {
+		# 軍事産業投資レベル (5段階)
+		oct_military_investment_level_1 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { military_factory_construction_speed_factor = 0.01 production_speed_military_factory_factor = 0.01 } }
+		oct_military_investment_level_2 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { military_factory_construction_speed_factor = 0.02 production_speed_military_factory_factor = 0.02 } }
+		oct_military_investment_level_3 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { military_factory_construction_speed_factor = 0.03 production_speed_military_factory_factor = 0.03 } }
+		oct_military_investment_level_4 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { military_factory_construction_speed_factor = 0.04 production_speed_military_factory_factor = 0.04 } }
+		oct_military_investment_level_5 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { military_factory_construction_speed_factor = 0.05 production_speed_military_factory_factor = 0.05 } }
+
+		# 造船産業投資レベル (5段階)
+		oct_naval_investment_level_1 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { dockyard_construction_speed_factor = 0.01 production_speed_dockyard_factor = 0.01 } }
+		oct_naval_investment_level_2 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { dockyard_construction_speed_factor = 0.02 production_speed_dockyard_factor = 0.02 } }
+		oct_naval_investment_level_3 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { dockyard_construction_speed_factor = 0.03 production_speed_dockyard_factor = 0.03 } }
+		oct_naval_investment_level_4 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { dockyard_construction_speed_factor = 0.04 production_speed_dockyard_factor = 0.04 } }
+		oct_naval_investment_level_5 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { dockyard_construction_speed_factor = 0.05 production_speed_dockyard_factor = 0.05 } }
+
+		# 建設産業投資レベル (5段階)
+		oct_construction_investment_level_1 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { civilian_factory_construction_speed_factor = 0.01 infrastructure_construction_speed = 0.01 } }
+		oct_construction_investment_level_2 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { civilian_factory_construction_speed_factor = 0.02 infrastructure_construction_speed = 0.02 } }
+		oct_construction_investment_level_3 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { civilian_factory_construction_speed_factor = 0.03 infrastructure_construction_speed = 0.03 } }
+		oct_construction_investment_level_4 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { civilian_factory_construction_speed_factor = 0.04 infrastructure_construction_speed = 0.04 } }
+		oct_construction_investment_level_5 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { civilian_factory_construction_speed_factor = 0.05 infrastructure_construction_speed = 0.05 } }
+
+		# 鉱業産業投資レベル (5段階)
+		oct_resource_investment_level_1 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { local_resources_factor = 0.01 } }
+		oct_resource_investment_level_2 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { local_resources_factor = 0.02 } }
+		oct_resource_investment_level_3 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { local_resources_factor = 0.03 } }
+		oct_resource_investment_level_4 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { local_resources_factor = 0.04 } }
+		oct_resource_investment_level_5 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { local_resources_factor = 0.05 } }
+
+		# 金融産業投資レベル (5段階)
+		oct_finance_investment_level_1 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { consumer_goods_factor = -0.01 } }
+		oct_finance_investment_level_2 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { consumer_goods_factor = -0.02 } }
+		oct_finance_investment_level_3 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { consumer_goods_factor = -0.03 } }
+		oct_finance_investment_level_4 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { consumer_goods_factor = -0.04 } }
+		oct_finance_investment_level_5 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { consumer_goods_factor = -0.05 } }
+
+		# サービス産業投資レベル (5段階)
+		oct_service_investment_level_1 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { political_power_gain = 0.01 stability_factor = 0.01 } }
+		oct_service_investment_level_2 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { political_power_gain = 0.02 stability_factor = 0.02 } }
+		oct_service_investment_level_3 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { political_power_gain = 0.03 stability_factor = 0.03 } }
+		oct_service_investment_level_4 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { political_power_gain = 0.04 stability_factor = 0.04 } }
+		oct_service_investment_level_5 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { political_power_gain = 0.05 stability_factor = 0.05 } }
+
+		# 投資先国用「経済依存度」国民精神 (5段階)
+		economic_dependency_with_oct_level_1 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { trade_relations_factor = 0.01 export_capacity_factor = 0.01 } }
+		economic_dependency_with_oct_level_2 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { trade_relations_factor = 0.02 export_capacity_factor = 0.02 } }
+		economic_dependency_with_oct_level_3 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { trade_relations_factor = 0.03 export_capacity_factor = 0.03 } }
+		economic_dependency_with_oct_level_4 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { trade_relations_factor = 0.04 export_capacity_factor = 0.04 } }
+		economic_dependency_with_oct_level_5 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { trade_relations_factor = 0.05 export_capacity_factor = 0.05 } }
+
+		# オクタヴィネル用「海外投資利益」国民精神 (5段階)
+		oct_foreign_investment_profit_level_1 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { military_factory_output_factor = 0.005 civilian_factory_output_factor = 0.005 political_power_gain = 0.005 } }
+		oct_foreign_investment_profit_level_2 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { military_factory_output_factor = 0.01 civilian_factory_output_factor = 0.01 political_power_gain = 0.01 } }
+		oct_foreign_investment_profit_level_3 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { military_factory_output_factor = 0.015 civilian_factory_output_factor = 0.015 political_power_gain = 0.015 } }
+		oct_foreign_investment_profit_level_4 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { military_factory_output_factor = 0.02 civilian_factory_output_factor = 0.02 political_power_gain = 0.02 } }
+		oct_foreign_investment_profit_level_5 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { military_factory_output_factor = 0.025 civilian_factory_output_factor = 0.025 political_power_gain = 0.025 } }
 	}
 }

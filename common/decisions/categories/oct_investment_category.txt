@@ -1,0 +1,11 @@
+oct_investment_category = {
+	icon = GFX_decision_category_generic_industry
+	
+	allowed = {
+		tag = OCT
+	}
+	
+	visible = {
+		tag = OCT
+	}
+}

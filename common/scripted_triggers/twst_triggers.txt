@@ -1,0 +1,19 @@
+# Mostro Zaibatsu Investment Triggers
+oct_can_invest_military_trigger = {
+	check_variable = { var = mostro_zaibatsu_military_var value < 0.05 }
+}
+oct_can_invest_naval_trigger = {
+	check_variable = { var = mostro_zaibatsu_naval_var value < 0.05 }
+}
+oct_can_invest_construction_trigger = {
+	check_variable = { var = mostro_zaibatsu_construction_var value < 0.05 }
+}
+oct_can_invest_resource_trigger = {
+	check_variable = { var = mostro_zaibatsu_resource_var value < 0.05 }
+}
+oct_can_invest_finance_trigger = {
+	check_variable = { var = mostro_zaibatsu_finance_var value < 0.05 }
+}
+oct_can_invest_service_trigger = {
+	check_variable = { var = mostro_zaibatsu_service_var value < 0.05 }
+}

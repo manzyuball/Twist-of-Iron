@@ -16,4 +16,16 @@ on_actions = {
 			}
 		}
 	}
+
+	on_monthly = {
+		effect = {
+			# オクタヴィネルがプレイ中の場合のみ動的国策の効果を更新
+			if = {
+				limit = {
+					tag = OCT
+				}
+				oct_update_mostro_zaibatsu_modifier_effects = yes
+			}
+		}
+	}
 }

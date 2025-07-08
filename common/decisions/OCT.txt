@@ -1,0 +1,122 @@
+country_decisions = {
+	category = oct_economic_category # 既存のカテゴリを維持
+
+	# 既存のディシジョンがあればここに記述
+
+	# --- 軍事産業への投資 ---
+	oct_invest_in_military = {
+		icon = GFX_goal_generic_construct_mil_factory
+		
+		visible = {
+			has_country_flag = oct_can_invest_in_military
+		}
+		
+		available = {
+			oct_can_invest_military_trigger = yes
+		}
+		
+		cost = 50 # 政治力コスト
+		
+		complete_effect = {
+			add_to_variable = { var = mostro_zaibatsu_military_var value = 0.01 }
+		}
+		
+		# ローカライゼーションで動的に名前を表示
+		# oct_invest_in_military_title: "軍事産業への投資 (レベル [?mostro_zaibatsu_military_var|%0])"
+	}
+
+	# --- 造船産業への投資 ---
+	oct_invest_in_naval = {
+		icon = GFX_focus_generic_naval_dockyards
+		
+		visible = {
+			has_country_flag = oct_can_invest_in_naval
+		}
+		
+		available = {
+			oct_can_invest_naval_trigger = yes
+		}
+		
+		cost = 50
+		
+		complete_effect = {
+			add_to_variable = { var = mostro_zaibatsu_naval_var value = 0.01 }
+		}
+	}
+
+	# --- 建設産業への投資 ---
+	oct_invest_in_construction = {
+		icon = GFX_goal_generic_construction
+		
+		visible = {
+			has_country_flag = oct_can_invest_in_construction
+		}
+		
+		available = {
+			oct_can_invest_construction_trigger = yes
+		}
+		
+		cost = 50
+		
+		complete_effect = {
+			add_to_variable = { var = mostro_zaibatsu_construction_var value = 0.01 }
+		}
+	}
+
+	# --- 鉱業産業への投資 ---
+	oct_invest_in_resource = {
+		icon = GFX_focus_generic_mining_industry
+		
+		visible = {
+			has_country_flag = oct_can_invest_in_resource
+		}
+		
+		available = {
+			oct_can_invest_resource_trigger = yes
+		}
+		
+		cost = 50
+		
+		complete_effect = {
+			add_to_variable = { var = mostro_zaibatsu_resource_var value = 0.01 }
+		}
+	}
+
+	# --- 金融産業への投資 ---
+	oct_invest_in_finance = {
+		icon = GFX_focus_generic_monetary_union
+		
+		visible = {
+			has_country_flag = oct_can_invest_in_finance
+		}
+		
+		available = {
+			oct_can_invest_finance_trigger = yes
+		}
+		
+		cost = 50
+		
+		complete_effect = {
+			add_to_variable = { var = mostro_zaibatsu_finance_var value = 0.01 }
+		}
+	}
+
+	# --- サービス産業への投資 ---
+	oct_invest_in_service = {
+		icon = GFX_SOV_national_specialists_ccp_2d_sov_compatibility
+		
+		visible = {
+			has_country_flag = oct_can_invest_in_service
+		}
+		
+		available = {
+			oct_can_invest_service_trigger = yes
+		}
+		
+		cost = 50
+		
+		complete_effect = {
+			add_to_variable = { var = mostro_zaibatsu_service_var value = 0.01 }
+		}
+	}
+}

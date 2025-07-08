@@ -1,4 +1,3 @@
-
 HEA_basic_fitness_spirit = { #NATIONAL SPIRIT
 	enable = { always = yes }
 
@@ -37,4 +36,14 @@ rose_kingdom_legacy_modifier = {
 			
 	production_factory_max_efficiency_factor = rose_kingdom_legacy_production_efficiency
 	industrial_capacity_factory = rose_kingdom_legacy_factory_output
+}
+
+mostro_zaibatsu_modifier = { #DYNAMIC MODIFIER for Octavinelle
+	enable = { always = yes }
+	icon = GFX_idea_generic_industrial_concern # Placeholder icon
+
+	# 変数に直接値を割り当てるのではなく、スクリプト変数として定義されたものを参照
+	# 動的国策自体は固定値で、スクリプトエフェクトで変数の値を適用する
+	industrial_capacity_factory = mostro_zaibatsu_civ_factory_output_var # これは残す
+	research_speed_factor = mostro_zaibatsu_research_speed_var # これは残す
 }

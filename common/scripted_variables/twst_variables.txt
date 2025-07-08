@@ -1,0 +1,32 @@
+# Octavinelle Mostro Zaibatsu Variables
+mostro_zaibatsu_military_var = 0
+mostro_zaibatsu_naval_var = 0
+mostro_zaibatsu_construction_var = 0
+mostro_zaibatsu_resource_var = 0
+mostro_zaibatsu_finance_var = 0
+mostro_zaibatsu_service_var = 0
+
+# Dynamic Modifier Effect Variables
+mostro_zaibatsu_military_construction_speed_bonus = 0
+mostro_zaibatsu_military_production_speed_bonus = 0
+mostro_zaibatsu_naval_construction_speed_bonus = 0
+mostro_zaibatsu_naval_production_speed_bonus = 0
+mostro_zaibatsu_civilian_construction_speed_bonus = 0
+mostro_zaibatsu_infrastructure_construction_speed_bonus = 0
+mostro_zaibatsu_resource_gain_bonus = 0
+mostro_zaibatsu_consumer_goods_bonus = 0
+mostro_zaibatsu_political_power_gain_bonus = 0
+mostro_zaibatsu_stability_bonus = 0
+
+# 各国が持つ対オクタヴィネル経済依存度変数
+economic_dependency_with_oct = 0.0 # 初期値
+
+# オクタヴィネルが持つ海外投資利益変数
+oct_foreign_investment_military_profit_var = 0.0
+oct_foreign_investment_naval_profit_var = 0.0
+oct_foreign_investment_construction_profit_var = 0.0
+oct_foreign_investment_resource_profit_var = 0.0
+oct_foreign_investment_finance_profit_var = 0.0
+oct_foreign_investment_service_profit_var = 0.0
+
+total_foreign_profit_level = 0.0 # 海外投資利益の合計レベル

@@ -1,5 +1,151 @@
-# Octavinelle Events
-# This file will contain all the events related to the Octavinelle focus tree.
+country_event = {
+    id = oct.1 # メインの更新トリガーイベント
+    title = "oct.1.t"
+    desc = "oct.1.d"
+    picture = GFX_report_event_OCT_Event1
 
-# Placeholder for future events
-# add_namespace = oct
+    # is_triggered_only は削除し、on_actionsから定期的にトリガーされるようにする
+
+    option = {
+        name = "oct.1.a"
+        ai_chance = { factor = 1 }
+
+        # 各産業の投資レベルが0より大きい場合に、対応する更新イベントをトリガー
+        if = {
+            limit = { check_variable = { var = mostro_zaibatsu_military_var value > 0 } }
+            trigger_event = { id = oct.military_update }
+        }
+        if = {
+            limit = { check_variable = { var = mostro_zaibatsu_naval_var value > 0 } }
+            trigger_event = { id = oct.naval_update }
+        }
+        if = {
+            limit = { check_variable = { var = mostro_zaibatsu_construction_var value > 0 } }
+            trigger_event = { id = oct.construction_update }
+        }
+        if = {
+            limit = { check_variable = { var = mostro_zaibatsu_resource_var value > 0 } }
+            trigger_event = { id = oct.resource_update }
+        }
+        if = {
+            limit = { check_variable = { var = mostro_zaibatsu_finance_var value > 0 } }
+            trigger_event = { id = oct.finance_update }
+        }
+        if = {
+            limit = { check_variable = { var = mostro_zaibatsu_service_var value > 0 } }
+            trigger_event = { id = oct.service_update }
+        }
+    }
+}
+
+# 軍事産業更新イベント
+country_event = {
+    id = oct.military_update
+    is_triggered_only = yes
+    option = {
+        name = "OK"
+        ai_chance = { factor = 1 }
+        remove_ideas = oct_military_industry_bonus
+        add_ideas = oct_military_industry_bonus
+        set_idea_modifier = {
+            idea = oct_military_industry_bonus
+            modifier = {
+                military_factory_construction_speed_factor = mostro_zaibatsu_military_var
+                production_speed_military_factory_factor = mostro_zaibatsu_military_var
+            }
+        }
+    }
+}
+
+# 造船産業更新イベント
+country_event = {
+    id = oct.naval_update
+    is_triggered_only = yes
+    option = {
+        name = "OK"
+        ai_chance = { factor = 1 }
+        remove_ideas = oct_naval_industry_bonus
+        add_ideas = oct_naval_industry_bonus
+        set_idea_modifier = {
+            idea = oct_naval_industry_bonus
+            modifier = {
+                dockyard_construction_speed_factor = mostro_zaibatsu_naval_var
+                production_speed_dockyard_factor = mostro_zaibatsu_naval_var
+            }
+        }
+    }
+}
+
+# 建設産業更新イベント
+country_event = {
+    id = oct.construction_update
+    is_triggered_only = yes
+    option = {
+        name = "OK"
+        ai_chance = { factor = 1 }
+        remove_ideas = oct_construction_industry_bonus
+        add_ideas = oct_construction_industry_bonus
+        set_idea_modifier = {
+            idea = oct_construction_industry_bonus
+            modifier = {
+                civilian_factory_construction_speed_factor = mostro_zaibatsu_construction_var
+                infrastructure_construction_speed = mostro_zaibatsu_construction_var
+            }
+        }
+    }
+}
+
+# 鉱業産業更新イベント
+country_event = {
+    id = oct.resource_update
+    is_triggered_only = yes
+    option = {
+        name = "OK"
+        ai_chance = { factor = 1 }
+        remove_ideas = oct_resource_industry_bonus
+        add_ideas = oct_resource_industry_bonus
+        set_idea_modifier = {
+            idea = oct_resource_industry_bonus
+            modifier = {
+                local_resources_factor = mostro_zaibatsu_resource_var
+            }
+        }
+    }
+}
+
+# 金融産業更新イベント
+country_event = {
+    id = oct.finance_update
+    is_triggered_only = yes
+    option = {
+        name = "OK"
+        ai_chance = { factor = 1 }
+        remove_ideas = oct_finance_industry_bonus
+        add_ideas = oct_finance_industry_bonus
+        set_idea_modifier = {
+            idea = oct_finance_industry_bonus
+            modifier = {
+                consumer_goods_factor = { value = mostro_zaibatsu_finance_var multiply = -1 }
+            }
+        }
+    }
+}
+
+# サービス産業更新イベント
+country_event = {
+    id = oct.service_update
+    is_triggered_only = yes
+    option = {
+        name = "OK"
+        ai_chance = { factor = 1 }
+        remove_ideas = oct_service_industry_bonus
+        add_ideas = oct_service_industry_bonus
+        set_idea_modifier = {
+            idea = oct_service_industry_bonus
+            modifier = {
+                political_power_gain = mostro_zaibatsu_service_var
+                stability_factor = mostro_zaibatsu_service_var
+            }
+        }
+    }
+}

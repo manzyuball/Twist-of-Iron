@@ -1,12 +1,535 @@
 focus_tree = {
 	id = octavinelle_focus
+	
 	country = {
-		factor = 5
+		factor = 0
+		
 		modifier = {
-			add = 1.5
-			has_government = democratic
+			add = 10
+			tag = OCT
 		}
 	}
+	
 	default = no
 
+	continuous_focus_position = { x = 50 y = 1650 }
+
+	# Main Industrial Branch (Azul's Core Path - 5 NFs)
+	focus = {
+		id = OCT_mostro_lounge_establishment # モストロ・ラウンジ設立
+		icon = GFX_goal_generic_production2
+		x = 6 # Abs: 6,0
+		y = 0
+		cost = 10
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = OCT_mostro_lounge_expansion # モストロ・ラウンジ拡張
+		icon = GFX_focus_DEN_heavy_regulations
+		prerequisite = { focus = OCT_mostro_lounge_establishment }
+		x = 0 # Abs: 6,1
+		y = 1
+		relative_position_id = OCT_mostro_lounge_establishment
+		cost = 10
+		completion_reward = {
+			add_political_power = 25
+			add_to_variable = { var = mostro_zaibatsu_civ_factory_output_var value = 0.05 } # Initial buff
+		}
+	}
+
+	focus = {
+		id = OCT_mostro_zaibatsu_formation # モストロ財閥設立
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = OCT_mostro_lounge_expansion }
+		x = 0 # Abs: 6,2
+		y = 1
+		relative_position_id = OCT_mostro_lounge_expansion
+		cost = 10
+		completion_reward = {
+			add_political_power = 50
+			add_to_variable = { var = mostro_zaibatsu_civ_factory_output_var value = 0.05 }
+		}
+	}
+
+	focus = {
+		id = OCT_business_diversification # 事業多角化
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = OCT_mostro_zaibatsu_formation }
+		x = 0 # Abs: 6,3
+		y = 1
+		relative_position_id = OCT_mostro_zaibatsu_formation
+		cost = 10
+		completion_reward = {
+			add_political_power = 25
+			add_to_variable = { var = mostro_zaibatsu_civ_factory_output_var value = 0.05 }
+		}
+	}
+
+	focus = {
+		id = OCT_global_ambitions # 世界進出への野望
+		icon = GFX_focus_RAJ_to_shake_the_world
+		prerequisite = { focus = OCT_business_diversification }
+		x = 0 # Abs: 6,4
+		y = 1
+		relative_position_id = OCT_business_diversification
+		cost = 10
+		completion_reward = {
+			add_political_power = 50
+			add_to_variable = { var = mostro_zaibatsu_civ_factory_output_var value = 0.05 }
+		}
+	}
+
+	# Sub-Branches (Industry Specific) - 5 NFs each
+
+	# A. Military Industry Branch (5 NFs)
+	focus = {
+		id = OCT_military_contracts # 軍事契約の獲得 (Hub)
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = OCT_mostro_zaibatsu_formation }
+		x = -3 # Abs: 3,3
+		y = 2
+		relative_position_id = OCT_mostro_zaibatsu_formation
+		cost = 10
+		completion_reward = {
+			set_country_flag = oct_can_invest_in_military
+		}
+	}
+	focus = {
+		id = OCT_arms_manufacturing # 兵器製造事業
+		icon = GFX_focus_generic_reorient_production
+		prerequisite = { focus = OCT_military_contracts }
+		x = 0 # Abs: 1,4
+		y = 1
+		relative_position_id = OCT_military_contracts
+		cost = 10
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+	focus = {
+		id = OCT_advanced_weaponry # 先端兵器開発
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = OCT_military_contracts }
+		prerequisite = {	focus = OCT_rare_earth_mining 	}
+		x = -2 # Abs: 5,4
+		y = 1
+		relative_position_id = OCT_military_contracts
+		cost = 10
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+	focus = {
+		id = OCT_military_logistics # 軍事物流最適化
+		icon = GFX_focus_generic_supply_line
+		prerequisite = { focus = OCT_arms_manufacturing }
+		x = -1 # Abs: 1,5
+		y = 1
+		relative_position_id = OCT_arms_manufacturing
+		cost = 10
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+	focus = {
+		id = OCT_naval_armament # 海軍兵器供給
+		icon = GFX_focus_POL_develop_polish_shipbuilding
+		prerequisite = { focus = OCT_advanced_weaponry }
+		x = -1 # Abs: 5,5
+		y = 1
+		relative_position_id = OCT_advanced_weaponry
+		cost = 10
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+	focus = {
+		id = OCT_military_industrial_complex # 軍事産業複合体
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = OCT_military_logistics focus = OCT_naval_armament }
+		x = -1 # Abs: 1,6 (relative to military_logistics)
+		y = 1
+		relative_position_id = OCT_military_logistics
+		cost = 10
+		completion_reward = {
+			add_political_power = 100
+			set_country_flag = oct_military_industrial_complex_completed # フラグを立てる
+		}
+	}
+
+	# B. Shipbuilding Industry Branch (5 NFs)
+	focus = {
+		id = OCT_maritime_ventures # 海洋事業への進出 (Hub)
+		icon = GFX_focus_generic_refit_civilian_ships
+		prerequisite = { focus = OCT_mostro_zaibatsu_formation }
+		x = 6 # Abs: 9,3
+		y = 1
+		relative_position_id = OCT_mostro_zaibatsu_formation
+		cost = 10
+		completion_reward = {
+			set_country_flag = oct_can_invest_in_naval
+		}
+	}
+	focus = {
+		id = OCT_deep_sea_mining # 深海資源採掘
+		icon = GFX_focus_generic_resource_extraction
+		prerequisite = { focus = OCT_maritime_ventures }
+		x = 1 # Abs: 7,4
+		y = 1
+		relative_position_id = OCT_maritime_ventures
+		cost = 10
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+	focus = {
+		id = OCT_luxury_liners # 豪華客船事業
+		icon = GFX_focus_generic_merchant_fleet
+		prerequisite = { focus = OCT_maritime_ventures }
+		x = -1 # Abs: 11,4
+		y = 1
+		relative_position_id = OCT_maritime_ventures
+		cost = 10
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+	focus = {
+		id = OCT_naval_research_focus # 海軍研究重点化
+		icon = GFX_focus_generic_navy_research_bonus
+		prerequisite = { focus = OCT_deep_sea_mining }
+		x = 2 # Abs: 7,5
+		y = 1
+		relative_position_id = OCT_deep_sea_mining
+		cost = 10
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+	focus = {
+		id = OCT_naval_dominance # 海洋覇権の確立
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = OCT_luxury_liners }
+		x = 2 # Abs: 11,5
+		y = 1
+		relative_position_id = OCT_luxury_liners
+		cost = 10
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+	focus = {
+		id = OCT_global_shipping_empire # グローバル海運帝国
+		icon = GFX_focus_eng_global_defense
+		prerequisite = { focus = OCT_naval_research_focus focus = OCT_naval_dominance }
+		x = -1 # Abs: 7,6 (relative to naval_research_focus)
+		y = 1
+		relative_position_id = OCT_naval_research_focus
+		cost = 10
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	# C. Construction Industry Branch (5 NFs)
+	focus = {
+		id = OCT_real_estate_development # 不動産開発 (Hub)
+		icon = GFX_focus_SWE_hygienic_housing
+		prerequisite = { focus = OCT_business_diversification }
+		x = -1 # Abs: 3,4
+		y = 3
+		relative_position_id = OCT_business_diversification
+		cost = 10
+		completion_reward = {
+			set_country_flag = oct_can_invest_in_construction
+		}
+	}
+	focus = {
+		id = OCT_urban_planning # 都市計画
+		icon = GFX_focus_SWE_urbanization
+		prerequisite = { focus = OCT_real_estate_development }
+		x = -2 # Abs: 1,5
+		y = 1
+		relative_position_id = OCT_real_estate_development
+		cost = 10
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+	focus = {
+		id = OCT_large_scale_projects # 大規模プロジェクト
+		icon = GFX_focus_generic_hydroelectric_energy
+		prerequisite = { focus = OCT_real_estate_development }
+		x = 0 # Abs: 5,5
+		y = 1
+		relative_position_id = OCT_real_estate_development
+		cost = 10
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+	focus = {
+		id = OCT_infrastructure_modernization # インフラ近代化
+		icon = GFX_focus_POL_warsaw_main_station
+		prerequisite = { focus = OCT_urban_planning }
+		x = 0 # Abs: 1,6
+		y = 1
+		relative_position_id = OCT_urban_planning
+		cost = 10
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+	focus = {
+		id = OCT_construction_innovation # 建設技術革新
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = OCT_large_scale_projects }
+		x = 0 # Abs: 5,6
+		y = 1
+		relative_position_id = OCT_large_scale_projects
+		cost = 10
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+	focus = {
+		id = OCT_urban_renewal_initiative # 都市再生計画
+		icon = GFX_focus_generic_low_cost_housing
+		prerequisite = { focus = OCT_infrastructure_modernization focus = OCT_construction_innovation }
+		x = 2 # Abs: 1,7 (relative to infrastructure_modernization)
+		y = 1
+		relative_position_id = OCT_infrastructure_modernization
+		cost = 10
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	# D. Mining Industry Branch (5 NFs)
+	focus = {
+		id = OCT_mining_ventures # 鉱業事業への進出 (Hub)
+		icon = GFX_focus_generic_mining_industry
+		prerequisite = { focus = OCT_mostro_zaibatsu_formation }
+		x = -6 # Abs: 0,3 (This is the leftmost point, x=0)
+		y = 1
+		relative_position_id = OCT_mostro_zaibatsu_formation
+		cost = 10
+		completion_reward = {
+			set_country_flag = oct_can_invest_in_resource
+		}
+	}
+	focus = {
+		id = OCT_strategic_resource_acquisition # 戦略資源確保
+		icon = GFX_focus_generic_chromium
+		prerequisite = { focus = OCT_mining_ventures }
+		x = -1 # Abs: -2,4 (This goes outside the 0-12 range if starting at 0. Let's adjust the hub x to -3 or -4)
+		y = 1
+		relative_position_id = OCT_mining_ventures
+		cost = 10
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+	focus = {
+		id = OCT_rare_earth_mining # 希少金属採掘
+		icon = GFX_focus_generic_uranium_extraction
+		prerequisite = { focus = OCT_mining_ventures }
+		x = 1 # Abs: 2,4
+		y = 1
+		relative_position_id = OCT_mining_ventures
+		cost = 10
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+	focus = {
+		id = OCT_global_mining_network # グローバル採掘ネットワーク
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = OCT_strategic_resource_acquisition }
+		x = -2 # Abs: -2,5
+		y = 1
+		relative_position_id = OCT_strategic_resource_acquisition
+		cost = 10
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+	focus = {
+		id = OCT_deep_earth_drilling # 深部掘削技術
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = OCT_rare_earth_mining }
+		x = -2 # Abs: 2,5
+		y = 1
+		relative_position_id = OCT_rare_earth_mining
+		cost = 10
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+	focus = {
+		id = OCT_resource_monopoly # 資源独占
+		icon = GFX_focus_PER_invite_oil_nations
+		prerequisite = { focus = OCT_global_mining_network focus = OCT_deep_earth_drilling }
+		x = 1 # Abs: -2,6 (relative to global_mining_network)
+		y = 1
+		relative_position_id = OCT_global_mining_network
+		cost = 10
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	# E. Financial Industry Branch (5 NFs)
+	focus = {
+		id = OCT_financial_investments # 金融投資 (Hub)
+		icon = GFX_focus_generic_monetary_union
+		prerequisite = { focus = OCT_business_diversification }
+		x = 1 # Abs: 9,4
+		y = 3
+		relative_position_id = OCT_business_diversification
+		cost = 10
+		completion_reward = {
+			set_country_flag = oct_can_invest_in_finance
+		}
+	}
+	focus = {
+		id = OCT_asset_management # 資産運用
+		icon = GFX_focus_RAJ_special_economic_zones
+		prerequisite = { focus = OCT_financial_investments }
+		x = 0 # Abs: 7,5
+		y = 1
+		relative_position_id = OCT_financial_investments
+		cost = 10
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = OCT_market_manipulation # 市場操作
+		icon = GFX_focus_generic_economic_recovery
+		prerequisite = { focus = OCT_financial_investments }
+		x = 2 # Abs: 11,5
+		y = 1
+		relative_position_id = OCT_financial_investments
+		cost = 10
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+	focus = {
+		id = OCT_international_banking # 国際銀行業務
+		icon = GFX_focus_generic_improve_the_administration
+		prerequisite = { focus = OCT_asset_management }
+		x = 0 # Abs: 7,6
+		y = 1
+		relative_position_id = OCT_asset_management
+		cost = 10
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = OCT_global_financial_network # グローバル金融ネットワーク
+		icon = GFX_focus_generic_devaluation
+		prerequisite = { focus = OCT_market_manipulation }
+		x = 0 # Abs: 11,6
+		y = 1
+		relative_position_id = OCT_market_manipulation
+		cost = 10
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+	focus = {
+		id = OCT_financial_hegemony # 金融覇権
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		prerequisite = { focus = OCT_international_banking focus = OCT_global_financial_network }
+		x = 0 # Abs: 7,7 (relative to international_banking)
+		y = 1
+		relative_position_id = OCT_international_banking
+		cost = 10
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	# F. Service Industry Branch (5 NFs)
+	focus = {
+		id = OCT_hospitality_expansion # ホスピタリティ事業拡張 (Hub)
+		icon = GFX_SOV_national_specialists_ccp_2d_sov_compatibility
+		prerequisite = { focus = OCT_business_diversification }
+		x = 3 # Abs: 12,4 (This is the rightmost point, x=12)
+		y = 1
+		relative_position_id = OCT_business_diversification
+		cost = 10
+		completion_reward = {
+			set_country_flag = oct_can_invest_in_service
+		}
+	}
+	focus = {
+		id = OCT_entertainment_ventures # エンターテイメント事業
+		icon = GFX_focus_RAJ_just_good_business
+		prerequisite = { focus = OCT_hospitality_expansion }
+		x =0 # Abs: 10,5
+		y = 1
+		relative_position_id = OCT_hospitality_expansion
+		cost = 10
+		completion_reward = {
+			add_political_power = 25
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = OCT_luxury_services # 高級サービス提供
+		icon = GFX_focus_HUN_goulash_communism
+		prerequisite = { focus = OCT_hospitality_expansion }
+	    prerequisite = { focus = OCT_luxury_liners }
+		x = 2 # Abs: 14,5 (This goes outside the 0-12 range. Let's adjust the hub x to 3 or 4)
+		y = 1
+		relative_position_id = OCT_hospitality_expansion
+		cost = 10
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+	focus = {
+		id = OCT_global_service_network # グローバルサービスネットワーク
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = OCT_entertainment_ventures }
+		x = 1 # Abs: 10,6
+		y = 1
+		relative_position_id = OCT_entertainment_ventures
+		cost = 10
+		completion_reward = {
+			add_political_power = 10
+		}
+	}
+	focus = {
+		id = OCT_customer_loyalty_programs # 顧客ロイヤルティプログラム
+		icon = GFX_goal_generic_consumer_goods
+		prerequisite = { focus = OCT_luxury_services }
+		x = 1 # Abs: 14,6
+		y = 1
+		relative_position_id = OCT_luxury_services
+		cost = 10
+		completion_reward = {
+			add_political_power = 25
+		}
+	}
+	focus = {
+		id = OCT_service_industry_dominance # サービス産業の支配
+		icon = GFX_focus_DEN_no_regulations
+		prerequisite = { focus = OCT_global_service_network focus = OCT_customer_loyalty_programs }
+		x = 1 # Abs: 10,7 (relative to global_service_network)
+		y = 1
+		relative_position_id = OCT_global_service_network
+		cost = 10
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
 }

@@ -1,0 +1,190 @@
+# Mostro Zaibatsu Dynamic Modifier Update Effect
+oct_update_mostro_zaibatsu_modifier_effects = {
+	# 既存の国民精神をすべて削除
+	remove_ideas = {
+		oct_military_investment_level_1
+		oct_military_investment_level_2
+		oct_military_investment_level_3
+		oct_military_investment_level_4
+		oct_military_investment_level_5
+
+		oct_naval_investment_level_1
+		oct_naval_investment_level_2
+		oct_naval_investment_level_3
+		oct_naval_investment_level_4
+		oct_naval_investment_level_5
+
+		oct_construction_investment_level_1
+		oct_construction_investment_level_2
+		oct_construction_investment_level_3
+		oct_construction_investment_level_4
+		oct_construction_investment_level_5
+
+		oct_resource_investment_level_1
+		oct_resource_investment_level_2
+		oct_resource_investment_level_3
+		oct_resource_investment_level_4
+		oct_resource_investment_level_5
+
+		oct_finance_investment_level_1
+		oct_finance_investment_level_2
+		oct_finance_investment_level_3
+		oct_finance_investment_level_4
+		oct_finance_investment_level_5
+
+		oct_service_investment_level_1
+		oct_service_investment_level_2
+		oct_service_investment_level_3
+		oct_service_investment_level_4
+		oct_service_investment_level_5
+	}
+
+	# 軍事産業ボーナス
+	if = {
+		limit = { check_variable = { var = mostro_zaibatsu_military_var value >= 0.05 } }
+		add_ideas = oct_military_investment_level_5
+	} else_if = {
+		limit = { check_variable = { var = mostro_zaibatsu_military_var value >= 0.04 } }
+		add_ideas = oct_military_investment_level_4
+	} else_if = {
+		limit = { check_variable = { var = mostro_zaibatsu_military_var value >= 0.03 } }
+		add_ideas = oct_military_investment_level_3
+	} else_if = {
+		limit = { check_variable = { var = mostro_zaibatsu_military_var value >= 0.02 } }
+		add_ideas = oct_military_investment_level_2
+	} else_if = {
+		limit = { check_variable = { var = mostro_zaibatsu_military_var value >= 0.01 } }
+		add_ideas = oct_military_investment_level_1
+	}
+
+	# 造船産業ボーナス
+	if = {
+		limit = { check_variable = { var = mostro_zaibatsu_naval_var value >= 0.05 } }
+		add_ideas = oct_naval_investment_level_5
+	} else_if = {
+		limit = { check_variable = { var = mostro_zaibatsu_naval_var value >= 0.04 } }
+		add_ideas = oct_naval_investment_level_4
+	} else_if = {
+		limit = { check_variable = { var = mostro_zaibatsu_naval_var value >= 0.03 } }
+		add_ideas = oct_naval_investment_level_3
+	} else_if = {
+		limit = { check_variable = { var = mostro_zaibatsu_naval_var value >= 0.02 } }
+		add_ideas = oct_naval_investment_level_2
+	} else_if = {
+		limit = { check_variable = { var = mostro_zaibatsu_naval_var value >= 0.01 } }
+		add_ideas = oct_naval_investment_level_1
+	}
+
+	# 建設産業ボーナス
+	if = {
+		limit = { check_variable = { var = mostro_zaibatsu_construction_var value >= 0.05 } }
+		add_ideas = oct_construction_investment_level_5
+	} else_if = {
+		limit = { check_variable = { var = mostro_zaibatsu_construction_var value >= 0.04 } }
+		add_ideas = oct_construction_investment_level_4
+	} else_if = {
+		limit = { check_variable = { var = mostro_zaibatsu_construction_var value >= 0.03 } }
+		add_ideas = oct_construction_investment_level_3
+	} else_if = {
+		limit = { check_variable = { var = mostro_zaibatsu_construction_var value >= 0.02 } }
+		add_ideas = oct_construction_investment_level_2
+	} else_if = {
+		limit = { check_variable = { var = mostro_zaibatsu_construction_var value >= 0.01 } }
+		add_ideas = oct_construction_investment_level_1
+	}
+
+	# 鉱業産業ボーナス
+	if = {
+		limit = { check_variable = { var = mostro_zaibatsu_resource_var value >= 0.05 } }
+		add_ideas = oct_resource_investment_level_5
+	} else_if = {
+		limit = { check_variable = { var = mostro_zaibatsu_resource_var value >= 0.04 } }
+		add_ideas = oct_resource_investment_level_4
+	} else_if = {
+		limit = { check_variable = { var = mostro_zaibatsu_resource_var value >= 0.03 } }
+		add_ideas = oct_resource_investment_level_3
+	} else_if = {
+		limit = { check_variable = { var = mostro_zaibatsu_resource_var value >= 0.02 } }
+		add_ideas = oct_resource_investment_level_2
+	} else_if = {
+		limit = { check_variable = { var = mostro_zaibatsu_resource_var value >= 0.01 } }
+		add_ideas = oct_resource_investment_level_1
+	}
+
+	# 金融産業ボーナス
+	if = {
+		limit = { check_variable = { var = mostro_zaibatsu_finance_var value >= 0.05 } }
+		add_ideas = oct_finance_investment_level_5
+	} else_if = {
+		limit = { check_variable = { var = mostro_zaibatsu_finance_var value >= 0.04 } }
+		add_ideas = oct_finance_investment_level_4
+	} else_if = {
+		limit = { check_variable = { var = mostro_zaibatsu_finance_var value >= 0.03 } }
+		add_ideas = oct_finance_investment_level_3
+	} else_if = {
+		limit = { check_variable = { var = mostro_zaibatsu_finance_var value >= 0.02 } }
+		add_ideas = oct_finance_investment_level_2
+	} else_if = {
+		limit = { check_variable = { var = mostro_zaibatsu_finance_var value >= 0.01 } }
+		add_ideas = oct_finance_investment_level_1
+	}
+
+	# サービス産業ボーナス
+	if = {
+		limit = { check_variable = { var = mostro_zaibatsu_service_var value >= 0.05 } }
+		add_ideas = oct_service_investment_level_5
+	} else_if = {
+		limit = { check_variable = { var = mostro_zaibatsu_service_var value >= 0.04 } }
+		add_ideas = oct_service_investment_level_4
+	} else_if = {
+		limit = { check_variable = { var = mostro_zaibatsu_service_var value >= 0.03 } }
+		add_ideas = oct_service_investment_level_3
+	} else_if = {
+		limit = { check_variable = { var = mostro_zaibatsu_service_var value >= 0.02 } }
+		add_ideas = oct_service_investment_level_2
+	} else_if = {
+		limit = { check_variable = { var = mostro_zaibatsu_service_var value >= 0.01 } }
+		add_ideas = oct_service_investment_level_1
+	}
+}
+
+# Mostro Zaibatsu Dynamic Modifier Reset Effect (for on_remove)
+oct_reset_mostro_zaibatsu_modifier_effects = {
+	remove_ideas = {
+		oct_military_investment_level_1
+		oct_military_investment_level_2
+		oct_military_investment_level_3
+		oct_military_investment_level_4
+		oct_military_investment_level_5
+
+		oct_naval_investment_level_1
+		oct_naval_investment_level_2
+		oct_naval_investment_level_3
+		oct_naval_investment_level_4
+		oct_naval_investment_level_5
+
+		oct_construction_investment_level_1
+		oct_construction_investment_level_2
+		oct_construction_investment_level_3
+		oct_construction_investment_level_4
+		oct_construction_investment_level_5
+
+		oct_resource_investment_level_1
+		oct_resource_investment_level_2
+		oct_resource_investment_level_3
+		oct_resource_investment_level_4
+		oct_resource_investment_level_5
+
+		oct_finance_investment_level_1
+		oct_finance_investment_level_2
+		oct_finance_investment_level_3
+		oct_finance_investment_level_4
+		oct_finance_investment_level_5
+
+		oct_service_investment_level_1
+		oct_service_investment_level_2
+		oct_service_investment_level_3
+		oct_service_investment_level_4
+		oct_service_investment_level_5
+	}
+}
