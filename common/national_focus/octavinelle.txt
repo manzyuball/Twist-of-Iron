@@ -1,535 +1,787 @@
 focus_tree = {
 	id = octavinelle_focus
-	
+
 	country = {
 		factor = 0
-		
 		modifier = {
 			add = 10
 			tag = OCT
 		}
 	}
-	
+
 	default = no
 
-	continuous_focus_position = { x = 50 y = 1650 }
+	#==================================================
+	# Ⅰ. モストロ・ラウンジ基盤
+	#==================================================
 
-	# Main Industrial Branch (Azul's Core Path - 5 NFs)
 	focus = {
-		id = OCT_mostro_lounge_establishment # モストロ・ラウンジ設立
-		icon = GFX_goal_generic_production2
-		x = 6 # Abs: 6,0
+		id = OCT_the_mostro_lounge
+		icon = GFX_goal_generic_construct_civ_factory
+		x = 10
 		y = 0
-		cost = 10
+		cost = 8
+		ai_will_do = { factor = 10 }
+
 		completion_reward = {
-			add_political_power = 50
+			add_ideas = OCT_Mostro_Lounge
+		}
+	}
+
+	focus = {
+		id = OCT_premium_services
+		icon = GFX_goal_generic_synthetic_rubber
+		prerequisite = { focus = OCT_the_mostro_lounge }
+		relative_position_id = OCT_the_mostro_lounge
+		x = 0
+		y = 1
+		cost = 8
+		ai_will_do = { factor = 10 }
+
+		completion_reward = {
 			add_stability = 0.05
+			add_ideas = OCT_Mostro_Premium_Services
 		}
 	}
 
 	focus = {
-		id = OCT_mostro_lounge_expansion # モストロ・ラウンジ拡張
-		icon = GFX_focus_DEN_heavy_regulations
-		prerequisite = { focus = OCT_mostro_lounge_establishment }
-		x = 0 # Abs: 6,1
+		id = OCT_contract_is_absolute
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = OCT_premium_services }
+		relative_position_id = OCT_premium_services
+		x = 0
 		y = 1
-		relative_position_id = OCT_mostro_lounge_establishment
-		cost = 10
-		completion_reward = {
-			add_political_power = 25
-			add_to_variable = { var = mostro_zaibatsu_civ_factory_output_var value = 0.05 } # Initial buff
-		}
-	}
+		cost = 8
+		ai_will_do = { factor = 10 }
 
-	focus = {
-		id = OCT_mostro_zaibatsu_formation # モストロ財閥設立
-		icon = GFX_goal_generic_demand_territory
-		prerequisite = { focus = OCT_mostro_lounge_expansion }
-		x = 0 # Abs: 6,2
-		y = 1
-		relative_position_id = OCT_mostro_lounge_expansion
-		cost = 10
 		completion_reward = {
 			add_political_power = 50
-			add_to_variable = { var = mostro_zaibatsu_civ_factory_output_var value = 0.05 }
+			add_ideas = OCT_Mostro_Contract_Economy
+		}
+	}
+
+	#==================================================
+	# Ⅱ-A. レストラン事業・マスターシェフルート
+	#==================================================
+
+	focus = {
+		id = OCT_restaurant_expansion
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = OCT_the_mostro_lounge }
+		relative_position_id = OCT_the_mostro_lounge
+		x = 9
+		y = 1
+		cost = 8
+		ai_will_do = { factor = 8 }
+
+		completion_reward = {
+			add_ideas = OCT_Mostro_Restaurant_Base
 		}
 	}
 
 	focus = {
-		id = OCT_business_diversification # 事業多角化
+		id = OCT_master_chef_program
 		icon = GFX_goal_generic_propaganda
-		prerequisite = { focus = OCT_mostro_zaibatsu_formation }
-		x = 0 # Abs: 6,3
+		prerequisite = { focus = OCT_restaurant_expansion }
+		relative_position_id = OCT_restaurant_expansion
+		x = 1
 		y = 1
-		relative_position_id = OCT_mostro_zaibatsu_formation
-		cost = 10
+		cost = 8
+		ai_will_do = { factor = 7 }
+
 		completion_reward = {
-			add_political_power = 25
-			add_to_variable = { var = mostro_zaibatsu_civ_factory_output_var value = 0.05 }
+			add_ideas = OCT_Master_Chef_Program
 		}
 	}
 
 	focus = {
-		id = OCT_global_ambitions # 世界進出への野望
-		icon = GFX_focus_RAJ_to_shake_the_world
-		prerequisite = { focus = OCT_business_diversification }
-		x = 0 # Abs: 6,4
-		y = 1
-		relative_position_id = OCT_business_diversification
-		cost = 10
-		completion_reward = {
-			add_political_power = 50
-			add_to_variable = { var = mostro_zaibatsu_civ_factory_output_var value = 0.05 }
-		}
-	}
-
-	# Sub-Branches (Industry Specific) - 5 NFs each
-
-	# A. Military Industry Branch (5 NFs)
-	focus = {
-		id = OCT_military_contracts # 軍事契約の獲得 (Hub)
-		icon = GFX_goal_generic_intelligence_exchange
-		prerequisite = { focus = OCT_mostro_zaibatsu_formation }
-		x = -3 # Abs: 3,3
-		y = 2
-		relative_position_id = OCT_mostro_zaibatsu_formation
-		cost = 10
-		completion_reward = {
-			set_country_flag = oct_can_invest_in_military
-		}
-	}
-	focus = {
-		id = OCT_arms_manufacturing # 兵器製造事業
-		icon = GFX_focus_generic_reorient_production
-		prerequisite = { focus = OCT_military_contracts }
-		x = 0 # Abs: 1,4
-		y = 1
-		relative_position_id = OCT_military_contracts
-		cost = 10
-		completion_reward = {
-			add_political_power = 10
-		}
-	}
-	focus = {
-		id = OCT_advanced_weaponry # 先端兵器開発
-		icon = GFX_goal_generic_army_tanks
-		prerequisite = { focus = OCT_military_contracts }
-		prerequisite = {	focus = OCT_rare_earth_mining 	}
-		x = -2 # Abs: 5,4
-		y = 1
-		relative_position_id = OCT_military_contracts
-		cost = 10
-		completion_reward = {
-			add_political_power = 10
-		}
-	}
-	focus = {
-		id = OCT_military_logistics # 軍事物流最適化
-		icon = GFX_focus_generic_supply_line
-		prerequisite = { focus = OCT_arms_manufacturing }
-		x = -1 # Abs: 1,5
-		y = 1
-		relative_position_id = OCT_arms_manufacturing
-		cost = 10
-		completion_reward = {
-			add_political_power = 10
-		}
-	}
-	focus = {
-		id = OCT_naval_armament # 海軍兵器供給
-		icon = GFX_focus_POL_develop_polish_shipbuilding
-		prerequisite = { focus = OCT_advanced_weaponry }
-		x = -1 # Abs: 5,5
-		y = 1
-		relative_position_id = OCT_advanced_weaponry
-		cost = 10
-		completion_reward = {
-			add_political_power = 10
-		}
-	}
-	focus = {
-		id = OCT_military_industrial_complex # 軍事産業複合体
-		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = OCT_military_logistics focus = OCT_naval_armament }
-		x = -1 # Abs: 1,6 (relative to military_logistics)
-		y = 1
-		relative_position_id = OCT_military_logistics
-		cost = 10
-		completion_reward = {
-			add_political_power = 100
-			set_country_flag = oct_military_industrial_complex_completed # フラグを立てる
-		}
-	}
-
-	# B. Shipbuilding Industry Branch (5 NFs)
-	focus = {
-		id = OCT_maritime_ventures # 海洋事業への進出 (Hub)
-		icon = GFX_focus_generic_refit_civilian_ships
-		prerequisite = { focus = OCT_mostro_zaibatsu_formation }
-		x = 6 # Abs: 9,3
-		y = 1
-		relative_position_id = OCT_mostro_zaibatsu_formation
-		cost = 10
-		completion_reward = {
-			set_country_flag = oct_can_invest_in_naval
-		}
-	}
-	focus = {
-		id = OCT_deep_sea_mining # 深海資源採掘
-		icon = GFX_focus_generic_resource_extraction
-		prerequisite = { focus = OCT_maritime_ventures }
-		x = 1 # Abs: 7,4
-		y = 1
-		relative_position_id = OCT_maritime_ventures
-		cost = 10
-		completion_reward = {
-			add_political_power = 10
-		}
-	}
-	focus = {
-		id = OCT_luxury_liners # 豪華客船事業
-		icon = GFX_focus_generic_merchant_fleet
-		prerequisite = { focus = OCT_maritime_ventures }
-		x = -1 # Abs: 11,4
-		y = 1
-		relative_position_id = OCT_maritime_ventures
-		cost = 10
-		completion_reward = {
-			add_political_power = 10
-		}
-	}
-	focus = {
-		id = OCT_naval_research_focus # 海軍研究重点化
-		icon = GFX_focus_generic_navy_research_bonus
-		prerequisite = { focus = OCT_deep_sea_mining }
-		x = 2 # Abs: 7,5
-		y = 1
-		relative_position_id = OCT_deep_sea_mining
-		cost = 10
-		completion_reward = {
-			add_political_power = 10
-		}
-	}
-	focus = {
-		id = OCT_naval_dominance # 海洋覇権の確立
-		icon = GFX_goal_generic_navy_battleship
-		prerequisite = { focus = OCT_luxury_liners }
-		x = 2 # Abs: 11,5
-		y = 1
-		relative_position_id = OCT_luxury_liners
-		cost = 10
-		completion_reward = {
-			add_political_power = 10
-		}
-	}
-	focus = {
-		id = OCT_global_shipping_empire # グローバル海運帝国
-		icon = GFX_focus_eng_global_defense
-		prerequisite = { focus = OCT_naval_research_focus focus = OCT_naval_dominance }
-		x = -1 # Abs: 7,6 (relative to naval_research_focus)
-		y = 1
-		relative_position_id = OCT_naval_research_focus
-		cost = 10
-		completion_reward = {
-			add_political_power = 50
-		}
-	}
-
-	# C. Construction Industry Branch (5 NFs)
-	focus = {
-		id = OCT_real_estate_development # 不動産開発 (Hub)
-		icon = GFX_focus_SWE_hygienic_housing
-		prerequisite = { focus = OCT_business_diversification }
-		x = -1 # Abs: 3,4
-		y = 3
-		relative_position_id = OCT_business_diversification
-		cost = 10
-		completion_reward = {
-			set_country_flag = oct_can_invest_in_construction
-		}
-	}
-	focus = {
-		id = OCT_urban_planning # 都市計画
-		icon = GFX_focus_SWE_urbanization
-		prerequisite = { focus = OCT_real_estate_development }
-		x = -2 # Abs: 1,5
-		y = 1
-		relative_position_id = OCT_real_estate_development
-		cost = 10
-		completion_reward = {
-			add_political_power = 10
-		}
-	}
-	focus = {
-		id = OCT_large_scale_projects # 大規模プロジェクト
-		icon = GFX_focus_generic_hydroelectric_energy
-		prerequisite = { focus = OCT_real_estate_development }
-		x = 0 # Abs: 5,5
-		y = 1
-		relative_position_id = OCT_real_estate_development
-		cost = 10
-		completion_reward = {
-			add_political_power = 10
-		}
-	}
-	focus = {
-		id = OCT_infrastructure_modernization # インフラ近代化
-		icon = GFX_focus_POL_warsaw_main_station
-		prerequisite = { focus = OCT_urban_planning }
-		x = 0 # Abs: 1,6
-		y = 1
-		relative_position_id = OCT_urban_planning
-		cost = 10
-		completion_reward = {
-			add_political_power = 10
-		}
-	}
-	focus = {
-		id = OCT_construction_innovation # 建設技術革新
-		icon = GFX_goal_generic_construction
-		prerequisite = { focus = OCT_large_scale_projects }
-		x = 0 # Abs: 5,6
-		y = 1
-		relative_position_id = OCT_large_scale_projects
-		cost = 10
-		completion_reward = {
-			add_political_power = 10
-		}
-	}
-	focus = {
-		id = OCT_urban_renewal_initiative # 都市再生計画
-		icon = GFX_focus_generic_low_cost_housing
-		prerequisite = { focus = OCT_infrastructure_modernization focus = OCT_construction_innovation }
-		x = 2 # Abs: 1,7 (relative to infrastructure_modernization)
-		y = 1
-		relative_position_id = OCT_infrastructure_modernization
-		cost = 10
-		completion_reward = {
-			add_political_power = 50
-		}
-	}
-
-	# D. Mining Industry Branch (5 NFs)
-	focus = {
-		id = OCT_mining_ventures # 鉱業事業への進出 (Hub)
-		icon = GFX_focus_generic_mining_industry
-		prerequisite = { focus = OCT_mostro_zaibatsu_formation }
-		x = -6 # Abs: 0,3 (This is the leftmost point, x=0)
-		y = 1
-		relative_position_id = OCT_mostro_zaibatsu_formation
-		cost = 10
-		completion_reward = {
-			set_country_flag = oct_can_invest_in_resource
-		}
-	}
-	focus = {
-		id = OCT_strategic_resource_acquisition # 戦略資源確保
-		icon = GFX_focus_generic_chromium
-		prerequisite = { focus = OCT_mining_ventures }
-		x = -1 # Abs: -2,4 (This goes outside the 0-12 range if starting at 0. Let's adjust the hub x to -3 or -4)
-		y = 1
-		relative_position_id = OCT_mining_ventures
-		cost = 10
-		completion_reward = {
-			add_political_power = 10
-		}
-	}
-	focus = {
-		id = OCT_rare_earth_mining # 希少金属採掘
-		icon = GFX_focus_generic_uranium_extraction
-		prerequisite = { focus = OCT_mining_ventures }
-		x = 1 # Abs: 2,4
-		y = 1
-		relative_position_id = OCT_mining_ventures
-		cost = 10
-		completion_reward = {
-			add_political_power = 10
-		}
-	}
-	focus = {
-		id = OCT_global_mining_network # グローバル採掘ネットワーク
-		icon = GFX_goal_generic_positive_trade_relations
-		prerequisite = { focus = OCT_strategic_resource_acquisition }
-		x = -2 # Abs: -2,5
-		y = 1
-		relative_position_id = OCT_strategic_resource_acquisition
-		cost = 10
-		completion_reward = {
-			add_political_power = 10
-		}
-	}
-	focus = {
-		id = OCT_deep_earth_drilling # 深部掘削技術
-		icon = GFX_goal_generic_construction2
-		prerequisite = { focus = OCT_rare_earth_mining }
-		x = -2 # Abs: 2,5
-		y = 1
-		relative_position_id = OCT_rare_earth_mining
-		cost = 10
-		completion_reward = {
-			add_political_power = 10
-		}
-	}
-	focus = {
-		id = OCT_resource_monopoly # 資源独占
-		icon = GFX_focus_PER_invite_oil_nations
-		prerequisite = { focus = OCT_global_mining_network focus = OCT_deep_earth_drilling }
-		x = 1 # Abs: -2,6 (relative to global_mining_network)
-		y = 1
-		relative_position_id = OCT_global_mining_network
-		cost = 10
-		completion_reward = {
-			add_political_power = 50
-		}
-	}
-
-	# E. Financial Industry Branch (5 NFs)
-	focus = {
-		id = OCT_financial_investments # 金融投資 (Hub)
-		icon = GFX_focus_generic_monetary_union
-		prerequisite = { focus = OCT_business_diversification }
-		x = 1 # Abs: 9,4
-		y = 3
-		relative_position_id = OCT_business_diversification
-		cost = 10
-		completion_reward = {
-			set_country_flag = oct_can_invest_in_finance
-		}
-	}
-	focus = {
-		id = OCT_asset_management # 資産運用
-		icon = GFX_focus_RAJ_special_economic_zones
-		prerequisite = { focus = OCT_financial_investments }
-		x = 0 # Abs: 7,5
-		y = 1
-		relative_position_id = OCT_financial_investments
-		cost = 10
-		completion_reward = {
-			add_political_power = 50
-		}
-	}
-	focus = {
-		id = OCT_market_manipulation # 市場操作
-		icon = GFX_focus_generic_economic_recovery
-		prerequisite = { focus = OCT_financial_investments }
-		x = 2 # Abs: 11,5
-		y = 1
-		relative_position_id = OCT_financial_investments
-		cost = 10
-		completion_reward = {
-			add_political_power = 10
-		}
-	}
-	focus = {
-		id = OCT_international_banking # 国際銀行業務
-		icon = GFX_focus_generic_improve_the_administration
-		prerequisite = { focus = OCT_asset_management }
-		x = 0 # Abs: 7,6
-		y = 1
-		relative_position_id = OCT_asset_management
-		cost = 10
-		completion_reward = {
-			add_political_power = 50
-		}
-	}
-	focus = {
-		id = OCT_global_financial_network # グローバル金融ネットワーク
-		icon = GFX_focus_generic_devaluation
-		prerequisite = { focus = OCT_market_manipulation }
-		x = 0 # Abs: 11,6
-		y = 1
-		relative_position_id = OCT_market_manipulation
-		cost = 10
-		completion_reward = {
-			add_political_power = 10
-		}
-	}
-	focus = {
-		id = OCT_financial_hegemony # 金融覇権
-		icon = GFX_focus_usa_reestablish_the_gold_standard
-		prerequisite = { focus = OCT_international_banking focus = OCT_global_financial_network }
-		x = 0 # Abs: 7,7 (relative to international_banking)
-		y = 1
-		relative_position_id = OCT_international_banking
-		cost = 10
-		completion_reward = {
-			add_political_power = 50
-		}
-	}
-
-	# F. Service Industry Branch (5 NFs)
-	focus = {
-		id = OCT_hospitality_expansion # ホスピタリティ事業拡張 (Hub)
-		icon = GFX_SOV_national_specialists_ccp_2d_sov_compatibility
-		prerequisite = { focus = OCT_business_diversification }
-		x = 3 # Abs: 12,4 (This is the rightmost point, x=12)
-		y = 1
-		relative_position_id = OCT_business_diversification
-		cost = 10
-		completion_reward = {
-			set_country_flag = oct_can_invest_in_service
-		}
-	}
-	focus = {
-		id = OCT_entertainment_ventures # エンターテイメント事業
-		icon = GFX_focus_RAJ_just_good_business
-		prerequisite = { focus = OCT_hospitality_expansion }
-		x =0 # Abs: 10,5
-		y = 1
-		relative_position_id = OCT_hospitality_expansion
-		cost = 10
-		completion_reward = {
-			add_political_power = 25
-			add_stability = 0.05
-		}
-	}
-	focus = {
-		id = OCT_luxury_services # 高級サービス提供
-		icon = GFX_focus_HUN_goulash_communism
-		prerequisite = { focus = OCT_hospitality_expansion }
-	    prerequisite = { focus = OCT_luxury_liners }
-		x = 2 # Abs: 14,5 (This goes outside the 0-12 range. Let's adjust the hub x to 3 or 4)
-		y = 1
-		relative_position_id = OCT_hospitality_expansion
-		cost = 10
-		completion_reward = {
-			add_political_power = 10
-		}
-	}
-	focus = {
-		id = OCT_global_service_network # グローバルサービスネットワーク
-		icon = GFX_goal_generic_intelligence_exchange
-		prerequisite = { focus = OCT_entertainment_ventures }
-		x = 1 # Abs: 10,6
-		y = 1
-		relative_position_id = OCT_entertainment_ventures
-		cost = 10
-		completion_reward = {
-			add_political_power = 10
-		}
-	}
-	focus = {
-		id = OCT_customer_loyalty_programs # 顧客ロイヤルティプログラム
+		id = OCT_premium_menu
 		icon = GFX_goal_generic_consumer_goods
-		prerequisite = { focus = OCT_luxury_services }
-		x = 1 # Abs: 14,6
+		prerequisite = { focus = OCT_master_chef_program }
+		relative_position_id = OCT_master_chef_program
+		x = 0
 		y = 1
-		relative_position_id = OCT_luxury_services
-		cost = 10
+		cost = 8
+		ai_will_do = { factor = 7 }
+
 		completion_reward = {
-			add_political_power = 25
+			add_ideas = OCT_Premium_Menu
+		}
+	}
+
+	focus = {
+		id = OCT_ingredient_network
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = OCT_restaurant_expansion }
+		relative_position_id = OCT_restaurant_expansion
+		x = -1
+		y = 1
+		cost = 8
+		ai_will_do = { factor = 7 }
+
+		completion_reward = {
+			add_ideas = OCT_Ingredient_Supply_Network
+		}
+	}
+
+	focus = {
+		id = OCT_secure_supply_contracts
+		icon = GFX_goal_generic_army_logistics
+		prerequisite = { focus = OCT_ingredient_network }
+		relative_position_id = OCT_ingredient_network
+		x = 0
+		y = 1
+		cost = 8
+		ai_will_do = { factor = 6 }
+
+		completion_reward = {
+			add_ideas = OCT_Secure_Supply_Contracts
+		}
+	}
+
+	focus = {
+		id = OCT_catering_for_elites
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = OCT_premium_menu focus = OCT_secure_supply_contracts }
+		relative_position_id = OCT_master_chef_program
+		x = -1
+		y = 2
+		cost = 8
+		ai_will_do = { factor = 6 }
+
+		completion_reward = {
+			add_ideas = OCT_Elite_Catering
+		}
+	}
+
+	focus = {
+		id = OCT_mostro_global_franchise
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = OCT_catering_for_elites }
+		relative_position_id = OCT_catering_for_elites
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = { factor = 8 }
+
+		completion_reward = {
+			add_ideas = OCT_Mostro_Global_Franchise
+		}
+	}
+
+	#==================================================
+	# Ⅱ-B. 多角化企業ルート（既存）
+	#==================================================
+
+	focus = {
+		id = OCT_construction_business
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = OCT_contract_is_absolute }
+		relative_position_id = OCT_contract_is_absolute
+		x = -2
+		y = 1
+		cost = 8
+		ai_will_do = { factor = 10 }
+
+		completion_reward = {
+			add_ideas = OCT_Mostro_Construction_Division
+		}
+	}
+
+	focus = {
+		id = OCT_urban_development
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = OCT_construction_business }
+		relative_position_id = OCT_construction_business
+		x = 0
+		y = 1
+		cost = 8
+		ai_will_do = { factor = 8 }
+
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = OCT_financial_business
+		icon = GFX_goal_generic_political_reform
+		prerequisite = { focus = OCT_contract_is_absolute }
+		relative_position_id = OCT_contract_is_absolute
+		x = 0
+		y = 1
+		cost = 8
+		ai_will_do = { factor = 10 }
+
+		completion_reward = {
+			add_ideas = OCT_Mostro_Financial_Division
+		}
+	}
+
+	focus = {
+		id = OCT_stock_market
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = OCT_financial_business }
+		relative_position_id = OCT_financial_business
+		x = 0
+		y = 1
+		cost = 8
+		ai_will_do = { factor = 8 }
+
+		completion_reward = {
+			add_ideas = OCT_Mostro_Financial_Market
+		}
+	}
+
+	focus = {
+		id = OCT_retail_business
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = OCT_contract_is_absolute }
+		relative_position_id = OCT_contract_is_absolute
+		x = 2
+		y = 1
+		cost = 8
+		ai_will_do = { factor = 10 }
+
+		completion_reward = {
+			add_ideas = OCT_Mostro_Retail_Tourism
+		}
+	}
+
+	focus = {
+		id = OCT_resort_development
+		icon = GFX_goal_generic_occupy_states_coastal
+		prerequisite = { focus = OCT_retail_business }
+		relative_position_id = OCT_retail_business
+		x = 0
+		y = 1
+		cost = 8
+		ai_will_do = { factor = 8 }
+
+		completion_reward = {
+			add_ideas = OCT_Mostro_Resort_Program
+		}
+	}
+
+	focus = {
+		id = OCT_logistics_network
+		icon = GFX_goal_generic_army_logistics
+		prerequisite = { focus = OCT_construction_business focus = OCT_financial_business }
+		relative_position_id = OCT_financial_business
+		x = -1
+		y = 2
+		cost = 8
+		ai_will_do = { factor = 8 }
+
+		completion_reward = {
+			add_ideas = OCT_Mostro_Logistics_Shipping
+		}
+	}
+
+	focus = {
+		id = OCT_offshore_production
+		icon = GFX_goal_generic_naval_effort2
+		prerequisite = { focus = OCT_retail_business focus = OCT_financial_business }
+		relative_position_id = OCT_retail_business
+		x = -1
+		y = 2
+		cost = 8
+		ai_will_do = { factor = 8 }
+
+		completion_reward = {
+			add_ideas = OCT_Mostro_Offshore_Production
+		}
+	}
+
+	focus = {
+		id = OCT_mostro_conglomerate
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = OCT_logistics_network focus = OCT_offshore_production }
+		relative_position_id = OCT_contract_is_absolute
+		x = 0
+		y = 4
+		cost = 10
+		ai_will_do = { factor = 10 }
+
+		completion_reward = {
+			add_ideas = OCT_Mostro_Conglomerate
+		}
+	}
+
+	#==================================================
+	# Ⅲ. ジェイド陸軍ルート
+	#==================================================
+
+	focus = {
+		id = OCT_jade_land_focus
+		icon = GFX_goal_generic_army_doctrine
+		prerequisite = { focus = OCT_military_branch }
+		relative_position_id = OCT_military_branch
+		x = -2
+		y = 1
+		cost = 8
+		ai_will_do = { factor = 8 }
+
+		completion_reward = {
+			add_ideas = OCT_Jade_Land_Advisor
+		}
+	}
+
+	focus = {
+		id = OCT_jade_mountain_expedition
+		icon = GFX_goal_generic_mountain_training
+		prerequisite = { focus = OCT_jade_land_focus }
+		relative_position_id = OCT_jade_land_focus
+		x = 0
+		y = 1
+		cost = 8
+		ai_will_do = { factor = 7 }
+
+		completion_reward = {
+			add_ideas = OCT_Mountain_Exploration
+		}
+	}
+
+	focus = {
+		id = OCT_mountain_warfare
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = OCT_jade_mountain_expedition }
+		relative_position_id = OCT_jade_mountain_expedition
+		x = -1
+		y = 1
+		cost = 8
+		ai_will_do = { factor = 7 }
+
+		completion_reward = {
+			add_ideas = OCT_Mountain_Warfare_Prof
+		}
+	}
+
+	focus = {
+		id = OCT_jade_intelligence_network
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = OCT_jade_land_focus }
+		relative_position_id = OCT_jade_land_focus
+		x = -2
+		y = 1
+		cost = 8
+		ai_will_do = { factor = 6 }
+
+		completion_reward = {
+			add_ideas = OCT_Land_Intelligence
+		}
+	}
+
+	focus = {
+		id = OCT_logistics_refinement
+		icon = GFX_goal_generic_army_logistics
+		prerequisite = { focus = OCT_jade_intelligence_network }
+		relative_position_id = OCT_jade_intelligence_network
+		x = -1
+		y = 1
+		cost = 8
+		ai_will_do = { factor = 6 }
+
+		completion_reward = {
+			add_ideas = OCT_Logistics_Refinement
+		}
+	}
+
+	focus = {
+		id = OCT_special_operations
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = OCT_mountain_warfare focus = OCT_logistics_refinement }
+		relative_position_id = OCT_jade_land_focus
+		x = -2
+		y = 3
+		cost = 8
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			add_ideas = OCT_Special_Operations
+		}
+	}
+
+	focus = {
+		id = OCT_jade_perfected_army
+		icon = GFX_goal_generic_army_doctrine
+		prerequisite = { focus = OCT_special_operations }
+		relative_position_id = OCT_special_operations
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			add_ideas = OCT_Jade_Perfected_Army
+		}
+	}
+
+	#==================================================
+	# Ⅳ. フロイド海軍ルート
+	#==================================================
+
+	focus = {
+		id = OCT_military_branch
+		icon = GFX_goal_generic_navy_effort
+		prerequisite = { focus = OCT_the_mostro_lounge }
+		x = 6
+		y = 2
+		cost = 8
+		ai_will_do = { factor = 8 }
+
+		completion_reward = {
+			add_ideas = OCT_Mostro_Naval_Base
+		}
+	}
+
+	focus = {
+		id = OCT_floyd_sea_focus
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = OCT_military_branch }
+		relative_position_id = OCT_military_branch
+		x = 0
+		y = 1
+		cost = 8
+		ai_will_do = { factor = 8 }
+
+		completion_reward = {
+			add_ideas = OCT_Floyd_Sea_Doctrine
+		}
+	}
+
+	focus = {
+		id = OCT_floyd_raiding_fleet
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = OCT_floyd_sea_focus }
+		relative_position_id = OCT_floyd_sea_focus
+		x = 0
+		y = 1
+		cost = 8
+		ai_will_do = { factor = 7 }
+
+		completion_reward = {
+			add_ideas = OCT_Floyd_Raiding_Fleet
+		}
+	}
+
+	focus = {
+		id = OCT_unpredictable_patrols
+		icon = GFX_goal_generic_navy_raiding
+		prerequisite = { focus = OCT_floyd_raiding_fleet }
+		relative_position_id = OCT_floyd_raiding_fleet
+		x = -1
+		y = 1
+		cost = 8
+		ai_will_do = { factor = 6 }
+
+		completion_reward = {
+			add_ideas = OCT_Unpredictable_Patrols
+		}
+	}
+
+	focus = {
+		id = OCT_wolfpack_contracts
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = OCT_unpredictable_patrols }
+		relative_position_id = OCT_unpredictable_patrols
+		x = 0
+		y = 1
+		cost = 8
+		ai_will_do = { factor = 6 }
+
+		completion_reward = {
+			add_ideas = OCT_Wolfpack_Contracts
+		}
+	}
+
+	focus = {
+		id = OCT_amphibious_strike_teams
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = OCT_floyd_raiding_fleet }
+		relative_position_id = OCT_floyd_raiding_fleet
+		x = 1
+		y = 1
+		cost = 8
+		ai_will_do = { factor = 6 }
+
+		completion_reward = {
+			add_ideas = OCT_Amphibious_Strike_Teams
+		}
+	}
+
+	focus = {
+		id = OCT_deep_sea_hunters
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = OCT_wolfpack_contracts }
+		relative_position_id = OCT_wolfpack_contracts
+		x = -1
+		y = 1
+		cost = 8
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			add_ideas = OCT_Deep_Sea_Hunters
+		}
+	}
+
+	focus = {
+		id = OCT_naval_terror
+		icon = GFX_goal_generic_navy_raiding
+		prerequisite = { focus = OCT_deep_sea_hunters focus = OCT_amphibious_strike_teams }
+		relative_position_id = OCT_floyd_raiding_fleet
+		x = 1
+		y = 4
+		cost = 10
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			add_ideas = OCT_Naval_Terror
+		}
+	}
+
+	focus = {
+		id = OCT_floyd_sea_supremacy
+		icon = GFX_goal_generic_navy_mission
+		prerequisite = { focus = OCT_naval_terror }
+		relative_position_id = OCT_naval_terror
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			add_ideas = OCT_Floyd_Sea_Supremacy
+		}
+	}
+
+	#==================================================
+	# Ⅴ. 対英国 契約・乗っ取りルート（5NF）
+	#==================================================
+
+	focus = {
+		id = OCT_uk_london_entry
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = OCT_contract_is_absolute }
+		relative_position_id = OCT_contract_is_absolute
+		x = 5
+		y = 1
+		cost = 8
+		ai_will_do = { factor = 6 }
+
+		completion_reward = {
+			set_country_flag = OCT_can_offer_uk_deal
+			add_ideas = OCT_UK_London_Entry
+		}
+	}
+
+	focus = {
+		id = OCT_uk_port_partnership
+		icon = GFX_goal_generic_navy_effort
+		prerequisite = { focus = OCT_uk_london_entry }
+		relative_position_id = OCT_uk_london_entry
+		x = 0
+		y = 1
+		cost = 8
+		ai_will_do = { factor = 6 }
+
+		completion_reward = {
+			add_ideas = OCT_UK_Port_Partnership
+		}
+	}
+
+	focus = {
+		id = OCT_uk_debt_chain
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = OCT_uk_port_partnership }
+		relative_position_id = OCT_uk_port_partnership
+		x = 0
+		y = 1
+		cost = 8
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			add_ideas = OCT_UK_Debt_Chain
+		}
+	}
+
+	focus = {
+		id = OCT_shadow_governance
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = OCT_uk_debt_chain }
+		relative_position_id = OCT_uk_debt_chain
+		x = 0
+		y = 1
+		cost = 8
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			add_ideas = OCT_UK_Shadow_Governance
+		}
+	}
+
+	focus = {
+		id = OCT_claim_the_empire
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = OCT_shadow_governance }
+		relative_position_id = OCT_shadow_governance
+		x = 0
+		y = 1
+		cost = 10
+		ai_will_do = { factor = 4 }
+
+		completion_reward = {
+			add_ideas = OCT_UK_Empire_Puppet_Market
+			# 将来的に決断/イベントで英連邦支配へ発展させるフック
+		}
+	}
+
+	#==================================================
+	# Ⅵ. 対新大陸 契約ルート（地域別）
+	#==================================================
+	focus = {
+		id = OCT_target_new_world
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = OCT_target_new_world }
+		relative_position_id = OCT_target_new_world
+		x = -3
+		y = 1
+		cost = 8
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			add_ideas = OCT_Canada_Investments
 		}
 	}
 	focus = {
-		id = OCT_service_industry_dominance # サービス産業の支配
-		icon = GFX_focus_DEN_no_regulations
-		prerequisite = { focus = OCT_global_service_network focus = OCT_customer_loyalty_programs }
-		x = 1 # Abs: 10,7 (relative to global_service_network)
+		id = OCT_canada_investments
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = OCT_target_new_world }
+		relative_position_id = OCT_target_new_world
+		x = -3
 		y = 1
-		relative_position_id = OCT_global_service_network
-		cost = 10
+		cost = 8
+		ai_will_do = { factor = 5 }
+
 		completion_reward = {
-			add_political_power = 50
+			add_ideas = OCT_Canada_Investments
+		}
+	}
+
+	focus = {
+		id = OCT_us_ne_focus
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = OCT_target_new_world }
+		relative_position_id = OCT_target_new_world
+		x = -1
+		y = 1
+		cost = 8
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			add_ideas = OCT_US_NE_Ports
+		}
+	}
+
+	focus = {
+		id = OCT_us_south_focus
+		icon = GFX_goal_generic_oil
+		prerequisite = { focus = OCT_us_ne_focus }
+		relative_position_id = OCT_us_ne_focus
+		x = 0
+		y = 1
+		cost = 8
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			add_ideas = OCT_US_South_Resources
+		}
+	}
+
+	focus = {
+		id = OCT_us_midwest_focus
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = OCT_us_ne_focus }
+		relative_position_id = OCT_us_ne_focus
+		x = -2
+		y = 1
+		cost = 8
+		ai_will_do = { factor = 5 }
+
+		completion_reward = {
+			add_ideas = OCT_US_Midwest_Industry
+		}
+	}
+
+	focus = {
+		id = OCT_us_west_focus
+		icon = GFX_goal_generic_naval_effort2
+		prerequisite = { focus = OCT_us_midwest_focus }
+		relative_position_id = OCT_us_midwest_focus
+		x = 0
+		y = 1
+		cost = 8
+		ai_will_do = { factor = 4 }
+
+		completion_reward = {
+			add_ideas = OCT_US_West_Pacific_Hub
+		}
+	}
+
+	focus = {
+		id = OCT_mexico_network
+		icon = GFX_goal_generic_occupy_states_coastal
+		prerequisite = { focus = OCT_target_new_world }
+		relative_position_id = OCT_target_new_world
+		x = 1
+		y = 1
+		cost = 8
+		ai_will_do = { factor = 4 }
+
+		completion_reward = {
+			add_ideas = OCT_Mexico_Resort_And_Ports
+		}
+	}
+
+	focus = {
+		id = OCT_central_america_corridor
+		icon = GFX_goal_generic_army_logistics
+		prerequisite = { focus = OCT_mexico_network }
+		relative_position_id = OCT_mexico_network
+		x = 0
+		y = 1
+		cost = 8
+		ai_will_do = { factor = 4 }
+
+		completion_reward = {
+			add_ideas = OCT_Central_Canal_Corridor
+		}
+	}
+
+	focus = {
+		id = OCT_caribbean_hub
+		icon = GFX_goal_generic_navy_raiding
+		prerequisite = { focus = OCT_target_new_world }
+		relative_position_id = OCT_target_new_world
+		x = 3
+		y = 1
+		cost = 8
+		ai_will_do = { factor = 4 }
+
+		completion_reward = {
+			add_ideas = OCT_Caribbean_Hub
 		}
 	}
 }

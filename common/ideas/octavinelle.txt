@@ -1,59 +1,431 @@
 ideas = {
 	country = {
-		# 軍事産業投資レベル (5段階)
-		oct_military_investment_level_1 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { military_factory_construction_speed_factor = 0.01 production_speed_military_factory_factor = 0.01 } }
-		oct_military_investment_level_2 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { military_factory_construction_speed_factor = 0.02 production_speed_military_factory_factor = 0.02 } }
-		oct_military_investment_level_3 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { military_factory_construction_speed_factor = 0.03 production_speed_military_factory_factor = 0.03 } }
-		oct_military_investment_level_4 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { military_factory_construction_speed_factor = 0.04 production_speed_military_factory_factor = 0.04 } }
-		oct_military_investment_level_5 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { military_factory_construction_speed_factor = 0.05 production_speed_military_factory_factor = 0.05 } }
 
-		# 造船産業投資レベル (5段階)
-		oct_naval_investment_level_1 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { dockyard_construction_speed_factor = 0.01 production_speed_dockyard_factor = 0.01 } }
-		oct_naval_investment_level_2 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { dockyard_construction_speed_factor = 0.02 production_speed_dockyard_factor = 0.02 } }
-		oct_naval_investment_level_3 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { dockyard_construction_speed_factor = 0.03 production_speed_dockyard_factor = 0.03 } }
-		oct_naval_investment_level_4 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { dockyard_construction_speed_factor = 0.04 production_speed_dockyard_factor = 0.04 } }
-		oct_naval_investment_level_5 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { dockyard_construction_speed_factor = 0.05 production_speed_dockyard_factor = 0.05 } }
+		# ==================================================
+		# 既存: Mostro 基盤系（既に運用しているものは維持）
+		# ==================================================
 
-		# 建設産業投資レベル (5段階)
-		oct_construction_investment_level_1 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { civilian_factory_construction_speed_factor = 0.01 infrastructure_construction_speed = 0.01 } }
-		oct_construction_investment_level_2 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { civilian_factory_construction_speed_factor = 0.02 infrastructure_construction_speed = 0.02 } }
-		oct_construction_investment_level_3 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { civilian_factory_construction_speed_factor = 0.03 infrastructure_construction_speed = 0.03 } }
-		oct_construction_investment_level_4 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { civilian_factory_construction_speed_factor = 0.04 infrastructure_construction_speed = 0.04 } }
-		oct_construction_investment_level_5 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { civilian_factory_construction_speed_factor = 0.05 infrastructure_construction_speed = 0.05 } }
+		OCT_Mostro_Lounge = {
+			allowed = { original_tag = OCT }
+			allowed_civil_war = { original_tag = OCT }
+			modifier = {
+				consumer_goods_factor = -0.05
+				stability_factor = 0.05
+			}
+		}
 
-		# 鉱業産業投資レベル (5段階)
-		oct_resource_investment_level_1 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { local_resources_factor = 0.01 } }
-		oct_resource_investment_level_2 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { local_resources_factor = 0.02 } }
-		oct_resource_investment_level_3 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { local_resources_factor = 0.03 } }
-		oct_resource_investment_level_4 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { local_resources_factor = 0.04 } }
-		oct_resource_investment_level_5 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { local_resources_factor = 0.05 } }
+		OCT_Mostro_Premium_Services = {
+			allowed = { original_tag = OCT }
+			allowed_civil_war = { original_tag = OCT }
+			modifier = {
+				consumer_goods_factor = -0.02
+				political_power_factor = 0.05
+			}
+		}
 
-		# 金融産業投資レベル (5段階)
-		oct_finance_investment_level_1 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { consumer_goods_factor = -0.01 } }
-		oct_finance_investment_level_2 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { consumer_goods_factor = -0.02 } }
-		oct_finance_investment_level_3 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { consumer_goods_factor = -0.03 } }
-		oct_finance_investment_level_4 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { consumer_goods_factor = -0.04 } }
-		oct_finance_investment_level_5 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { consumer_goods_factor = -0.05 } }
+		OCT_Mostro_Contract_Economy = {
+			allowed = { original_tag = OCT }
+			allowed_civil_war = { original_tag = OCT }
+			modifier = {
+				consumer_goods_factor = -0.03
+				political_power_factor = 0.05
+			}
+		}
 
-		# サービス産業投資レベル (5段階)
-		oct_service_investment_level_1 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { political_power_gain = 0.01 stability_factor = 0.01 } }
-		oct_service_investment_level_2 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { political_power_gain = 0.02 stability_factor = 0.02 } }
-		oct_service_investment_level_3 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { political_power_gain = 0.03 stability_factor = 0.03 } }
-		oct_service_investment_level_4 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { political_power_gain = 0.04 stability_factor = 0.04 } }
-		oct_service_investment_level_5 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { political_power_gain = 0.05 stability_factor = 0.05 } }
+		OCT_Mostro_Construction_Division = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_dockyard_factor = 0.1
+			}
+		}
 
-		# 投資先国用「経済依存度」国民精神 (5段階)
-		economic_dependency_with_oct_level_1 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { trade_relations_factor = 0.01 export_capacity_factor = 0.01 } }
-		economic_dependency_with_oct_level_2 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { trade_relations_factor = 0.02 export_capacity_factor = 0.02 } }
-		economic_dependency_with_oct_level_3 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { trade_relations_factor = 0.03 export_capacity_factor = 0.03 } }
-		economic_dependency_with_oct_level_4 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { trade_relations_factor = 0.04 export_capacity_factor = 0.04 } }
-		economic_dependency_with_oct_level_5 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { trade_relations_factor = 0.05 export_capacity_factor = 0.05 } }
+		OCT_Mostro_Financial_Division = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				political_power_factor = 0.05
+				research_speed_factor = 0.02
+			}
+		}
 
-		# オクタヴィネル用「海外投資利益」国民精神 (5段階)
-		oct_foreign_investment_profit_level_1 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { military_factory_output_factor = 0.005 civilian_factory_output_factor = 0.005 political_power_gain = 0.005 } }
-		oct_foreign_investment_profit_level_2 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { military_factory_output_factor = 0.01 civilian_factory_output_factor = 0.01 political_power_gain = 0.01 } }
-		oct_foreign_investment_profit_level_3 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { military_factory_output_factor = 0.015 civilian_factory_output_factor = 0.015 political_power_gain = 0.015 } }
-		oct_foreign_investment_profit_level_4 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { military_factory_output_factor = 0.02 civilian_factory_output_factor = 0.02 political_power_gain = 0.02 } }
-		oct_foreign_investment_profit_level_5 = { picture = GFX_idea_generic_industrial_concern allowed = { always = no } removal_cost = 0 modifier = { military_factory_output_factor = 0.025 civilian_factory_output_factor = 0.025 political_power_gain = 0.025 } }
+		OCT_Mostro_Financial_Market = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				consumer_goods_factor = -0.02
+				trade_opinion_factor = 0.1
+				research_speed_factor = 0.02
+			}
+		}
+
+		OCT_Mostro_Retail_Tourism = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				stability_factor = 0.02
+				consumer_goods_factor = -0.01
+			}
+		}
+
+		OCT_Mostro_Resort_Program = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				stability_factor = 0.03
+				weekly_manpower = 250
+			}
+		}
+
+		OCT_Mostro_Logistics_Shipping = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				convoy_escort_efficiency = 0.1
+				supply_consumption_factor = -0.03
+			}
+		}
+
+		OCT_Mostro_Offshore_Production = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+			}
+		}
+
+		OCT_Mostro_Conglomerate = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				consumer_goods_factor = -0.15
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				research_speed_factor = 0.03
+			}
+		}
+
+		OCT_Mostro_Naval_Base = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				navy_max_range_factor = 0.15
+				navy_org = 0.05
+			}
+		}
+
+		OCT_Floyd_Sea_Doctrine = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				naval_speed_factor = 0.1
+				naval_hit_chance = 0.05
+			}
+		}
+
+		OCT_Mostro_Marines = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				marine_attack_factor = 0.1
+				marine_defence_factor = 0.05
+			}
+		}
+
+		OCT_Mostro_Carrier_Group = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				carrier_armor_factor = 0.05
+				carrier_sortie_efficiency_factor = 0.1
+			}
+		}
+
+		OCT_Mostro_Americas_Network = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				consumer_goods_factor = -0.02
+				convoy_escort_efficiency = 0.05
+				trade_opinion_factor = 0.1
+			}
+		}
+
+		# ==================================================
+		# Ⅱ-A. レストラン事業・マスターシェフ
+		# ==================================================
+
+		OCT_Mostro_Restaurant_Base = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				consumer_goods_factor = -0.01
+				stability_factor = 0.01
+			}
+		}
+
+		OCT_Master_Chef_Program = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				consumer_goods_factor = -0.01
+				industrial_capacity_factory = 0.02
+			}
+		}
+
+		OCT_Premium_Menu = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				consumer_goods_factor = -0.01
+				political_power_factor = 0.02
+			}
+		}
+
+		OCT_Ingredient_Supply_Network = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				trade_opinion_factor = 0.1
+				industrial_capacity_factory = 0.01
+			}
+		}
+
+		OCT_Secure_Supply_Contracts = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				supply_consumption_factor = -0.03
+				convoy_escort_efficiency = 0.05
+			}
+		}
+
+		OCT_Elite_Catering = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				stability_factor = 0.02
+				enemy_intel_factor = 0.05
+			}
+		}
+
+		OCT_Mostro_Global_Franchise = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				consumer_goods_factor = -0.02
+				trade_opinion_factor = 0.15
+				weekly_manpower = 200
+			}
+		}
+
+		# ==================================================
+		# Ⅲ. ジェイド陸軍ルート
+		# ==================================================
+
+		OCT_Jade_Land_Advisor = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				army_org_factor = 0.05
+				army_leader_cost_factor = -0.1
+			}
+		}
+
+		OCT_Mountain_Exploration = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				mountain_attack_factor = 0.1
+				mountain_defence_factor = 0.1
+			}
+		}
+
+		OCT_Mountain_Warfare_Prof = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				special_forces_cap = 0.05
+				acclimatization_cold_climate_gain_factor = 0.1
+			}
+		}
+
+		OCT_Land_Intelligence = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				army_intel_factor = 0.1
+				decryption_power = 0.05
+			}
+		}
+
+		OCT_Logistics_Refinement = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				supply_consumption_factor = -0.05
+			}
+		}
+
+		OCT_Special_Operations = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				special_forces_cap = 0.05
+				special_forces_attack_factor = 0.05
+			}
+		}
+
+		OCT_Jade_Perfected_Army = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				army_attack_factor = 0.03
+				army_defence_factor = 0.03
+				supply_consumption_factor = -0.03
+			}
+		}
+
+		# ==================================================
+		# Ⅳ. フロイド海軍ルート
+		# ==================================================
+
+		OCT_Floyd_Raiding_Fleet = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				convoy_raiding_efficiency = 0.15
+			}
+		}
+
+		OCT_Unpredictable_Patrols = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				naval_speed_factor = 0.05
+				naval_enemy_retreat_chance = -0.05
+			}
+		}
+
+		OCT_Wolfpack_Contracts = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				submarine_attack_factor = 0.1
+				convoy_raiding_efficiency = 0.05
+			}
+		}
+
+		OCT_Amphibious_Strike_Teams = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				amphibious_invasion = 0.1
+				marine_attack_factor = 0.05
+			}
+		}
+
+		OCT_Deep_Sea_Hunters = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				navy_submarine_detection_factor = 0.1
+				submarine_attack_factor = 0.05
+			}
+		}
+
+		OCT_Naval_Terror = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				enemy_convoy_raiding_defense_factor = -0.1
+				navy_org_factor = 0.05
+			}
+		}
+
+		OCT_Floyd_Sea_Supremacy = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				navy_max_range_factor = 0.1
+				naval_hit_chance = 0.05
+				naval_speed_factor = 0.05
+			}
+		}
+
+		# ==================================================
+		# Ⅴ. 対英国 契約・乗っ取り
+		# ==================================================
+
+		OCT_UK_London_Entry = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				trade_opinion_factor = 0.1
+			}
+		}
+
+		OCT_UK_Port_Partnership = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				navy_max_range_factor = 0.05
+				trade_opinion_factor = 0.05
+			}
+		}
+
+		OCT_UK_Debt_Chain = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				political_power_factor = 0.02
+				trade_opinion_factor = 0.05
+			}
+		}
+
+		OCT_UK_Shadow_Governance = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				stability_factor = 0.02
+				political_power_factor = 0.02
+			}
+		}
+
+		OCT_UK_Empire_Puppet_Market = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				trade_opinion_factor = 0.15
+				industrial_capacity_factory = 0.03
+			}
+		}
+
+		# ==================================================
+		# Ⅵ. 対新大陸 契約ルート（地域別）
+		# ==================================================
+
+		OCT_Canada_Investments = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				trade_opinion_factor = 0.05
+				production_speed_dockyard_factor = 0.05
+			}
+		}
+
+		OCT_US_NE_Ports = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				trade_opinion_factor = 0.05
+				industrial_capacity_factory = 0.02
+			}
+		}
+
+		OCT_US_South_Resources = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				trade_opinion_factor = 0.05
+			}
+		}
+
+		OCT_US_Midwest_Industry = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				industrial_capacity_factory = 0.02
+			}
+		}
+
+		OCT_US_West_Pacific_Hub = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				navy_max_range_factor = 0.05
+			}
+		}
+
+		OCT_Mexico_Resort_And_Ports = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				stability_factor = 0.01
+				trade_opinion_factor = 0.03
+			}
+		}
+
+		OCT_Central_Canal_Corridor = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				convoy_escort_efficiency = 0.05
+			}
+		}
+
+		OCT_Caribbean_Hub = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				naval_speed_factor = 0.02
+				trade_opinion_factor = 0.03
+			}
+		}
 	}
 }

@@ -1,3 +1,0 @@
-oct_economic_decisions_category = {
-	icon = GFX_decision_category_economy
-}

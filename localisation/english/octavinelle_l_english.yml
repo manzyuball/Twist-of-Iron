@@ -1,0 +1,145 @@
+l_english:
+  # ==================================================
+  # Octavinelle - National Focuses
+  # ==================================================
+  OCT_the_mostro_lounge: "Mostro Lounge"
+  OCT_the_mostro_lounge_desc: "The heart of Octavinelle and the stage for every contract. From this lounge, we carefully observe this world's needs and weaknesses, and convert them into profit."
+
+  OCT_premium_services: "Premium Services"
+  OCT_premium_services_desc: "Polite smiles and luxurious options on the surface, airtight clauses in the fine print. A system designed to raise both satisfaction and dependency."
+
+  OCT_contract_is_absolute: "Contract Is Absolute"
+  OCT_contract_is_absolute_desc: "Once signed, a contract cannot be undone by excuses. We will teach this world that principle. No loopholes. No mercy."
+
+  OCT_construction_business: "Enter Construction Sector"
+  OCT_construction_business_desc: "Ports, lounges, commercial facilities—whoever builds the foundation quietly controls the city. By handling infrastructure, we gain leverage over our 'clients.'"
+
+  OCT_urban_development: "Coastal Urban Development"
+  OCT_urban_development_desc: "A port city under the Mostro brand attracts ships, people, and money. Outwardly, it is support for development. In reality, it is the expansion of our influence."
+
+  OCT_financial_business: "Expand Financial Services"
+  OCT_financial_business_desc: "Loans, guarantees, insurance, and currency. Those who master numbers become the true rulers. Let us 'kindly' support national finances—at a proper price."
+
+  OCT_stock_market: "Mostro Securities Network"
+  OCT_stock_market_desc: "A web of stocks and bonds reveals the pulse of each economy. We will sense tremors long before anyone else, and profit accordingly."
+
+  OCT_retail_business: "Retail & Service Network"
+  OCT_retail_business_desc: "The pretty shops and cafes form our public face, while quietly gathering trends, rumors, and leverage."
+
+  OCT_resort_development: "Marine Resort Projects"
+  OCT_resort_development_desc: "Luxurious resorts draw in the wealthy and powerful. Over tea and sunsets, they may find themselves signing far more than they expected."
+
+  OCT_logistics_network: "Logistics Network"
+  OCT_logistics_network_desc: "By controlling supply routes, we gain the power to decide whose cargo arrives safely—and whose does not."
+
+  OCT_offshore_production: "Offshore Production Hubs"
+  OCT_offshore_production_desc: "We exploit legal gaps and favorable conditions abroad. Profit flows to Mostro; responsibility remains conveniently offshore."
+
+  OCT_mostro_conglomerate: "Mostro Conglomerate"
+  OCT_mostro_conglomerate_desc: "Dining, construction, finance, logistics, tourism, even arms. All united under one brand, with power comparable to a sovereign state."
+
+  OCT_military_branch: "Maritime Security Division"
+  OCT_military_branch_desc: "Naval power justified as 'protection' for our partners. Of course, protection can be withheld if terms are not met."
+
+  OCT_floyd_sea_focus: "Floyd's Fleet Doctrine"
+  OCT_floyd_sea_focus_desc: "Unpredictable, relentless, gleefully destructive. Floyd's style turns our navy into a nightmare for anyone who stands in our way."
+
+  OCT_marine_training: "Elite Marine Forces"
+  OCT_marine_training_desc: "Amphibious troops ready to land wherever negotiations fail. The living embodiment of the 'final clause' in every contract."
+
+  OCT_carrier_operations: "Carrier Strike Operations"
+  OCT_carrier_operations_desc: "With air and sea power combined, we can present our offers with overwhelming 'persuasive force.'"
+
+  OCT_target_uk: "Special Deal with the Empire"
+  OCT_target_uk_desc: "They once ruled the seas. Now we offer them a choice: let Mostro handle their ports and finance, in exchange for continued prestige."
+
+  OCT_uk_joint_ventures: "London Joint Ventures"
+  OCT_uk_joint_ventures_desc: "Shared projects in ports and finance. For them, valuable support. For us, a firm hand on their economic throat."
+
+  OCT_target_new_world: "Invest in the New World"
+  OCT_target_new_world_desc: "Rich resources and growing markets. The New World holds many promising 'clients.'"
+
+  OCT_americas_conglomerate_network: "Americas Investment Network"
+  OCT_americas_conglomerate_network_desc: "Multiple contracts woven into a single pipeline, channeling profit and influence steadily back to Mostro."
+
+  # ==================================================
+  # Octavinelle - Ideas
+  # ==================================================
+  OCT_Mostro_Lounge: "Mostro Lounge"
+  OCT_Mostro_Lounge_desc: "The lounge where contracts, rumors, and information converge. Hospitality on the surface, calculation underneath."
+
+  OCT_Mostro_Premium_Services: "Premium Services"
+  OCT_Mostro_Premium_Services_desc: "Exclusive benefits that bind important clients with velvet chains."
+
+  OCT_Mostro_Contract_Economy: "Contract-Based Economy"
+  OCT_Mostro_Contract_Economy_desc: "Legal clauses as weapons, signatures as shackles, profits as justification."
+
+  OCT_Mostro_Construction_Division: "Mostro Construction Division"
+  OCT_Mostro_Construction_Division_desc: "Infrastructure contracts that secure influence over harbors and cities."
+
+  OCT_Mostro_Financial_Division: "Mostro Financial Division"
+  OCT_Mostro_Financial_Division_desc: "Carefully tailored loans and guarantees that lead states deeper into our pocket."
+
+  OCT_Mostro_Financial_Market: "Mostro Market Network"
+  OCT_Mostro_Financial_Market_desc: "A transnational web of securities that turns global capital flows into Mostro's lifeline."
+
+  OCT_Mostro_Retail_Tourism: "Retail & Tourism Network"
+  OCT_Mostro_Retail_Tourism_desc: "Shops and attractions that gather money, people, and intel in equal measure."
+
+  OCT_Mostro_Resort_Program: "Marine Resort Program"
+  OCT_Mostro_Resort_Program_desc: "A playground for elites, and a perfect setting to discuss 'mutually beneficial' agreements."
+
+  OCT_Mostro_Logistics_Shipping: "Logistics & Shipping Control"
+  OCT_Mostro_Logistics_Shipping_desc: "Knowing every route and every cargo makes it easy to decide who prospers."
+
+  OCT_Mostro_Offshore_Production: "Offshore Production Network"
+  OCT_Mostro_Offshore_Production_desc: "A chain of facilities positioned to maximize profit and minimize liability."
+
+  OCT_Mostro_Conglomerate: "Mostro Conglomerate"
+  OCT_Mostro_Conglomerate_desc: "A fully matured corporate empire, exerting power rivaling great powers."
+
+  OCT_Mostro_Naval_Base: "Maritime Security Network"
+  OCT_Mostro_Naval_Base_desc: "Naval assets officially dedicated to 'securing trade,' unofficially extending our reach."
+
+  OCT_Floyd_Sea_Doctrine: "Floyd's Sea Doctrine"
+  OCT_Floyd_Sea_Doctrine_desc: "Fluid, violent, and impossible to predict. Enemies learn to fear our flag."
+
+  OCT_Mostro_Marines: "Mostro Marines"
+  OCT_Mostro_Marines_desc: "Special forces trained to make sure 'agreements' are respected on every shore."
+
+  OCT_Mostro_Carrier_Group: "Mostro Carrier Group"
+  OCT_Mostro_Carrier_Group_desc: "Carrier-based aviation to enforce our interests far beyond our own waters."
+
+  OCT_Mostro_Americas_Network: "Americas Investment Network"
+  OCT_Mostro_Americas_Network_desc: "A web of investments across the New World, ensuring our presence in every major harbor."
+
+  # ==================================================
+  # Decisions
+  # ==================================================
+  OCT_contracts: "Mostro International Contracts"
+  OCT_contracts_desc: "A portfolio of 'mutually beneficial' offers extended to foreign powers through Mostro Lounge."
+
+  OCT_offer_uk_financial_deal: "Offer London Joint Financial Deal"
+  OCT_offer_uk_financial_deal_desc: "Propose a joint venture in ports and finance to the British. They gain stability; we gain leverage."
+
+  OCT_offer_usa_investment: "Offer U.S. Infrastructure Investment"
+  OCT_offer_usa_investment_desc: "Present a large-scale investment package to the United States. If they accept, we secure a gateway into the New World."
+
+  OCT_offer_bra_investment: "Offer Brazilian Development Package"
+  OCT_offer_bra_investment_desc: "Offer to develop Brazilian ports and tourism in exchange for access and influence."
+
+  # ==================================================
+  # Events
+  # ==================================================
+  OCT_uk_deal_1_title: "A Proposal from Mostro"
+  OCT_uk_deal_1_desc: "A peculiar entity calling itself 'Mostro Lounge' proposes a joint project in London's financial district and key ports. The terms look profitable—but accepting means inviting them deep into our system."
+  OCT_uk_deal_1_a: "Accept. Profit comes first."
+  OCT_uk_deal_1_b: "Reject. Too dangerous."
+
+  OCT_new_world_usa_title: "Mostro Investment Offer"
+  OCT_new_world_usa_desc: "Octavinelle proposes to invest in our infrastructure and industry. Their capital is tempting, but their motives are unclear."
+  OCT_new_world_bra_title: "Development Offer from Octavinelle"
+  OCT_new_world_bra_desc: "Octavinelle offers to help develop our ports and resorts. Prosperity, in exchange for a share of control."
+
+  OCT_new_world_deal_accept: "Accept the proposal"
+  OCT_new_world_deal_reject: "Reject the offer"

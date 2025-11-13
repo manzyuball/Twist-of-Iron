@@ -1,122 +1,91 @@
-country_decisions = {
-	category = oct_economic_category # 既存のカテゴリを維持
+OCT_contracts = {
 
-	# 既存のディシジョンがあればここに記述
+	# ==================================================
+	# 前提:
+	# - NFで以下のフラグ/条件を獲得済み
+	#   OCT_can_offer_uk_deal
+	#   OCT_can_offer_new_world_deals
+	# ==================================================
 
-	# --- 軍事産業への投資 ---
-	oct_invest_in_military = {
-		icon = GFX_goal_generic_construct_mil_factory
-		
+	#--------------------------
+	# 対英国: Mostro–London 金融合弁
+	#--------------------------
+	OCT_offer_uk_financial_deal = {
+		icon = GFX_goal_generic_positive_trade_relations
+		allowed = {
+			original_tag = OCT
+			has_country_flag = OCT_can_offer_uk_deal
+			ENG = { exists = yes }
+		}
 		visible = {
-			has_country_flag = oct_can_invest_in_military
+			ENG = { exists = yes }
 		}
-		
 		available = {
-			oct_can_invest_military_trigger = yes
+			is_subject = no
+			NOT = { has_war_with = ENG }
+			ENG = {
+				is_subject = no
+				NOT = { has_war_with = OCT }
+			}
 		}
-		
-		cost = 50 # 政治力コスト
-		
-		complete_effect = {
-			add_to_variable = { var = mostro_zaibatsu_military_var value = 0.01 }
-		}
-		
-		# ローカライゼーションで動的に名前を表示
-		# oct_invest_in_military_title: "軍事産業への投資 (レベル [?mostro_zaibatsu_military_var|%0])"
-	}
+		cost = 25
+		fire_only_once = yes
 
-	# --- 造船産業への投資 ---
-	oct_invest_in_naval = {
-		icon = GFX_focus_generic_naval_dockyards
-		
-		visible = {
-			has_country_flag = oct_can_invest_in_naval
-		}
-		
-		available = {
-			oct_can_invest_naval_trigger = yes
-		}
-		
-		cost = 50
-		
 		complete_effect = {
-			add_to_variable = { var = mostro_zaibatsu_naval_var value = 0.01 }
+			ENG = { country_event = { id = OCT_uk_deal.1 days = 1 } }
 		}
 	}
 
-	# --- 建設産業への投資 ---
-	oct_invest_in_construction = {
-		icon = GFX_goal_generic_construction
-		
-		visible = {
-			has_country_flag = oct_can_invest_in_construction
+	#--------------------------
+	# 対新大陸: Mostro 投資オファー（汎用）
+	# 対象例: USA / CAN / BRA / MEX など
+	#--------------------------
+
+	OCT_offer_usa_investment = {
+		icon = GFX_goal_generic_construct_civ_factory
+		allowed = {
+			original_tag = OCT
+			has_country_flag = OCT_can_offer_new_world_deals
+			USA = { exists = yes }
 		}
-		
+		visible = { USA = { exists = yes } }
 		available = {
-			oct_can_invest_construction_trigger = yes
+			is_subject = no
+			NOT = { has_war_with = USA }
+			USA = {
+				is_subject = no
+				NOT = { has_war_with = OCT }
+			}
 		}
-		
-		cost = 50
-		
+		cost = 25
+		fire_only_once = yes
+
 		complete_effect = {
-			add_to_variable = { var = mostro_zaibatsu_construction_var value = 0.01 }
+			USA = { country_event = { id = OCT_new_world_deal.1 days = 1 } }
 		}
 	}
 
-	# --- 鉱業産業への投資 ---
-	oct_invest_in_resource = {
-		icon = GFX_focus_generic_mining_industry
-		
-		visible = {
-			has_country_flag = oct_can_invest_in_resource
+	OCT_offer_bra_investment = {
+		icon = GFX_goal_generic_construct_civ_factory
+		allowed = {
+			original_tag = OCT
+			has_country_flag = OCT_can_offer_new_world_deals
+			BRA = { exists = yes }
 		}
-		
+		visible = { BRA = { exists = yes } }
 		available = {
-			oct_can_invest_resource_trigger = yes
+			is_subject = no
+			NOT = { has_war_with = BRA }
+			BRA = {
+				is_subject = no
+				NOT = { has_war_with = OCT }
+			}
 		}
-		
-		cost = 50
-		
-		complete_effect = {
-			add_to_variable = { var = mostro_zaibatsu_resource_var value = 0.01 }
-		}
-	}
+		cost = 25
+		fire_only_once = yes
 
-	# --- 金融産業への投資 ---
-	oct_invest_in_finance = {
-		icon = GFX_focus_generic_monetary_union
-		
-		visible = {
-			has_country_flag = oct_can_invest_in_finance
-		}
-		
-		available = {
-			oct_can_invest_finance_trigger = yes
-		}
-		
-		cost = 50
-		
 		complete_effect = {
-			add_to_variable = { var = mostro_zaibatsu_finance_var value = 0.01 }
-		}
-	}
-
-	# --- サービス産業への投資 ---
-	oct_invest_in_service = {
-		icon = GFX_SOV_national_specialists_ccp_2d_sov_compatibility
-		
-		visible = {
-			has_country_flag = oct_can_invest_in_service
-		}
-		
-		available = {
-			oct_can_invest_service_trigger = yes
-		}
-		
-		cost = 50
-		
-		complete_effect = {
-			add_to_variable = { var = mostro_zaibatsu_service_var value = 0.01 }
+			BRA = { country_event = { id = OCT_new_world_deal.2 days = 1 } }
 		}
 	}
 }

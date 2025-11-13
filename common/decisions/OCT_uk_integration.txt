@@ -1,0 +1,109 @@
+decisions = {
+
+	OCT_uk_integration_category = {
+		icon = generic_decision_icon
+		allowed = {
+			original_tag = OCT
+		}
+		visible = {
+			original_tag = OCT
+			has_completed_focus = OCT_uk_debt_chain
+		}
+	}
+
+	# ==================================================
+	# 武力ルート: 英国への最後通牒と戦争（OCT_uk_forceful_path 用）
+	# ==================================================
+	OCT_uk_forceful_integration_decision = {
+		icon = generic_decision_icon
+		allowed = { original_tag = OCT }
+		visible = {
+			has_country_flag = OCT_uk_forceful_path_chosen
+			NOT = { has_country_flag = OCT_uk_forceful_integration_started }
+		}
+		available = {
+			has_completed_focus = OCT_uk_debt_chain
+			ENG = { exists = yes }
+		}
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			set_country_flag = OCT_uk_forceful_integration_started
+			# ENGとの関係悪化と開戦事由（バニラ準拠の安全な形に限定）
+			ENG = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = embargo
+				}
+			}
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ENG
+			}
+		}
+	}
+
+	# ==================================================
+	# 平和ルート: 英国との共同統治・経済統合（OCT_uk_peaceful_path 用）
+	# ==================================================
+	OCT_uk_peaceful_integration_decision = {
+		icon = generic_decision_icon
+		allowed = { original_tag = OCT }
+		visible = {
+			has_country_flag = OCT_uk_peaceful_path_chosen
+			NOT = { has_country_flag = OCT_uk_peaceful_integration_started }
+		}
+		available = {
+			has_completed_focus = OCT_uk_debt_chain
+			ENG = {
+				exists = yes
+				is_in_faction_with = ROOT
+			}
+		}
+		cost = 50
+		fire_only_once = yes
+
+		complete_effect = {
+			set_country_flag = OCT_uk_peaceful_integration_started
+			add_ideas = OCT_UK_Empire_Puppet_Market
+			# 意図: 英国の対OCT好感度上昇（標準modifier名が不明なため、安全に省略）
+		}
+	}
+
+	# ==================================================
+	# 中核化: 英本土の段階的統合（武力/平和共通）
+	# ==================================================
+	OCT_uk_core_home_isles = {
+		icon = generic_decision_icon
+		allowed = { original_tag = OCT }
+		visible = {
+			OR = {
+				AND = {
+					has_country_flag = OCT_uk_forceful_integration_started
+					OR = {
+						ENG = { is_subject_of = ROOT }
+						NOT = { ENG = { exists = yes } }
+					}
+				}
+				AND = {
+					has_country_flag = OCT_uk_peaceful_integration_started
+					has_idea = OCT_UK_Empire_Puppet_Market
+				}
+			}
+		}
+		available = {
+			controls_state = 126
+			controls_state = 118
+			controls_state = 119
+		}
+		cost = 75
+		fire_only_once = yes
+
+		complete_effect = {
+			add_state_core = 126
+			add_state_core = 118
+			add_state_core = 119
+		}
+	}
+}
