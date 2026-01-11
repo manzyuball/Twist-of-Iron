@@ -1,0 +1,180 @@
+# ==================================================
+# Octavinelle Decisions
+# ==================================================
+
+# ==================================================
+# Octavinelle Decisions
+# ==================================================
+
+# --------------------------------------------------
+# ジェイドの食材調達 (Jade's Food Procurement)
+# --------------------------------------------------
+oct_jade_food_decisions = {
+
+	# 政治力で調達
+	oct_procure_food_pp = {
+		icon = GFX_decision_generic_prepare_civil_war
+		
+		available = {
+			has_political_power > 25
+		}
+		
+		cost = 25
+		days_remove = 30
+		
+		modifier = {
+			# 調達中は政治力獲得が少し下がる（ジェイドが忙しい）
+			political_power_gain = -0.1
+		}
+		
+		remove_effect = {
+			random_list = {
+				50 = {
+					# 通常成功
+					country_event = { id = OCT_decisions.1 }
+				}
+				50 = {
+					# 大成功フラグを立ててイベント呼び出し
+					set_country_flag = oct_procure_food_great_success
+					country_event = { id = OCT_decisions.1 }
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				check_variable = { var = oct_food_stock value = 10 compare = greater_than }
+			}
+		}
+	}
+
+	# 銃で調達（狩猟？）
+	oct_procure_food_guns = {
+		icon = GFX_decision_generic_supply
+		
+		available = {
+			has_equipment = {
+				infantry_equipment > 500
+			}
+		}
+		
+		cost = 0 
+		
+		fire_only_once = no
+		
+		days_remove = 30
+		
+		# 開始時効果で装備消費
+		fire_effect = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -500
+			}
+		}
+		
+		modifier = {
+			# 狩猟中は陸軍の訓練時間が少し伸びる（教官不在）
+			training_time_factor = 0.1
+		}
+		
+		remove_effect = {
+			random_list = {
+				50 = {
+					country_event = { id = OCT_decisions.2 }
+				}
+				50 = {
+					set_country_flag = oct_procure_food_great_success
+					country_event = { id = OCT_decisions.2 }
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				check_variable = { var = oct_food_stock value = 10 compare = greater_than }
+			}
+		}
+	}
+}
+
+# --------------------------------------------------
+# フロイドのお料理/ギャンブル (Floyd's Cooking)
+# --------------------------------------------------
+oct_floyd_cooking_decisions = {
+
+	# 民需工場で食材購入
+	oct_buy_ingredients = {
+		icon = GFX_decision_generic_construction
+		
+		available = {
+			num_of_civilian_factories_available_for_projects > 5
+		}
+		
+		cost = 0
+		days_remove = 30
+		
+		modifier = {
+			# 民需工場使用の表現
+			consumer_goods_factor = 0.05
+		}
+		
+		remove_effect = {
+			add_to_variable = { var = oct_food_stock value = 1 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				check_variable = { var = oct_food_stock value = 10 compare = greater_than }
+			}
+		}
+	}
+
+	# まかないを作る（ギャンブル）
+	oct_cook_meal = {
+		icon = GFX_decision_generic_form_nation
+		
+		available = {
+			check_variable = { var = oct_food_stock value = 1 compare = greater_or_equals }
+		}
+		
+		cost = 0
+		fire_only_once = no
+		
+		complete_effect = {
+			add_to_variable = { var = oct_food_stock value = -1 }
+			
+			random_list = {
+				25 = {
+					set_country_flag = oct_cooking_result_bad
+					country_event = { id = OCT_decisions.10 }
+				}
+				25 = {
+					set_country_flag = oct_cooking_result_normal
+					country_event = { id = OCT_decisions.10 }
+				}
+				25 = {
+					set_country_flag = oct_cooking_result_good
+					country_event = { id = OCT_decisions.10 }
+				}
+				25 = {
+					set_country_flag = oct_cooking_result_great
+					country_event = { id = OCT_decisions.10 }
+				}
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				has_political_power > 200
+			}
+		}
+	}
+}

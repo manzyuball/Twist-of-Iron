@@ -1,0 +1,19 @@
+# ==================================================
+# Octavinelle Dynamic Modifiers
+# ==================================================
+
+# 慈悲の精神（国民精神として付与されるが、効果は変数で変動する）
+oct_mercy_spirit = {
+	# 左ルート（ジェイド）
+	army_experience_gain_factor = var:oct_army_xp_gain_var
+	special_forces_attack_factor = var:oct_special_forces_attack_var
+	special_forces_defense_factor = var:oct_special_forces_defense_var
+	supply_consumption_factor = var:oct_supply_consumption_var
+	
+	# 右ルート（フロイド）
+	shore_bombardment_bonus = var:oct_shore_bombardment_var
+	production_cost_max_submarine_factor = var:oct_sub_cost_var
+	
+	# 共通/合流
+	naval_torpedo_hit_chance_factor = var:oct_torpedo_hit_var
+}

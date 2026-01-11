@@ -1,0 +1,105 @@
+add_namespace = OCT_decisions
+
+# ==================================================
+# Food Procurement Events
+# ==================================================
+
+# 食材調達完了 (PP)
+country_event = {
+	id = OCT_decisions.1
+	title = OCT_decisions.1.t
+	desc = OCT_decisions.1.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OCT_decisions.1.a # 成果あり (+1)
+		trigger = {
+			NOT = { has_country_flag = oct_procure_food_great_success }
+		}
+		add_to_variable = { var = oct_food_stock value = 1 }
+	}
+	
+	option = {
+		name = OCT_decisions.1.b # 大漁 (+2)
+		trigger = {
+			has_country_flag = oct_procure_food_great_success
+		}
+		add_to_variable = { var = oct_food_stock value = 2 }
+		clr_country_flag = oct_procure_food_great_success
+	}
+}
+
+# 食材調達完了 (Guns)
+country_event = {
+	id = OCT_decisions.2
+	title = OCT_decisions.2.t
+	desc = OCT_decisions.2.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = OCT_decisions.2.a # 成果あり (+1)
+		trigger = {
+			NOT = { has_country_flag = oct_procure_food_great_success }
+		}
+		add_to_variable = { var = oct_food_stock value = 1 }
+	}
+	
+	option = {
+		name = OCT_decisions.2.b # 大漁 (+2)
+		trigger = {
+			has_country_flag = oct_procure_food_great_success
+		}
+		add_to_variable = { var = oct_food_stock value = 2 }
+		clr_country_flag = oct_procure_food_great_success
+	}
+}
+
+# ==================================================
+# Cooking Events
+# ==================================================
+
+# フロイドの料理結果
+country_event = {
+	id = OCT_decisions.10
+	title = OCT_decisions.10.t
+	desc = OCT_decisions.10.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	# 大失敗 (-25 PP)
+	option = {
+		name = OCT_decisions.10.a
+		trigger = { has_country_flag = oct_cooking_result_bad }
+		add_political_power = -25
+		clr_country_flag = oct_cooking_result_bad
+	}
+	
+	# 普通 (+25 PP)
+	option = {
+		name = OCT_decisions.10.b
+		trigger = { has_country_flag = oct_cooking_result_normal }
+		add_political_power = 25
+		clr_country_flag = oct_cooking_result_normal
+	}
+	
+	# 美味 (+50 PP)
+	option = {
+		name = OCT_decisions.10.c
+		trigger = { has_country_flag = oct_cooking_result_good }
+		add_political_power = 50
+		clr_country_flag = oct_cooking_result_good
+	}
+	
+	# 絶品 (+150 PP)
+	option = {
+		name = OCT_decisions.10.d
+		trigger = { has_country_flag = oct_cooking_result_great }
+		add_political_power = 150
+		clr_country_flag = oct_cooking_result_great
+	}
+}

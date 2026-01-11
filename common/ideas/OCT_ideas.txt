@@ -1,0 +1,43 @@
+ideas = {
+	country = {
+		# ==========================================
+		# Temporary Cost Ideas (NF Cost)
+		# ==========================================
+		
+		# 歩兵技術購入コスト
+		OCT_buying_infantry_tech_cost = {
+			picture = generic_production_bonus
+			
+			modifier = {
+				consumer_goods_factor = 0.05 # 民需4相当の簡易表現
+			}
+		}
+		
+		# 研究所建設コスト
+		OCT_building_research_institute_cost = {
+			picture = generic_research_bonus
+			
+			modifier = {
+				consumer_goods_factor = 0.15 # 民需12相当の簡易表現
+			}
+		}
+		
+		# 水上艦隊建造コスト
+		OCT_building_surface_fleet_cost = {
+			picture = generic_navy_bonus
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+			}
+		}
+		
+		# 潜水艦隊建造コスト
+		OCT_building_submarine_fleet_cost = {
+			picture = generic_navy_bonus
+			
+			modifier = {
+				consumer_goods_factor = 0.08
+			}
+		}
+	}
+}

@@ -1,0 +1,13 @@
+oct_jade_food_decisions = {
+	icon = GFX_decision_category_generic_supply
+	visible = {
+		has_country_flag = oct_jade_food_decisions_unlocked
+	}
+}
+
+oct_floyd_cooking_decisions = {
+	icon = GFX_decision_category_generic_production
+	visible = {
+		has_country_flag = oct_floyd_cooking_decisions_unlocked
+	}
+}

@@ -7,9 +7,10 @@ characters={
 			civilian = { large = GFX_portrait_Azul_Ashengrotto }
 			army = { large = GFX_portrait_Azul_Ashengrotto }
 		}
+		# アズール：Mostroコングロマリットを率いる契約経営者
 		country_leader={
 			ideology=conservatism
-			traits = { Charitable_Businessman }
+			traits = { popular_figure } # バニラ由来の互換性が高い指導者traitに寄せる
 			expire="1965.1.1.1"
 			id=-1
 		}
@@ -21,12 +22,13 @@ characters={
 			civilian={ large = GFX_portrait_Jade_Leech }
 			army = { large = GFX_portrait_Jade_Leech_Beens small = GFX_idea_OCT_Jade_Leech }
 		}
+		# ジェイド：穏やかな笑顔で裏を読む交渉・諜報担当
 		advisor={
 			cost = 150
 			slot = political_advisor
 			idea_token = OCT_Jade_Leech_Advisor_token
 			allowed = { original_tag = OCT }
-			traits = { Careful_Planner }
+			traits = { backroom_backstabber }
 		}
 	}
 
@@ -41,10 +43,10 @@ characters={
 			slot = army_chief
 			idea_token = OCT_Jade_Leech_Army_token
 			allowed = { original_tag = OCT }
-			traits = { Superior_Tactician }
+			traits = { army_regrouping }
 		}
 		corps_commander={
-			traits={ defensive_doctrine }
+			traits = { defensive_doctrine }
 			skill=4
 			attack_skill=2
 			defense_skill=5
@@ -59,12 +61,13 @@ characters={
 			civilian={ large = GFX_portrait_Jade_Leech }
 			army = { large = GFX_portrait_Jade_Leech_Beens small = GFX_idea_OCT_Jade_Leech }
 		}
+		# 海軍：情報と防衛を重視した堅実運用
 		advisor={
 			cost = 150
 			slot = navy_chief
 			idea_token = OCT_Jade_Leech_Navy_token
 			allowed = { original_tag = OCT }
-			traits = { Superior_Tactician }
+			traits = { navy_chief_naval_air_defense }
 		}
 	}
 
@@ -74,12 +77,13 @@ characters={
 			civilian={ large = GFX_portrait_Floyd_Leech }
 			army = { large = GFX_portrait_Floyd_Leech_Beens small = GFX_idea_OCT_Floyd_Leech }
 		}
+		# フロイド：楽しそうなもの（軍備）に飛びつく政治顧問
 		advisor={
 			cost = 150
 			slot = political_advisor
 			idea_token = OCT_Floyd_Leech_Advisor_token
 			allowed = { original_tag = OCT }
-			traits = { Aggressive_Attacker }
+			traits = { war_industry_expert }
 		}
 	}
 
@@ -94,10 +98,10 @@ characters={
 			slot = army_chief
 			idea_token = OCT_Floyd_Leech_Army_token
 			allowed = { original_tag = OCT }
-			traits = { Fierce_Warrior }
+			traits = { army_chief_offensive }
 		}
 		corps_commander={
-			traits={ offensive_doctrine }
+			traits = { offensive_doctrine }
 			skill=4
 			attack_skill=5
 			defense_skill=2
@@ -112,12 +116,13 @@ characters={
 			civilian={ large = GFX_portrait_Floyd_Leech }
 			army = { large = GFX_portrait_Floyd_Leech_Beens small = GFX_idea_OCT_Floyd_Leech }
 		}
+		# 海軍：通商破壊・決戦志向の危険な艦隊運用
 		advisor={
 			cost = 150
 			slot = navy_chief
 			idea_token = OCT_Floyd_Leech_Navy_token
 			allowed = { original_tag = OCT }
-			traits = { Fierce_Warrior }
+			traits = { navy_chief_decisive_battle }
 		}
 	}
 

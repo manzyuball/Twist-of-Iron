@@ -2,7 +2,80 @@ ideas = {
 	country = {
 
 		# ==================================================
-		# 既存: Mostro 基盤系（既に運用しているものは維持）
+		# Mostro 基幹スピリット(段階制・既存統合用の雛形)
+		# ※既存OCT_Mostro_*系は今後このCoreへ段階的に吸収する想定
+		# ==================================================
+
+		OCT_Mostro_Core_1 = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				consumer_goods_factor = -0.05
+				stability_factor = 0.05
+				trade_opinion_factor = 0.05
+				navy_max_range_factor = 0.05
+			}
+		}
+
+		OCT_Mostro_Core_2 = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				consumer_goods_factor = -0.08
+				stability_factor = 0.05
+				trade_opinion_factor = 0.08
+				navy_max_range_factor = 0.08
+				industrial_capacity_factory = 0.03
+				research_speed_factor = 0.02
+			}
+		}
+
+		OCT_Mostro_Core_3 = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				consumer_goods_factor = -0.12
+				stability_factor = 0.05
+				trade_opinion_factor = 0.10
+				navy_max_range_factor = 0.10
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				research_speed_factor = 0.03
+			}
+		}
+
+		# ==================================================
+		# 対外契約ネットワーク(段階制) - UK/新大陸等の契約集約用
+		# ==================================================
+
+		OCT_Contract_Network_1 = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				trade_opinion_factor = 0.05
+				convoy_escort_efficiency = 0.05
+			}
+		}
+
+		OCT_Contract_Network_2 = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				trade_opinion_factor = 0.10
+				consumer_goods_factor = -0.02
+				convoy_escort_efficiency = 0.08
+				production_speed_dockyard_factor = 0.05
+			}
+		}
+
+		OCT_Contract_Network_3 = {
+			allowed = { original_tag = OCT }
+			modifier = {
+				trade_opinion_factor = 0.15
+				consumer_goods_factor = -0.04
+				convoy_escort_efficiency = 0.10
+				production_speed_dockyard_factor = 0.08
+				subject_cost_factor = -0.1
+			}
+		}
+
+		# ==================================================
+		# 既存: Mostro 基盤系（順次Coreへ統合予定）
 		# ==================================================
 
 		OCT_Mostro_Lounge = {
